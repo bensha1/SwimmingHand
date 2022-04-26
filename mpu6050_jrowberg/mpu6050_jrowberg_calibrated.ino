@@ -51,9 +51,9 @@ THE SOFTWARE.
 // AD0 high = 0x69
 TwoWire mpuwire1(0);
 TwoWire mpuwire2(1);
-MPU6050 accelgyro1(0x69, &mpuwire1);
+MPU6050 accelgyro3(0x69, &mpuwire1);
 MPU6050 accelgyro2(0x68, &mpuwire1);
-MPU6050 accelgyro3(0x68, &mpuwire2);
+MPU6050 accelgyro1(0x68, &mpuwire2);
 //MPU6050 accelgyro(0x69); // <-- use for AD0 high
 //MPU6050 accelgyro(0x68, &Wire1); // <-- use for AD0 low, but 2nd Wire (TWI/I2C) object
 
@@ -102,7 +102,7 @@ uint8_t teapotPacket[14] = { '$', 0x02, 0, 0, 0, 0, 0, 0, 0, 0, 0x00, 0x00, '\r'
 void setup() {
   // initialize serial communication
     // (38400 chosen because it works as well at 8MHz as it does at 16MHz, but
-    // it's really up to you depending on your project)
+    // it's really up to you depending  on your project)
     Serial.begin(115200);
     // join I2C bus (I2Cdev library doesn't do this automatically)
 //    #if I2CDEV_IMPLEMENTATION == I2CDEV_ARDUINO_WIRE
@@ -121,10 +121,10 @@ void setup() {
     accelgyro3.initialize();
 
     // verify connection
-    Serial.println("Testing device connections...");
-    Serial.println(accelgyro1.testConnection() ? "MPU6050 1 connection successful" : "MPU6050 1 connection failed");
-    Serial.println(accelgyro2.testConnection() ? "MPU6050 2 connection successful" : "MPU6050 2 connection failed");
-    Serial.println(accelgyro3.testConnection() ? "MPU6050 3 connection successful" : "MPU6050 3 connection failed");
+//    Serial.println("Testing device connections...");
+//    Serial.println(accelgyro1.testConnection() ? "MPU6050 1 connection successful" : "MPU6050 1 connection failed");
+//    Serial.println(accelgyro2.testConnection() ? "MPU6050 2 connection successful" : "MPU6050 2 connection failed");
+//    Serial.println(accelgyro3.testConnection() ? "MPU6050 3 connection successful" : "MPU6050 3 connection failed");
 
     // use the code below to change accel/gyro offset values
     /*
@@ -151,12 +151,12 @@ void setup() {
     
     // configure Arduino LED pin for output
 //    pinMode(LED_PIN, OUTPUT);
-    packetSize1 = init_dmp(accelgyro1, 1);
-    packetSize2 = init_dmp(accelgyro2, 2);
-    packetSize3 = init_dmp(accelgyro3, 3);
+    packetSize1 = init_dmp(accelgyro1, 1, -4733, -6623, 12661, 136, -174, -12);
+    packetSize2 = init_dmp(accelgyro2, 2, -5721, 6951, 14059, -16, -24, -13);
+    packetSize3 = init_dmp(accelgyro3, 3, -1773, 1793, 4855, 62, -37, 53);
 }
 
-int init_dmp(MPU6050& mpu, int i) {
+int init_dmp(MPU6050& mpu, int i, int xacc, int yacc, int zacc, int xgyro, int ygyro, int zgyro) {
   Serial.print("dmp ");
   Serial.println(i);
   // wait for ready
@@ -164,42 +164,24 @@ int init_dmp(MPU6050& mpu, int i) {
 //  while (Serial.available() && Serial.read()); // empty buffer
 //  while (!Serial.available());                 // wait for data
   while (Serial.available() && Serial.read()); // empty buffer again
-  Serial.println("1");
   int devStatus = mpu.dmpInitialize();
-  Serial.println("2");
-  // supply your own gyro offsets here, scaled for min sensitivity
-  mpu.setXGyroOffset(51);
-  mpu.setYGyroOffset(8);
-  mpu.setZGyroOffset(21);
-  mpu.setXAccelOffset(1150);
-  mpu.setYAccelOffset(-50);
-  mpu.setZAccelOffset(1060);
+  
+  mpu.setXAccelOffset(xacc);
+  mpu.setYAccelOffset(yacc);
+  mpu.setZAccelOffset(zacc);
+  mpu.setXGyroOffset(xgyro);
+  mpu.setYGyroOffset(ygyro);
+  mpu.setZGyroOffset(zgyro);
+  
   // make sure it worked (returns 0 if so)
   if (devStatus == 0) {
-    Serial.println("3");
-    // Calibration Time: generate offsets and calibrate our MPU6050
-    mpu.CalibrateAccel(2);  
-    Serial.println("calibrated accel");
-    mpu.CalibrateGyro(2);
-    Serial.println();
     mpu.PrintActiveOffsets();
     // turn on the DMP, now that it's ready
     Serial.print(F("Enabling DMP "));
     Serial.print(i);
     Serial.println(" ...");
     mpu.setDMPEnabled(true);
-    Serial.println("4");
-    // enable Arduino interrupt detection
-//    Serial.print(F("Enabling interrupt detection (Arduino external interrupt "));
-//    Serial.print(digitalPinToInterrupt(INTERRUPT_PIN));
-//    Serial.println(F(")..."));
-//    attachInterrupt(digitalPinToInterrupt(INTERRUPT_PIN), dmpDataReady, RISING);
-//    mpuIntStatus = mpu.getIntStatus();
-//
-//    // set our DMP Ready flag so the main loop() function knows it's okay to use it
-//    Serial.println(F("DMP ready! Waiting for first interrupt..."));
-//    dmpReady = true;
-
+    
     // get expected DMP packet size for later comparison
     return mpu.dmpGetFIFOPacketSize();
   } else {
@@ -235,16 +217,11 @@ void main_loop(MPU6050& mpu, int i, int packetSize, uint8_t *fifoBuffer) {
     Serial.print("\t");
     Serial.print(ypr[2] * 180 / M_PI);
     Serial.println();
-
 }
 
 void loop() {
     main_loop(accelgyro1, 1, packetSize1, fifoBuffer1);
     main_loop(accelgyro2, 2, packetSize2, fifoBuffer2);
     main_loop(accelgyro3, 3, packetSize3, fifoBuffer3);
-
-    // blink LED to indicate activity
-//    blinkState = !blinkState;
-//    digitalWrite(LED_PIN, blinkState);
-    delay(100);
+  delay(10);
 }

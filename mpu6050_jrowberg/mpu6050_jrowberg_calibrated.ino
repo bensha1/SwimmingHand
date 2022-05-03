@@ -35,6 +35,7 @@ THE SOFTWARE.
 
 // I2Cdev and MPU6050 must be installed as libraries, or else the .cpp/.h files
 // for both classes must be in the include path of your project
+#include "SH_servo.h"
 #include "I2Cdev.h"
 //#include "MPU6050.h"
 #include "MPU6050_6Axis_MotionApps612.h"
@@ -44,6 +45,10 @@ THE SOFTWARE.
 #if I2CDEV_IMPLEMENTATION == I2CDEV_ARDUINO_WIRE
     #include "Wire.h"
 #endif
+
+// SERVO
+//#include <ESP32Servo.h>
+//#define Servo_PWM 5
 
 // class default I2C address is 0x68
 // specific I2C addresses may be passed as a parameter here
@@ -98,12 +103,25 @@ float ypr[3];           // [yaw, pitch, roll]   yaw/pitch/roll container and gra
 // packet structure for InvenSense teapot demo
 uint8_t teapotPacket[14] = { '$', 0x02, 0, 0, 0, 0, 0, 0, 0, 0, 0x00, 0x00, '\r', '\n' };
 
+//Servo MG995_Servo;
+//void init_servo();
+//void servo_write(int angle);
+//
+//void init_servo() {
+//  MG995_Servo.attach(Servo_PWM);
+//}
+//
+//void servo_write(int angle) {
+//  MG995_Servo.write(angle);
+//}
+
 
 void setup() {
   // initialize serial communication
     // (38400 chosen because it works as well at 8MHz as it does at 16MHz, but
     // it's really up to you depending  on your project)
     Serial.begin(115200);
+    init_servo();
     // join I2C bus (I2Cdev library doesn't do this automatically)
 //    #if I2CDEV_IMPLEMENTATION == I2CDEV_ARDUINO_WIRE
 //        Wire.begin();
@@ -217,6 +235,10 @@ void main_loop(MPU6050& mpu, int i, int packetSize, uint8_t *fifoBuffer) {
     Serial.print("\t");
     Serial.print(ypr[2] * 180 / M_PI);
     Serial.println();
+
+    if (i == 3) {
+      servo_write(map(ypr[1] * 180 / M_PI, -90, 90, 0, 180));
+    }
 }
 
 void loop() {

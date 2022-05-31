@@ -1,10 +1,10 @@
 import sys
 import pickle
 
-RANGES = [(-180, 14.999, 0), # (lower, upper, target)
-          (15.000, 44.999, 30),
-          (45.000, 74.999, 60),
-          (75.000, 180, 90)]
+RANGES = [(-180, 14.999, 0.0), # (lower, upper, target)
+          (15.000, 44.999, 30.0),
+          (45.000, 74.999, 60.0),
+          (75.000, 180, 90.0)]
 
 def fix_line(line):
     new_line = line
@@ -24,9 +24,9 @@ def quantize(log_pkl):
         new_line = fix_line(line)
         if new_line[1][2] not in [x[2] for x in RANGES]:
             print("WARNING: line", new_line, "not quantized correctly")
-        out.append(new_line)
+        out.append(new_line[0])
+        out.append(new_line[1])
         
-    
     return out
 
 

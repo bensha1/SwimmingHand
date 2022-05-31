@@ -31,10 +31,13 @@ THE SOFTWARE.
 ===============================================
 */
 
+/* SwimmingHand: changed PID for loop in MPU6050.cpp to 10 */
+
 // I2Cdev and MPU6050 must be installed as libraries, or else the .cpp/.h files
 // for both classes must be in the include path of your project
 #include "I2Cdev.h"
-#include "MPU6050.h"
+//#include "MPU6050.h"
+#include "MPU6050_6Axis_MotionApps612.h"
 
 // Arduino Wire library is required if I2Cdev I2CDEV_ARDUINO_WIRE implementation
 // is used in I2Cdev.h
@@ -48,14 +51,14 @@ THE SOFTWARE.
 // AD0 high = 0x69
 TwoWire mpuwire1(0);
 TwoWire mpuwire2(1);
-MPU6050 accelgyro1(0x69, &mpuwire1);
+MPU6050 accelgyro3(0x69, &mpuwire1);
 MPU6050 accelgyro2(0x68, &mpuwire1);
-MPU6050 accelgyro3(0x68, &mpuwire2);
+MPU6050 accelgyro1(0x68, &mpuwire2);
 //MPU6050 accelgyro(0x69); // <-- use for AD0 high
 //MPU6050 accelgyro(0x68, &Wire1); // <-- use for AD0 low, but 2nd Wire (TWI/I2C) object
 
-int16_t ax, ay, az;
-int16_t gx, gy, gz;
+//int16_t ax, ay, az;
+//int16_t gx, gy, gz;
 
 // uncomment "OUTPUT_READABLE_ACCELGYRO" if you want to see a tab-separated
 // list of the accel X/Y/Z and then gyro X/Y/Z values in decimal. Easy to read,
@@ -72,10 +75,34 @@ int16_t gx, gy, gz;
 #define LED_PIN 13
 bool blinkState = false;
 
+// MPU control/status vars
+//bool dmpReady = false;  // set true if DMP init was successful
+//uint8_t mpuIntStatus;   // holds actual interrupt status byte from MPU
+uint8_t devStatus1, devStatus2, devStatus3;      // return status after each device operation (0 = success, !0 = error)
+uint16_t packetSize1, packetSize2, packetSize3;    // expected DMP packet size (default is 42 bytes)
+uint16_t fifoCount;     // count of all bytes currently in FIFO
+uint8_t fifoBuffer1[64]; // FIFO storage buffer
+uint8_t fifoBuffer2[64]; // FIFO storage buffer
+uint8_t fifoBuffer3[64]; // FIFO storage buffer
+
+// orientation/motion vars
+Quaternion q;           // [w, x, y, z]         quaternion container
+VectorInt16 aa;         // [x, y, z]            accel sensor measurements
+VectorInt16 gy;         // [x, y, z]            gyro sensor measurements
+VectorInt16 aaReal;     // [x, y, z]            gravity-free accel sensor measurements
+VectorInt16 aaWorld;    // [x, y, z]            world-frame accel sensor measurements
+VectorFloat gravity;    // [x, y, z]            gravity vector
+float euler[3];         // [psi, theta, phi]    Euler angle container
+float ypr[3];           // [yaw, pitch, roll]   yaw/pitch/roll container and gravity vector
+
+// packet structure for InvenSense teapot demo
+uint8_t teapotPacket[14] = { '$', 0x02, 0, 0, 0, 0, 0, 0, 0, 0, 0x00, 0x00, '\r', '\n' };
+
+
 void setup() {
   // initialize serial communication
     // (38400 chosen because it works as well at 8MHz as it does at 16MHz, but
-    // it's really up to you depending on your project)
+    // it's really up to you depending  on your project)
     Serial.begin(115200);
     // join I2C bus (I2Cdev library doesn't do this automatically)
 //    #if I2CDEV_IMPLEMENTATION == I2CDEV_ARDUINO_WIRE
@@ -94,15 +121,15 @@ void setup() {
     accelgyro3.initialize();
 
     // verify connection
-    Serial.println("Testing device connections...");
-    Serial.println(accelgyro1.testConnection() ? "MPU6050 1 connection successful" : "MPU6050 1 connection failed");
-    Serial.println(accelgyro2.testConnection() ? "MPU6050 2 connection successful" : "MPU6050 2 connection failed");
-    Serial.println(accelgyro3.testConnection() ? "MPU6050 3 connection successful" : "MPU6050 3 connection failed");
+//    Serial.println("Testing device connections...");
+//    Serial.println(accelgyro1.testConnection() ? "MPU6050 1 connection successful" : "MPU6050 1 connection failed");
+//    Serial.println(accelgyro2.testConnection() ? "MPU6050 2 connection successful" : "MPU6050 2 connection failed");
+//    Serial.println(accelgyro3.testConnection() ? "MPU6050 3 connection successful" : "MPU6050 3 connection failed");
 
     // use the code below to change accel/gyro offset values
     /*
     Serial.println("Updating internal sensor offsets...");
-    // -76	-2359	1688	0	0	0
+    // -76  -2359 1688  0 0 0
     Serial.print(accelgyro.getXAccelOffset()); Serial.print("\t"); // -76
     Serial.print(accelgyro.getYAccelOffset()); Serial.print("\t"); // -2359
     Serial.print(accelgyro.getZAccelOffset()); Serial.print("\t"); // 1688
@@ -121,50 +148,81 @@ void setup() {
     Serial.print(accelgyro.getZGyroOffset()); Serial.print("\t"); // 0
     Serial.print("\n");
     */
-
+    
     // configure Arduino LED pin for output
-    pinMode(LED_PIN, OUTPUT);
+//    pinMode(LED_PIN, OUTPUT);
+    packetSize1 = init_dmp(accelgyro1, 1, -4733, -6623, 12661, 136, -174, -12);
+    packetSize2 = init_dmp(accelgyro2, 2, -5721, 6951, 14059, -16, -24, -13);
+    packetSize3 = init_dmp(accelgyro3, 3, -1773, 1793, 4855, 62, -37, 53);
 }
 
-void main_loop(MPU6050& accelgyro, int i) {
-      // read raw accel/gyro measurements from device
-    accelgyro.getMotion6(&ax, &ay, &az, &gx, &gy, &gz);
-    accelgyro.getMotion6(&ax, &ay, &az, &gx, &gy, &gz);
-    accelgyro.getMotion6(&ax, &ay, &az, &gx, &gy, &gz);
+int init_dmp(MPU6050& mpu, int i, int xacc, int yacc, int zacc, int xgyro, int ygyro, int zgyro) {
+  Serial.print("dmp ");
+  Serial.println(i);
+  // wait for ready
+  Serial.println(F("\nSend any character to begin DMP programming and demo: "));
+//  while (Serial.available() && Serial.read()); // empty buffer
+//  while (!Serial.available());                 // wait for data
+  while (Serial.available() && Serial.read()); // empty buffer again
+  int devStatus = mpu.dmpInitialize();
+  
+  mpu.setXAccelOffset(xacc);
+  mpu.setYAccelOffset(yacc);
+  mpu.setZAccelOffset(zacc);
+  mpu.setXGyroOffset(xgyro);
+  mpu.setYGyroOffset(ygyro);
+  mpu.setZGyroOffset(zgyro);
+  
+  // make sure it worked (returns 0 if so)
+  if (devStatus == 0) {
+    mpu.PrintActiveOffsets();
+    // turn on the DMP, now that it's ready
+    Serial.print(F("Enabling DMP "));
+    Serial.print(i);
+    Serial.println(" ...");
+    mpu.setDMPEnabled(true);
+    
+    // get expected DMP packet size for later comparison
+    return mpu.dmpGetFIFOPacketSize();
+  } else {
+    // ERROR!
+    // 1 = initial memory load failed
+    // 2 = DMP configuration updates failed
+    // (if it's going to break, usually the code will be 1)
+    Serial.print(F("DMP Initialization failed (code "));
+    Serial.print(devStatus);
+    Serial.println(F(")"));
+    return -1;
+  }
+}
 
-    // these methods (and a few others) are also available
-    //accelgyro.getAcceleration(&ax, &ay, &az);
-    //accelgyro.getRotation(&gx, &gy, &gz);
+void main_loop(MPU6050& mpu, int i, int packetSize, uint8_t *fifoBuffer) {
+  mpu.resetFIFO();
+  // get current FIFO count
+  fifoCount = mpu.getFIFOCount();
+  // wait for correct available data length, should be a VERY short wait
+  while (fifoCount < packetSize) fifoCount = mpu.getFIFOCount();
 
-    #ifdef OUTPUT_READABLE_ACCELGYRO
-        // display tab-separated accel/gyro x/y/z values
-        Serial.print("sensor "); Serial.print(i); Serial.print(" ");
-        Serial.print("a/g:\t");
-        Serial.print(ax); Serial.print("\t");
-        Serial.print(ay); Serial.print("\t");
-        Serial.print(az); Serial.print("\t");
-        Serial.print(gx); Serial.print("\t");
-        Serial.print(gy); Serial.print("\t");
-        Serial.println(gz);
-    #endif
-
-    #ifdef OUTPUT_BINARY_ACCELGYRO
-        Serial.write((uint8_t)(ax >> 8)); Serial.write((uint8_t)(ax & 0xFF));
-        Serial.write((uint8_t)(ay >> 8)); Serial.write((uint8_t)(ay & 0xFF));
-        Serial.write((uint8_t)(az >> 8)); Serial.write((uint8_t)(az & 0xFF));
-        Serial.write((uint8_t)(gx >> 8)); Serial.write((uint8_t)(gx & 0xFF));
-        Serial.write((uint8_t)(gy >> 8)); Serial.write((uint8_t)(gy & 0xFF));
-        Serial.write((uint8_t)(gz >> 8)); Serial.write((uint8_t)(gz & 0xFF));
-    #endif
+  // read a packet from FIFO
+  mpu.getFIFOBytes(fifoBuffer, packetSize);
+    mpu.dmpGetQuaternion(&q, fifoBuffer);
+    mpu.dmpGetGravity(&gravity, &q);
+    mpu.dmpGetYawPitchRoll(ypr, &q, &gravity);
+    Serial.print("mpu ");
+    Serial.print(i);
+    Serial.print(" ypr\t");
+    Serial.print(ypr[0] * 180 / M_PI);
+    Serial.print("\t");
+    Serial.print(ypr[1] * 180 / M_PI);
+    Serial.print("\t");
+    Serial.print(ypr[2] * 180 / M_PI);
+    Serial.println();
 }
 
 void loop() {
-    main_loop(accelgyro1, 1);
-    main_loop(accelgyro2, 2);
-    main_loop(accelgyro3, 3);
-
-    // blink LED to indicate activity
-//    blinkState = !blinkState;
-//    digitalWrite(LED_PIN, blinkState);
-    delay(100);
+    main_loop(accelgyro1, 1, packetSize1, fifoBuffer1);
+    main_loop(accelgyro2, 2, packetSize2, fifoBuffer2);
+    main_loop(accelgyro3, 3, packetSize3, fifoBuffer3);
+  delay(10);
 }
+ 

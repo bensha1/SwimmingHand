@@ -39,6 +39,17 @@ THE SOFTWARE.
 #include "I2Cdev.h"
 //#include "MPU6050.h"
 #include "MPU6050_6Axis_MotionApps612.h"
+#include "hand_model.h"
+#include "EloquentTinyML.h"
+#include <eloquent_tinyml/tensorflow.h>
+
+#define N_INPUTS 6
+#define N_OUTPUTS 4
+#define TENSOR_ARENA_SIZE 32*1024
+
+
+Eloquent::TinyML::TensorFlow::TensorFlow<N_INPUTS, N_OUTPUTS, TENSOR_ARENA_SIZE> tf;
+float predicted = 0.0;
 
 // Arduino Wire library is required if I2Cdev I2CDEV_ARDUINO_WIRE implementation
 // is used in I2Cdev.h
@@ -99,6 +110,22 @@ VectorInt16 aaWorld;    // [x, y, z]            world-frame accel sensor measure
 VectorFloat gravity;    // [x, y, z]            gravity vector
 float euler[3];         // [psi, theta, phi]    Euler angle container
 float ypr[3];           // [yaw, pitch, roll]   yaw/pitch/roll container and gravity vector
+float pred_ypr[6];
+
+float ranges[13][3] = {{-180.0, -165.0, -180.0},
+                {-164.999, -135.0, -150.0},
+                {-134.999, -105.0, -120.0},
+                {-104.999, -75.0, -90.0},
+                {-74.999, -45.0, -60.0},
+                {-44.999, -15.0, -30.0},
+                {-14.999, 15.0, 0.0},
+                {14.999, 45.0, 30.0},
+                {44.999, 75.0, 60.0},
+                {74.999, 105.0, 90.0},
+                {104.999, 135.0, 120.0},
+                {134.999, 165.0, 150.0},
+                {164.999, 180.0, 180.0}};
+
 
 // packet structure for InvenSense teapot demo
 uint8_t teapotPacket[14] = { '$', 0x02, 0, 0, 0, 0, 0, 0, 0, 0, 0x00, 0x00, '\r', '\n' };
@@ -117,6 +144,7 @@ uint8_t teapotPacket[14] = { '$', 0x02, 0, 0, 0, 0, 0, 0, 0, 0, 0x00, 0x00, '\r'
 
 
 void setup() {
+  tf.begin(hand_model);
   // initialize serial communication
     // (38400 chosen because it works as well at 8MHz as it does at 16MHz, but
     // it's really up to you depending  on your project)
@@ -214,13 +242,41 @@ int init_dmp(MPU6050& mpu, int i, int xacc, int yacc, int zacc, int xgyro, int y
   }
 }
 
+float fix_ypr(float f) {
+  for (int i = 0; i < 13; i++) {
+    if (ranges[i][0] <= f && f <= ranges[i][1]) {
+//      Serial.print("changed ");
+//      Serial.print(f);
+//      Serial.print(" to: ");
+//      Serial.println(ranges[i][2]);
+      return ranges[i][2];
+    }
+  }
+  return f;
+}
+
+float get_prediction(float* predict_arr) {
+  float max_val = -200.0;
+  int max_i = -1;
+  for (int i = 0; i < 4; i++) {
+    if (predict_arr[i] > max_val) {
+      max_val = predict_arr[i];
+      max_i = i;
+    }
+  }
+  Serial.print("out: ");
+  Serial.println(max_i * 30.0);
+  return max_i * 30.0;
+}
+
 void main_loop(MPU6050& mpu, int i, int packetSize, uint8_t *fifoBuffer) {
   mpu.resetFIFO();
   // get current FIFO count
   fifoCount = mpu.getFIFOCount();
   // wait for correct available data length, should be a VERY short wait
-  while (fifoCount < packetSize) fifoCount = mpu.getFIFOCount();
-
+  while (fifoCount < packetSize){
+    fifoCount = mpu.getFIFOCount();
+  }
   // read a packet from FIFO
   mpu.getFIFOBytes(fifoBuffer, packetSize);
     mpu.dmpGetQuaternion(&q, fifoBuffer);
@@ -234,12 +290,32 @@ void main_loop(MPU6050& mpu, int i, int packetSize, uint8_t *fifoBuffer) {
     Serial.print(ypr[1] * 180 / M_PI);
     Serial.print("\t");
     Serial.print(ypr[2] * 180 / M_PI);
+    Serial.print("\t");
     Serial.println();
 
-    if (i == 3) {
-      servo_write(map(ypr[1] * 180 / M_PI, -90, 90, 0, 180));
-    }
+//      pred_ypr[(i-1)*3 + 0] = fix_ypr(ypr[0] * 180 / M_PI);
+//      pred_ypr[(i-1)*3 + 1] = fix_ypr(ypr[1] * 180 / M_PI);
+//      pred_ypr[(i-1)*3 + 2] = fix_ypr(ypr[2] * 180 / M_PI);
+//      if (i == 2) {
+//        float prediction_arr[4];
+//        tf.predict(pred_ypr, prediction_arr);
+//        Serial.print("perdict: {");
+//        Serial.print(prediction_arr[0]);
+//        Serial.print(", ");
+//        Serial.print(prediction_arr[1]);
+//        Serial.print(", ");
+//        Serial.print(prediction_arr[2]);
+//        Serial.print(", ");
+//        Serial.print(prediction_arr[3]);
+//        Serial.print("} ");
+//        float prediction = get_prediction(prediction_arr);
+//        if (prediction != predicted) {
+//          servo_write(prediction);
+//          predicted = prediction;
+//        }  
+//      }
 }
+
 
 void loop() {
     main_loop(accelgyro1, 1, packetSize1, fifoBuffer1);

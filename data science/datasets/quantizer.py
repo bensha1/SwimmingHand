@@ -32,13 +32,6 @@ def fix_line(line, fix_input):
         for i in range(1, 7):
            fixed_input[i] = fix_value(line[0][i], INPUT_RANGES)
     new_line = (tuple(fixed_input), (line[1][0], line[1][1], fixed_output, line[1][2]))
-
-    # new_line = line
-    # for r in RANGES:
-        # if r[0] <= line[1][2] <= r[1]:
-            # # # changing only the pitch value of mpu 3
-            # # new_line = (line[0], (line[1][0], line[1][1], r[2], line[1][2]))
-            # break
     return new_line
 
 def quantize(log_pkl, fix_input):
@@ -51,8 +44,6 @@ def quantize(log_pkl, fix_input):
             new_line = fix_line(line, fix_input)
         except ValueError:
             print("WARNING: line", line, "not quantized correctly")
-        # if new_line[1][2] not in [x[2] for x in RANGES]:
-            # print("WARNING: line", new_line, "not quantized correctly")
         out.append(new_line[0])
         out.append(new_line[1])
         

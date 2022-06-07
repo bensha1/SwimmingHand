@@ -49,7 +49,7 @@ THE SOFTWARE.
 
 
 Eloquent::TinyML::TensorFlow::TensorFlow<N_INPUTS, N_OUTPUTS, TENSOR_ARENA_SIZE> tf;
-float predicted = 0.0;
+int predicted = 0;
 
 // Arduino Wire library is required if I2Cdev I2CDEV_ARDUINO_WIRE implementation
 // is used in I2Cdev.h
@@ -125,6 +125,14 @@ float ranges[13][3] = {{-180.0, -165.0, -180.0},
                 {104.999, 135.0, 120.0},
                 {134.999, 165.0, 150.0},
                 {164.999, 180.0, 180.0}};
+// 0, 60, 120, 180, 240, 300
+int servo_angles[] = {30, 0, 0, 30, 0, 60};
+int valid_transitions[6][2] = {{0, 1},
+                              {1, 2},
+                              {2, 3},
+                              {3, 4},
+                              {4, 5},
+                              {5, 0}};
 
 
 // packet structure for InvenSense teapot demo
@@ -164,7 +172,7 @@ void setup() {
     Serial.println("Initializing I2C devices...");
     accelgyro1.initialize();
     accelgyro2.initialize();
-    accelgyro3.initialize();
+//    accelgyro3.initialize();
 
     // verify connection
 //    Serial.println("Testing device connections...");
@@ -197,9 +205,10 @@ void setup() {
     
     // configure Arduino LED pin for output
 //    pinMode(LED_PIN, OUTPUT);
-    packetSize1 = init_dmp(accelgyro1, 1, -4733, -6623, 12661, 136, -174, -12);
-    packetSize2 = init_dmp(accelgyro2, 2, -5721, 6951, 14059, -16, -24, -13);
-    packetSize3 = init_dmp(accelgyro3, 3, -1773, 1793, 4855, 62, -37, 53);
+//    packetSize1 = init_dmp(accelgyro1, 1, -4733, -6623, 12661, 136, -174, -12);
+    packetSize1 = init_dmp(accelgyro1, 1, -5487, 5111, 12993, -20, -23, 6);
+    packetSize2 = init_dmp(accelgyro2, 2, -5065, -8381, 11773, 134, -174, -14);
+//    packetSize3 = init_dmp(accelgyro3, 3, -1773, 1793, 4855, 62, -37, 53);/
 }
 
 int init_dmp(MPU6050& mpu, int i, int xacc, int yacc, int zacc, int xgyro, int ygyro, int zgyro) {
@@ -255,18 +264,29 @@ float fix_ypr(float f) {
   return f;
 }
 
-float get_prediction(float* predict_arr) {
+int get_prediction(float* predict_arr, int* max_i) {
   float max_val = -200.0;
-  int max_i = -1;
-  for (int i = 0; i < 4; i++) {
+  *max_i = -1;
+  for (int i = 0; i < 6; i++) {
     if (predict_arr[i] > max_val) {
       max_val = predict_arr[i];
-      max_i = i;
+      *max_i = i;
     }
   }
   Serial.print("out: ");
-  Serial.println(max_i * 30.0);
-  return max_i * 30.0;
+  Serial.print(*max_i);
+  Serial.print(" servo angle: ");
+  Serial.print(servo_angles[*max_i]);
+  return servo_angles[*max_i];
+}
+
+bool is_valid_transition(int current, int next) {
+  for (int i = 0; i < 6; i++) {
+    if (valid_transitions[i][0] == current && valid_transitions[i][1] == next) {
+      return true;
+    }
+  }
+  return false;
 }
 
 void main_loop(MPU6050& mpu, int i, int packetSize, uint8_t *fifoBuffer) {
@@ -293,33 +313,44 @@ void main_loop(MPU6050& mpu, int i, int packetSize, uint8_t *fifoBuffer) {
     Serial.print("\t");
     Serial.println();
 
-//      pred_ypr[(i-1)*3 + 0] = fix_ypr(ypr[0] * 180 / M_PI);
-//      pred_ypr[(i-1)*3 + 1] = fix_ypr(ypr[1] * 180 / M_PI);
-//      pred_ypr[(i-1)*3 + 2] = fix_ypr(ypr[2] * 180 / M_PI);
-//      if (i == 2) {
-//        float prediction_arr[4];
-//        tf.predict(pred_ypr, prediction_arr);
-//        Serial.print("perdict: {");
-//        Serial.print(prediction_arr[0]);
-//        Serial.print(", ");
-//        Serial.print(prediction_arr[1]);
-//        Serial.print(", ");
-//        Serial.print(prediction_arr[2]);
-//        Serial.print(", ");
-//        Serial.print(prediction_arr[3]);
-//        Serial.print("} ");
-//        float prediction = get_prediction(prediction_arr);
+      pred_ypr[(i-1)*3 + 0] = (ypr[0] * 180 / M_PI);
+      pred_ypr[(i-1)*3 + 1] = (ypr[1] * 180 / M_PI);
+      pred_ypr[(i-1)*3 + 2] = (ypr[2] * 180 / M_PI);
+      if (i == 2) {
+        float prediction_arr[4];
+        tf.predict(pred_ypr, prediction_arr);
+        Serial.print("perdict: {");
+        Serial.print(prediction_arr[0]);
+        Serial.print(", ");
+        Serial.print(prediction_arr[1]);
+        Serial.print(", ");
+        Serial.print(prediction_arr[2]);
+        Serial.print(", ");
+        Serial.print(prediction_arr[3]);
+        Serial.print(", ");
+        Serial.print(prediction_arr[4]);
+        Serial.print(", ");
+        Serial.print(prediction_arr[5]);
+        Serial.print("} ");
+        int category = 0;
+        int prediction = get_prediction(prediction_arr, &category);
+        Serial.print(" current: ");
+        Serial.println(predicted);
+        if (is_valid_transition(predicted, category)) {
+          servo_write(prediction);
+          predicted = category;
+        }
 //        if (prediction != predicted) {
 //          servo_write(prediction);
 //          predicted = prediction;
-//        }  
-//      }
+//        } 
+      }
 }
 
 
 void loop() {
     main_loop(accelgyro1, 1, packetSize1, fifoBuffer1);
     main_loop(accelgyro2, 2, packetSize2, fifoBuffer2);
-    main_loop(accelgyro3, 3, packetSize3, fifoBuffer3);
-  delay(10);
+//    main_loop(accelgyro3, 3, packetSize3, fifoBuffer3);
+  delay(50);
 }

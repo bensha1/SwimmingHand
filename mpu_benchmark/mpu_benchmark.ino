@@ -46,17 +46,13 @@ int servo_angles[] = {30, 0, 0, 60};
 void setup() {
   Serial.begin(115200);
   mpuwire1.begin(21, 22);
-//   mpuwire2.begin(25, 26);
 
 
     // initialize device
     Serial.println("Initializing I2C devices...");
-//     accelgyro1.initialize();
     accelgyro2.initialize();
 
-//     packetSize1 = init_dmp(accelgyro1, 1, -5487, 5111, 12993, -20, -23, 6);
-    packetSize2 = init_dmp(accelgyro2, 2, -5599, 4921, 12097, -19, -22, 5);
-//    packetSize3 = init_dmp(accelgyro3, 3, -1773, 1793, 4855, 62, -37, 53);/
+    packetSize2 = init_dmp(accelgyro2, 2, -2005, -1937, 2944, 23, -46, 42);
 }
 
 int init_dmp(MPU6050& mpu, int i, int xacc, int yacc, int zacc, int xgyro, int ygyro, int zgyro) {
@@ -135,7 +131,7 @@ void get_statistics(float min_ypr[3], float max_ypr[3], float avg_ypr[3], int* s
   for (int i = 0; i < 3; i++) avg_ypr[i] = avg_ypr[i] + (ypr[i] - avg_ypr[i]) / (*samples);
 }
 
-void run_sampling(int seconds, int position) {
+void run_sampling(int seconds, int src, int dest = 0, bool dynamic = false) {
   float min_ypr[3] = {0}, max_ypr[3] = {0}, avg_ypr[3] = {0};
   int samples = 0;
   Serial.print("Sampling for "); Serial.print(seconds); Serial.println(" seconds");
@@ -144,7 +140,12 @@ void run_sampling(int seconds, int position) {
     get_statistics(min_ypr, max_ypr, avg_ypr, &samples);
   }
 
-  Serial.print("Position "); Serial.print(position); Serial.print(" results: ");
+  if (dynamic) {
+    Serial.print("Dynamic between "); Serial.print(src); Serial.print(" and "); Serial.print(dest); Serial.print(" results: ");
+  } else {
+    Serial.print("Static position "); Serial.print(src); Serial.print(" results: ");
+  }
+
   Serial.print("min: ["); Serial.print(min_ypr[0]); Serial.print(", "); Serial.print(min_ypr[1]); Serial.print(", "); Serial.print(min_ypr[2]); Serial.print("]\t");
   Serial.print("max: ["); Serial.print(max_ypr[0]); Serial.print(", "); Serial.print(max_ypr[1]); Serial.print(", "); Serial.print(max_ypr[2]); Serial.print("]\t");
   Serial.print("avg: ["); Serial.print(avg_ypr[0]); Serial.print(", "); Serial.print(avg_ypr[1]); Serial.print(", "); Serial.print(avg_ypr[2]); Serial.println("]");
@@ -152,17 +153,26 @@ void run_sampling(int seconds, int position) {
 
 }
 
-void benchmark_position(int position) {
-  Serial.print("Please set device to position "); Serial.println(position);
+void benchmark_position(int src, int dest = 0, bool dynamic = false) {
+  if (dynamic) {
+    Serial.print("Please move device between "); Serial.print(src); Serial.print(" and "); Serial.println(dest);
+  } else {
+    Serial.print("Please set device to position "); Serial.println(src);
+  }
+
+  delay(5000);
   Serial.println("benchmark will resume in 5 seconds");
   delay(5000);
-  run_sampling(10, position); // sample for 10 seconds in position
+  run_sampling(10, src, dest, dynamic); // sample for 10 seconds in position
+
+  if (dynamic) return;
+
   for (int i = 0; i < 2; i++) {
-    Serial.print("Please move device around then return to position "); Serial.println(position);
+    Serial.print("Please move device around then return to position "); Serial.println(src);
     delay(5000);
     Serial.println("benchmark will resume in 5 seconds");
     delay(5000);
-    run_sampling(10, position);
+    run_sampling(10, src);
   }
 }
 
@@ -171,7 +181,12 @@ void static_benchmark() {
   benchmark_position(0);
   benchmark_position(90);
   benchmark_position(180);
+}
 
+void dynamic_benchmark() {
+  Serial.println("Starting dynamic benchmark");
+  benchmark_position(0, 90, true);
+  benchmark_position(90, 180, true);
 }
 
 void main_loop(MPU6050& mpu, int i, int packetSize, uint8_t *fifoBuffer) {
@@ -192,8 +207,8 @@ void main_loop(MPU6050& mpu, int i, int packetSize, uint8_t *fifoBuffer) {
 
 
 void loop() {
-//     main_loop(accelgyro1, 1, packetSize1, fifoBuffer1);
-    static_benchmark();
-//    main_loop(accelgyro3, 3, packetSize3, fifoBuffer3);
+  static_benchmark();
+  dynamic_benchmark();
+  Serial.println("------ done ------");
   while(1) delay(1000);
 }

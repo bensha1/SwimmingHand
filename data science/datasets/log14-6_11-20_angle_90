@@ -1,0 +1,3669 @@
+=~=~=~=~=~=~=~=~=~=~=~= PuTTY log 2022.06.14 11:20:35 =~=~=~=~=~=~=~=~=~=~=~=
+ets Jun  8 2016 00:22:57
+
+rst:0x1 (POWERON_RESET),boot:0x12 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:1
+load:0x3fff0018,len:4
+load:0x3fff001c,len:1044
+load:0x40078000,len:10124
+load:0x40080400,len:5856
+entry 0x400806a8
+Initializing I2C devices...
+dmp 1
+
+Send any character to begin DMP programming and demo: 
+dev id = 0x34
+dev id = 0x34
+dev id = 0x34
+dev id = 0x34
+
+
+//		X Accel		Y Accel		Z Accel		X Gyro		Y Gyro		Z Gyro
+// OFFSETS	-1647.00000,	-199.00000,	3001.00000,	60.00000,	-37.00000,	50.00000
+
+Enabling DMP 1 ...
+dmp 2
+
+Send any character to begin DMP programming and demo: 
+dev id = 0x34
+dev id = 0x34
+dev id = 0x34
+dev id = 0x34
+
+
+//		X Accel		Y Accel		Z Accel		X Gyro		Y Gyro		Z Gyro
+// OFFSETS	-651.00000,	-781.00000,	3818.00000,	41.00000,	-28.00000,	38.00000
+
+Enabling DMP 2 ...
+mpu 1 ypr	8.73	27.49	-34.56	
+mpu 2 ypr	0.03	0.42	0.16	
+perdict: {8.00, 6.11, -1.74, 0.26, } out: 0 servo angle: 60 current: 0
+mpu 1 ypr	8.97	27.78	-35.12	
+mpu 2 ypr	0.04	2.06	-1.86	
+perdict: {7.58, 6.40, -0.46, 0.34, } out: 0 servo angle: 60 current: 60
+mpu 1 ypr	9.30	28.14	-35.69	
+mpu 2 ypr	0.13	3.73	-3.89	
+perdict: {7.20, 6.76, 0.79, 0.41, } out: 0 servo angle: 60 current: 60
+mpu 1 ypr	9.51	28.36	-36.23	
+mpu 2 ypr	0.22	5.29	-5.91	
+perdict: {6.76, 7.20, 1.88, 0.51, } out: 1 servo angle: 0 current: 60
+mpu 1 ypr	9.70	28.53	-36.69	
+mpu 2 ypr	0.36	6.75	-7.77	
+perdict: {6.31, 7.82, 2.73, 0.64, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	9.85	28.64	-36.99	
+mpu 2 ypr	0.61	8.09	-9.60	
+perdict: {5.93, 8.33, 3.44, 0.74, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	10.16	28.97	-37.32	
+mpu 2 ypr	0.98	9.54	-11.35	
+perdict: {5.62, 9.06, 4.04, 0.84, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	10.29	29.15	-37.64	
+mpu 2 ypr	1.32	10.89	-13.08	
+perdict: {5.17, 9.57, 4.89, 0.89, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	10.44	29.34	-37.97	
+mpu 2 ypr	1.65	12.21	-14.75	
+perdict: {4.74, 10.09, 5.71, 0.94, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	10.86	29.77	-38.35	
+mpu 2 ypr	2.18	13.67	-16.60	
+perdict: {4.48, 10.71, 6.38, 0.96, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	11.67	30.55	-38.53	
+mpu 2 ypr	3.08	15.30	-18.41	
+perdict: {4.73, 11.45, 6.58, 0.86, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	13.02	31.72	-38.49	
+mpu 2 ypr	4.58	17.15	-20.46	
+perdict: {5.10, 12.60, 6.38, 0.81, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	15.22	33.47	-38.18	
+mpu 2 ypr	6.81	19.28	-22.58	
+perdict: {5.01, 13.19, 6.49, 1.11, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	17.56	35.30	-37.23	
+mpu 2 ypr	9.56	21.52	-24.27	
+perdict: {3.72, 14.61, 6.44, 1.86, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	19.81	37.06	-35.96	
+mpu 2 ypr	12.51	23.76	-25.62	
+perdict: {1.40, 16.79, 6.64, 2.92, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	21.85	38.59	-34.71	
+mpu 2 ypr	15.36	25.89	-26.81	
+perdict: {-0.35, 19.26, 7.06, 4.23, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	23.55	39.80	-33.72	
+mpu 2 ypr	17.86	27.78	-27.97	
+perdict: {-2.08, 21.53, 7.27, 5.62, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	24.96	40.69	-33.15	
+mpu 2 ypr	19.92	29.38	-29.24	
+perdict: {-4.03, 23.67, 8.06, 6.71, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	25.88	41.21	-33.02	
+mpu 2 ypr	21.39	30.64	-30.46	
+perdict: {-5.72, 25.33, 9.09, 7.41, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	25.96	41.14	-33.25	
+mpu 2 ypr	22.06	31.39	-31.43	
+perdict: {-6.94, 26.24, 10.21, 7.63, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	25.47	40.62	-33.81	
+mpu 2 ypr	22.09	31.68	-32.45	
+perdict: {-6.93, 26.00, 10.87, 7.21, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	24.64	39.93	-34.19	
+mpu 2 ypr	21.82	31.76	-33.10	
+perdict: {-6.85, 25.61, 11.39, 6.74, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	23.38	38.94	-34.48	
+mpu 2 ypr	-0.22	-179.59	108.46	
+perdict: {-65.78, -171.04, -120.78, 125.46, } out: 3 servo angle: 0 current: 0
+mpu 1 ypr	21.52	37.38	-35.15	
+mpu 2 ypr	20.14	31.03	-34.07	
+perdict: {-8.58, 25.20, 14.32, 5.40, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	19.90	35.94	-35.95	
+mpu 2 ypr	18.91	30.31	-34.67	
+perdict: {-9.11, 24.54, 14.26, 5.44, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	18.01	34.34	-36.79	
+mpu 2 ypr	17.38	29.44	-35.11	
+perdict: {-9.39, 23.67, 14.24, 5.37, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	15.92	32.71	-37.64	
+mpu 2 ypr	15.63	28.53	-35.47	
+perdict: {-9.28, 22.71, 14.77, 4.96, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	13.69	31.15	-38.40	
+mpu 2 ypr	13.78	27.71	-35.68	
+perdict: {-8.94, 21.84, 15.80, 4.33, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	11.41	29.71	-39.05	
+mpu 2 ypr	11.44	26.87	-35.85	
+perdict: {-8.36, 20.65, 16.43, 3.63, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	8.70	28.19	-39.68	
+mpu 2 ypr	9.31	26.31	-35.98	
+perdict: {-8.88, 20.65, 16.82, 3.66, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	6.42	27.12	-40.03	
+mpu 2 ypr	7.75	26.15	-36.26	
+perdict: {-10.02, 21.21, 17.36, 4.03, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	5.03	26.65	-40.19	
+mpu 2 ypr	7.09	26.41	-36.88	
+perdict: {-11.61, 22.29, 18.07, 4.66, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	4.52	26.71	-40.19	
+mpu 2 ypr	7.28	26.99	-37.83	
+perdict: {-13.24, 23.58, 18.44, 5.55, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	4.75	27.07	-40.13	
+mpu 2 ypr	8.01	27.66	-38.81	
+perdict: {-14.33, 24.57, 18.34, 6.38, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	4.83	27.20	-39.77	
+mpu 2 ypr	8.68	28.15	-39.37	
+perdict: {-15.39, 25.51, 18.18, 7.21, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	4.64	27.08	-39.20	
+mpu 2 ypr	9.11	28.42	-39.50	
+perdict: {-16.34, 26.31, 17.96, 7.97, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	3.75	26.40	-38.29	
+mpu 2 ypr	9.00	28.24	-39.04	
+perdict: {-16.88, 26.85, 17.75, 8.42, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	2.77	25.35	-37.82	
+mpu 2 ypr	8.69	27.64	-39.24	
+perdict: {-17.11, 27.12, 17.56, 8.64, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	2.31	24.41	-38.20	
+mpu 2 ypr	8.34	26.93	-40.14	
+perdict: {-17.27, 27.37, 17.62, 8.75, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	1.95	23.58	-38.85	
+mpu 2 ypr	7.89	26.24	-41.13	
+perdict: {-17.46, 27.69, 17.79, 8.87, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	1.55	22.80	-39.38	
+mpu 2 ypr	7.47	25.61	-41.97	
+perdict: {-17.65, 27.99, 17.93, 8.98, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	1.28	22.15	-39.75	
+mpu 2 ypr	7.28	25.14	-42.77	
+perdict: {-17.82, 28.27, 18.02, 9.10, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	1.33	21.83	-39.96	
+mpu 2 ypr	7.50	25.01	-43.50	
+perdict: {-17.94, 28.46, 18.10, 9.18, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	1.66	21.83	-39.84	
+mpu 2 ypr	8.14	25.21	-44.03	
+perdict: {-18.00, 28.55, 18.09, 9.23, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	2.27	22.02	-39.28	
+mpu 2 ypr	9.26	25.68	-44.32	
+perdict: {-17.98, 28.48, 17.99, 9.23, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	3.28	22.37	-38.40	
+mpu 2 ypr	10.85	26.42	-44.34	
+perdict: {-17.97, 28.45, 17.93, 9.23, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	4.42	22.81	-37.06	
+mpu 2 ypr	12.78	27.32	-44.14	
+perdict: {-18.28, 28.86, 17.78, 9.51, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	6.00	23.51	-36.01	
+mpu 2 ypr	14.94	28.41	-44.27	
+perdict: {-18.70, 29.44, 17.77, 9.83, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	7.43	24.36	-35.13	
+mpu 2 ypr	16.84	29.61	-44.24	
+perdict: {-19.13, 30.10, 17.88, 10.15, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	8.33	25.17	-34.36	
+mpu 2 ypr	18.28	30.77	-44.13	
+perdict: {-19.70, 30.94, 18.02, 10.57, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	8.89	25.83	-33.95	
+mpu 2 ypr	19.30	31.67	-44.25	
+perdict: {-20.29, 32.07, 18.99, 10.82, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	9.13	26.30	-33.78	
+mpu 2 ypr	19.89	32.38	-44.31	
+perdict: {-20.91, 33.10, 19.42, 11.22, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	9.00	26.91	-33.62	
+mpu 2 ypr	20.27	33.30	-44.18	
+perdict: {-21.73, 34.38, 19.87, 11.76, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	8.51	27.92	-33.29	
+mpu 2 ypr	20.62	34.66	-43.93	
+perdict: {-23.22, 36.17, 20.16, 12.89, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	8.35	29.58	-33.27	
+mpu 2 ypr	21.46	36.51	-44.59	
+perdict: {-25.46, 38.34, 20.30, 14.67, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	9.24	31.82	-33.82	
+mpu 2 ypr	23.07	38.65	-46.28	
+perdict: {-27.57, 41.10, 21.38, 16.12, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	10.99	34.37	-34.49	
+mpu 2 ypr	25.43	40.93	-48.56	
+perdict: {-29.80, 44.07, 22.44, 17.67, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	13.48	37.00	-35.11	
+mpu 2 ypr	28.33	43.21	-51.08	
+perdict: {-32.00, 47.07, 23.49, 19.19, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	16.25	39.50	-35.54	
+mpu 2 ypr	31.44	45.38	-53.67	
+perdict: {-33.97, 49.83, 24.48, 20.54, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	19.61	42.03	-36.25	
+mpu 2 ypr	34.81	47.40	-56.89	
+perdict: {-35.22, 52.10, 25.37, 21.33, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	23.10	44.51	-37.17	
+mpu 2 ypr	37.98	49.26	-60.21	
+perdict: {-36.17, 53.97, 26.10, 21.90, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	25.96	46.74	-38.10	
+mpu 2 ypr	40.61	50.85	-63.29	
+perdict: {-36.97, 55.52, 26.66, 22.40, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	28.23	48.51	-39.17	
+mpu 2 ypr	42.62	51.96	-66.12	
+perdict: {-37.25, 56.51, 27.24, 22.47, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	29.59	49.47	-40.29	
+mpu 2 ypr	43.61	52.33	-68.24	
+perdict: {-36.83, 56.62, 27.70, 22.01, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	29.64	49.29	-41.53	
+mpu 2 ypr	43.16	51.73	-69.31	
+perdict: {-35.58, 55.57, 27.82, 20.98, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	28.74	48.20	-42.92	
+mpu 2 ypr	41.71	50.36	-69.84	
+perdict: {-33.96, 53.95, 27.62, 19.71, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	27.32	46.62	-44.47	
+mpu 2 ypr	39.49	48.51	-69.78	
+perdict: {-32.40, 51.71, 26.96, 18.62, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	24.82	44.20	-45.53	
+mpu 2 ypr	36.27	46.10	-68.75	
+perdict: {-30.26, 48.30, 25.78, 17.20, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	21.55	41.14	-46.20	
+mpu 2 ypr	32.34	43.30	-66.99	
+perdict: {-27.85, 44.45, 24.37, 15.61, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	17.83	37.80	-46.34	
+mpu 2 ypr	28.09	40.43	-64.63	
+perdict: {-25.36, 40.47, 22.89, 13.97, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	14.19	34.54	-45.97	
+mpu 2 ypr	24.24	37.76	-62.32	
+perdict: {-23.53, 37.23, 20.76, 12.99, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	11.02	31.65	-45.24	
+mpu 2 ypr	20.96	35.53	-59.93	
+perdict: {-22.40, 35.53, 20.51, 12.15, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	8.52	29.43	-44.50	
+mpu 2 ypr	18.65	33.85	-58.29	
+perdict: {-22.21, 35.24, 20.43, 12.03, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	7.19	28.12	-44.04	
+mpu 2 ypr	17.39	32.87	-57.32	
+perdict: {-22.08, 35.04, 20.36, 11.94, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	6.33	27.43	-43.30	
+mpu 2 ypr	16.80	32.49	-56.35	
+perdict: {-22.03, 34.97, 20.38, 11.90, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	5.96	27.03	-42.26	
+mpu 2 ypr	16.87	32.43	-55.52	
+perdict: {-22.04, 34.98, 20.38, 11.90, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	6.33	26.82	-41.39	
+mpu 2 ypr	17.53	32.48	-55.11	
+perdict: {-22.01, 34.91, 20.28, 11.90, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	7.10	26.77	-40.77	
+mpu 2 ypr	18.37	32.59	-54.97	
+perdict: {-21.92, 34.74, 20.13, 11.86, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	7.96	26.83	-40.48	
+mpu 2 ypr	19.14	32.71	-55.07	
+perdict: {-21.83, 34.57, 19.98, 11.82, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	8.67	26.98	-40.61	
+mpu 2 ypr	19.63	32.77	-55.43	
+perdict: {-21.75, 34.42, 19.85, 11.79, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	9.04	27.15	-40.97	
+mpu 2 ypr	19.82	32.82	-55.81	
+perdict: {-21.74, 34.39, 19.81, 11.79, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	9.25	27.46	-41.16	
+mpu 2 ypr	20.01	33.04	-56.08	
+perdict: {-21.79, 34.47, 19.85, 11.82, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	9.54	27.91	-41.30	
+mpu 2 ypr	20.35	33.39	-56.47	
+perdict: {-21.88, 34.61, 19.90, 11.87, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	9.89	28.43	-41.72	
+mpu 2 ypr	20.62	33.72	-57.01	
+perdict: {-21.95, 34.74, 19.96, 11.92, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	9.96	28.87	-41.91	
+mpu 2 ypr	20.76	34.05	-57.31	
+perdict: {-22.06, 34.92, 20.06, 11.99, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	10.27	29.41	-42.08	
+mpu 2 ypr	21.19	34.49	-57.85	
+perdict: {-22.21, 35.16, 20.14, 12.09, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	10.79	30.01	-42.33	
+mpu 2 ypr	21.72	34.93	-58.43	
+perdict: {-22.31, 35.31, 20.18, 12.15, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	11.47	30.63	-42.37	
+mpu 2 ypr	22.54	35.48	-59.05	
+perdict: {-22.54, 35.63, 20.15, 12.34, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	12.62	31.72	-42.12	
+mpu 2 ypr	23.89	36.64	-59.39	
+perdict: {-23.01, 36.52, 20.92, 12.54, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	13.58	33.43	-41.22	
+mpu 2 ypr	25.72	38.57	-59.45	
+perdict: {-24.40, 38.85, 22.63, 13.29, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	15.17	35.63	-40.42	
+mpu 2 ypr	28.23	40.79	-60.26	
+perdict: {-27.23, 41.96, 23.06, 15.47, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	17.40	37.74	-39.83	
+mpu 2 ypr	30.96	42.78	-61.46	
+perdict: {-29.41, 44.73, 23.60, 17.08, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	19.44	39.22	-39.57	
+mpu 2 ypr	33.01	44.09	-62.57	
+perdict: {-30.48, 46.50, 24.09, 17.81, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	20.65	39.75	-40.08	
+mpu 2 ypr	33.74	44.27	-63.67	
+perdict: {-30.29, 46.62, 24.24, 17.61, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	20.63	39.21	-41.37	
+mpu 2 ypr	32.94	43.29	-64.48	
+perdict: {-28.91, 45.11, 24.01, 16.55, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	19.75	37.86	-42.95	
+mpu 2 ypr	31.04	41.51	-64.82	
+perdict: {-26.79, 42.50, 23.47, 14.98, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	18.01	35.87	-44.35	
+mpu 2 ypr	28.41	39.26	-64.62	
+perdict: {-24.55, 39.21, 22.58, 13.40, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	15.93	33.67	-45.71	
+mpu 2 ypr	25.48	36.81	-64.32	
+perdict: {-22.97, 36.26, 20.22, 12.66, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	13.71	31.37	-46.95	
+mpu 2 ypr	22.39	34.30	-63.84	
+perdict: {-22.07, 34.71, 19.31, 12.15, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	11.29	28.89	-48.13	
+mpu 2 ypr	19.11	31.62	-63.35	
+perdict: {-21.40, 33.78, 19.38, 11.61, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	8.89	26.35	-49.34	
+mpu 2 ypr	15.80	28.87	-62.90	
+perdict: {-20.67, 32.76, 19.49, 11.02, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	6.39	23.83	-50.23	
+mpu 2 ypr	12.53	26.24	-62.26	
+perdict: {-19.93, 31.71, 19.46, 10.45, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	4.18	21.57	-50.87	
+mpu 2 ypr	9.76	23.95	-61.71	
+perdict: {-20.32, 30.38, 19.94, 10.58, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	2.65	19.88	-51.36	
+mpu 2 ypr	7.80	22.20	-61.44	
+perdict: {-21.00, 27.93, 20.81, 10.81, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	1.81	18.79	-51.49	
+mpu 2 ypr	6.73	21.14	-61.19	
+perdict: {-21.32, 26.42, 21.29, 10.89, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	1.51	18.39	-51.14	
+mpu 2 ypr	6.51	20.94	-60.82	
+perdict: {-21.35, 26.36, 21.30, 10.91, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	1.89	18.93	-50.54	
+mpu 2 ypr	7.25	21.69	-60.64	
+perdict: {-21.11, 27.87, 20.80, 10.89, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	2.56	20.22	-49.64	
+mpu 2 ypr	8.51	23.26	-60.35	
+perdict: {-20.75, 30.87, 19.91, 10.92, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	3.66	22.20	-48.90	
+mpu 2 ypr	10.38	25.36	-60.70	
+perdict: {-20.79, 32.88, 19.32, 11.14, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	5.60	24.71	-48.85	
+mpu 2 ypr	12.88	27.60	-62.08	
+perdict: {-20.99, 33.10, 19.09, 11.35, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	7.83	27.19	-49.12	
+mpu 2 ypr	15.38	29.65	-63.65	
+perdict: {-21.50, 33.79, 18.98, 11.77, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	9.59	29.25	-49.37	
+mpu 2 ypr	17.41	31.35	-64.97	
+perdict: {-21.92, 34.39, 18.96, 12.10, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	10.85	30.83	-49.86	
+mpu 2 ypr	18.82	32.54	-66.20	
+perdict: {-22.18, 34.81, 19.10, 12.28, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	11.46	31.75	-50.48	
+mpu 2 ypr	19.42	33.09	-67.14	
+perdict: {-22.34, 35.05, 19.16, 12.39, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	11.30	31.97	-51.11	
+mpu 2 ypr	19.18	33.06	-67.66	
+perdict: {-22.41, 35.16, 19.18, 12.44, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	10.76	31.81	-51.87	
+mpu 2 ypr	18.47	32.68	-68.10	
+perdict: {-22.45, 35.21, 19.18, 12.47, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	9.95	31.45	-52.70	
+mpu 2 ypr	17.37	32.08	-68.37	
+perdict: {-22.41, 35.15, 19.15, 12.45, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	8.65	30.86	-53.31	
+mpu 2 ypr	15.93	31.40	-68.34	
+perdict: {-22.41, 35.16, 19.20, 12.44, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	7.55	30.42	-53.85	
+mpu 2 ypr	14.76	30.86	-68.46	
+perdict: {-22.46, 35.24, 19.25, 12.46, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	6.82	30.34	-54.13	
+mpu 2 ypr	14.17	30.74	-68.63	
+perdict: {-22.65, 35.55, 19.38, 12.59, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	6.56	30.76	-53.94	
+mpu 2 ypr	14.40	31.18	-68.85	
+perdict: {-22.89, 35.96, 19.56, 12.74, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	7.81	32.09	-53.74	
+mpu 2 ypr	16.54	32.35	-70.09	
+perdict: {-23.33, 36.61, 19.66, 13.06, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	11.18	34.71	-53.67	
+mpu 2 ypr	20.73	34.47	-72.30	
+perdict: {-23.84, 37.33, 19.62, 13.47, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	15.07	37.88	-52.78	
+mpu 2 ypr	25.57	37.33	-74.15	
+perdict: {-24.00, 37.73, 20.25, 13.46, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	18.86	41.09	-51.22	
+mpu 2 ypr	30.55	40.47	-75.83	
+perdict: {-24.93, 39.95, 23.21, 13.57, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	22.65	44.14	-49.72	
+mpu 2 ypr	35.22	43.44	-77.55	
+perdict: {-26.68, 43.06, 25.31, 14.50, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	25.18	46.37	-48.45	
+mpu 2 ypr	38.46	45.72	-78.60	
+perdict: {-28.80, 46.37, 26.25, 15.96, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	26.26	47.60	-47.96	
+mpu 2 ypr	40.15	46.96	-79.28	
+perdict: {-29.98, 48.21, 26.81, 16.76, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	26.18	47.98	-48.23	
+mpu 2 ypr	40.48	47.27	-79.61	
+perdict: {-30.32, 48.75, 26.99, 16.99, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	25.45	47.72	-48.92	
+mpu 2 ypr	39.95	46.86	-79.78	
+perdict: {-30.00, 48.26, 26.88, 16.76, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	124.27	-41.74	13.78	
+mpu 2 ypr	38.64	46.04	-79.35	
+perdict: {-13.63, -42.80, -44.22, 43.04, } out: 3 servo angle: 0 current: 0
+mpu 1 ypr	-29.12	38.14	70.19	
+mpu 2 ypr	36.61	44.89	-78.31	
+perdict: {-50.23, 97.67, 95.96, 18.17, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	21.03	44.12	-49.78	
+mpu 2 ypr	34.65	43.76	-77.24	
+perdict: {-27.02, 43.67, 25.72, 14.68, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	19.37	42.52	-49.89	
+mpu 2 ypr	32.43	42.41	-76.09	
+perdict: {-25.90, 41.86, 24.98, 13.96, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	17.55	40.66	-50.04	
+mpu 2 ypr	29.86	40.81	-74.78	
+perdict: {-24.91, 40.09, 23.81, 13.43, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	15.55	38.51	-50.19	
+mpu 2 ypr	27.04	38.94	-73.40	
+perdict: {-24.13, 38.47, 22.08, 13.18, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	13.48	36.18	-50.36	
+mpu 2 ypr	24.06	36.90	-71.99	
+perdict: {-23.91, 37.66, 20.42, 13.35, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	11.52	33.86	-50.61	
+mpu 2 ypr	21.20	34.77	-70.79	
+perdict: {-23.53, 36.84, 19.48, 13.26, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	9.89	31.73	-51.01	
+mpu 2 ypr	18.68	32.73	-69.89	
+perdict: {-23.01, 35.98, 19.10, 12.92, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	8.42	29.82	-51.27	
+mpu 2 ypr	16.41	30.93	-68.96	
+perdict: {-22.51, 35.18, 18.77, 12.61, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	7.00	28.16	-51.32	
+mpu 2 ypr	14.46	29.43	-68.07	
+perdict: {-22.14, 34.58, 18.54, 12.37, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	5.94	26.97	-51.36	
+mpu 2 ypr	13.06	28.36	-67.42	
+perdict: {-22.09, 34.46, 18.41, 12.35, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	5.32	26.31	-51.24	
+mpu 2 ypr	12.27	27.79	-66.93	
+perdict: {-22.12, 34.50, 18.36, 12.39, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	5.14	26.13	-50.83	
+mpu 2 ypr	12.20	27.78	-66.56	
+perdict: {-22.12, 34.50, 18.38, 12.38, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	5.39	26.44	-50.19	
+mpu 2 ypr	12.72	28.28	-66.22	
+perdict: {-22.03, 34.40, 18.46, 12.29, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	5.83	26.98	-49.20	
+mpu 2 ypr	13.62	29.11	-65.75	
+perdict: {-21.91, 34.26, 18.60, 12.17, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	6.68	27.72	-48.07	
+mpu 2 ypr	15.02	30.17	-65.45	
+perdict: {-22.07, 34.55, 18.77, 12.26, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	8.05	28.62	-46.94	
+mpu 2 ypr	16.94	31.36	-65.44	
+perdict: {-22.24, 34.81, 18.87, 12.37, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	9.91	29.51	-45.88	
+mpu 2 ypr	19.09	32.50	-65.58	
+perdict: {-22.30, 34.90, 18.86, 12.42, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	11.89	30.22	-44.79	
+mpu 2 ypr	21.20	33.54	-65.63	
+perdict: {-22.27, 34.85, 18.80, 12.41, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	13.96	30.82	-43.86	
+mpu 2 ypr	23.21	34.43	-65.79	
+perdict: {-22.16, 34.81, 19.21, 12.24, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	16.01	31.40	-43.12	
+mpu 2 ypr	25.07	35.29	-65.95	
+perdict: {-21.90, 34.60, 19.75, 11.93, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	17.72	32.10	-42.58	
+mpu 2 ypr	26.62	36.18	-66.07	
+perdict: {-22.18, 35.21, 20.49, 11.99, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	19.05	32.79	-42.18	
+mpu 2 ypr	27.85	36.98	-66.13	
+perdict: {-22.46, 35.82, 21.16, 12.07, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	19.91	33.27	-41.65	
+mpu 2 ypr	28.75	37.68	-65.83	
+perdict: {-22.79, 36.48, 21.78, 12.20, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	20.49	33.69	-41.05	
+mpu 2 ypr	29.49	38.34	-65.45	
+perdict: {-23.23, 37.29, 22.42, 12.41, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	21.14	34.22	-40.67	
+mpu 2 ypr	30.26	39.01	-65.32	
+perdict: {-23.71, 38.13, 22.95, 12.67, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	21.67	34.84	-40.29	
+mpu 2 ypr	30.98	39.74	-65.13	
+perdict: {-24.37, 39.20, 23.37, 13.10, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	22.28	35.60	-40.02	
+mpu 2 ypr	31.80	40.55	-65.21	
+perdict: {-25.08, 40.34, 23.79, 13.57, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	23.03	36.72	-39.92	
+mpu 2 ypr	32.81	41.60	-65.51	
+perdict: {-25.98, 41.76, 24.29, 14.16, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	23.65	38.03	-39.71	
+mpu 2 ypr	33.87	42.86	-65.70	
+perdict: {-27.11, 43.53, 24.83, 14.93, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	23.79	39.39	-39.20	
+mpu 2 ypr	34.80	44.30	-65.49	
+perdict: {-28.73, 45.56, 25.16, 16.15, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	23.86	40.84	-38.78	
+mpu 2 ypr	35.86	45.75	-65.70	
+perdict: {-30.56, 47.55, 25.29, 17.59, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	24.43	42.48	-38.97	
+mpu 2 ypr	37.14	47.09	-66.74	
+perdict: {-31.89, 49.14, 25.53, 18.59, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	24.96	43.87	-39.50	
+mpu 2 ypr	38.13	48.08	-67.86	
+perdict: {-32.66, 50.31, 25.93, 19.12, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	24.95	44.61	-40.03	
+mpu 2 ypr	38.51	48.53	-68.62	
+perdict: {-32.97, 50.90, 26.21, 19.30, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	24.75	44.75	-40.72	
+mpu 2 ypr	38.41	48.42	-69.27	
+perdict: {-32.69, 50.84, 26.37, 19.03, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	24.48	44.51	-41.68	
+mpu 2 ypr	37.89	47.88	-69.84	
+perdict: {-31.95, 50.27, 26.40, 18.42, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	23.81	43.99	-42.61	
+mpu 2 ypr	36.89	47.14	-69.95	
+perdict: {-31.10, 49.18, 26.15, 17.80, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	22.31	43.00	-43.29	
+mpu 2 ypr	35.20	46.12	-69.37	
+perdict: {-30.16, 47.72, 25.76, 17.14, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	20.51	41.68	-44.01	
+mpu 2 ypr	33.12	44.79	-68.72	
+perdict: {-28.86, 45.78, 25.28, 16.22, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	18.65	40.15	-44.84	
+mpu 2 ypr	30.80	43.20	-68.11	
+perdict: {-27.24, 43.44, 24.74, 15.07, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	16.74	38.45	-45.71	
+mpu 2 ypr	28.26	41.43	-67.46	
+perdict: {-25.39, 40.79, 24.12, 13.75, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	14.53	36.53	-46.32	
+mpu 2 ypr	25.41	39.57	-66.40	
+perdict: {-24.14, 38.49, 22.40, 13.13, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	11.68	34.38	-46.36	
+mpu 2 ypr	22.09	37.75	-64.56	
+perdict: {-23.40, 37.12, 21.04, 12.83, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	8.56	32.18	-45.94	
+mpu 2 ypr	18.85	36.00	-62.65	
+perdict: {-23.13, 36.73, 21.01, 12.63, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	6.21	30.28	-45.61	
+mpu 2 ypr	16.30	34.42	-61.21	
+perdict: {-22.85, 36.30, 20.91, 12.43, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	4.43	28.62	-45.20	
+mpu 2 ypr	14.36	33.04	-60.02	
+perdict: {-22.58, 35.87, 20.75, 12.25, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	3.33	27.23	-44.83	
+mpu 2 ypr	13.09	31.85	-59.17	
+perdict: {-22.34, 35.45, 20.52, 12.11, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	2.58	26.06	-44.30	
+mpu 2 ypr	12.23	30.94	-58.23	
+perdict: {-22.27, 35.30, 20.35, 12.08, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	1.99	25.19	-43.65	
+mpu 2 ypr	11.68	30.33	-57.33	
+perdict: {-22.19, 35.16, 20.25, 12.05, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	1.40	24.53	-42.87	
+mpu 2 ypr	11.18	29.99	-56.14	
+perdict: {-22.12, 35.06, 20.26, 11.99, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	0.19	23.74	-41.53	
+mpu 2 ypr	10.37	29.76	-54.24	
+perdict: {-22.19, 35.22, 20.44, 12.01, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	-1.64	22.65	-39.71	
+mpu 2 ypr	9.16	29.43	-51.63	
+perdict: {-22.36, 35.55, 20.72, 12.08, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	-3.61	21.44	-37.94	
+mpu 2 ypr	7.95	28.93	-49.26	
+perdict: {-22.60, 35.96, 20.96, 12.22, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	-5.33	20.18	-36.54	
+mpu 2 ypr	6.78	28.24	-47.19	
+perdict: {-22.77, 36.23, 21.08, 12.33, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	-6.77	18.96	-35.75	
+mpu 2 ypr	5.71	27.34	-45.93	
+perdict: {-22.94, 36.46, 21.06, 12.46, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	-7.90	17.76	-35.57	
+mpu 2 ypr	4.60	26.26	-45.08	
+perdict: {-23.04, 36.57, 20.94, 12.56, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	-9.35	16.34	-35.17	
+mpu 2 ypr	3.24	25.03	-43.93	
+perdict: {-23.17, 36.73, 20.81, 12.70, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	-11.01	14.86	-34.41	
+mpu 2 ypr	1.85	23.86	-42.38	
+perdict: {-23.77, 37.22, 19.69, 13.48, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	-12.49	13.58	-33.34	
+mpu 2 ypr	0.96	22.96	-40.96	
+perdict: {-24.65, 37.81, 17.62, 14.70, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	-12.85	13.01	-32.67	
+mpu 2 ypr	1.09	22.62	-40.41	
+perdict: {-24.94, 37.97, 16.77, 15.14, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	-12.32	13.34	-32.22	
+mpu 2 ypr	2.08	23.05	-40.36	
+perdict: {-24.37, 37.54, 18.01, 14.37, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	-11.25	14.33	-31.76	
+mpu 2 ypr	3.63	24.10	-40.42	
+perdict: {-23.23, 36.71, 20.50, 12.84, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	-10.07	15.59	-30.90	
+mpu 2 ypr	5.47	25.58	-40.13	
+perdict: {-22.66, 36.18, 21.46, 12.16, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	-8.70	17.03	-29.79	
+mpu 2 ypr	7.65	27.25	-39.74	
+perdict: {-22.20, 35.69, 21.97, 11.70, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	-7.35	18.52	-28.55	
+mpu 2 ypr	9.89	29.05	-39.11	
+perdict: {-22.79, 36.70, 22.55, 12.04, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	-6.44	20.02	-27.07	
+mpu 2 ypr	11.87	30.92	-38.11	
+perdict: {-24.04, 38.94, 24.10, 12.69, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	-5.53	21.52	-26.14	
+mpu 2 ypr	13.69	32.64	-37.75	
+perdict: {-25.43, 41.32, 25.45, 13.49, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	-4.65	22.85	-25.75	
+mpu 2 ypr	15.16	34.05	-37.66	
+perdict: {-26.68, 42.97, 26.20, 14.33, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	-4.53	23.76	-25.34	
+mpu 2 ypr	15.88	35.06	-37.22	
+perdict: {-27.68, 44.14, 26.82, 15.01, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	-4.91	24.39	-25.04	
+mpu 2 ypr	16.04	35.79	-36.71	
+perdict: {-28.46, 45.15, 27.43, 15.50, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	-5.90	24.90	-24.70	
+mpu 2 ypr	15.72	36.41	-36.03	
+perdict: {-29.22, 46.22, 28.22, 15.94, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	-6.80	25.38	-24.71	
+mpu 2 ypr	15.39	36.91	-35.91	
+perdict: {-29.81, 47.15, 28.92, 16.27, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	-7.45	25.84	-24.95	
+mpu 2 ypr	15.13	37.30	-36.06	
+perdict: {-30.22, 47.84, 29.42, 16.49, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	-7.93	26.23	-25.27	
+mpu 2 ypr	14.99	37.62	-36.39	
+perdict: {-30.54, 48.41, 29.82, 16.65, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	-8.23	26.50	-25.63	
+mpu 2 ypr	14.94	37.84	-36.76	
+perdict: {-30.75, 48.82, 30.07, 16.77, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	-8.29	26.62	-26.18	
+mpu 2 ypr	14.97	37.85	-37.41	
+perdict: {-30.73, 48.93, 30.08, 16.74, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	-8.19	26.61	-26.93	
+mpu 2 ypr	14.96	37.68	-38.22	
+perdict: {-30.49, 48.76, 29.89, 16.58, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	-7.99	26.56	-27.83	
+mpu 2 ypr	14.96	37.41	-39.26	
+perdict: {-30.11, 48.43, 29.58, 16.33, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	-7.39	26.59	-29.30	
+mpu 2 ypr	15.07	37.04	-40.98	
+perdict: {-29.48, 47.74, 28.96, 15.95, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	-7.19	26.68	-30.97	
+mpu 2 ypr	14.67	36.68	-42.56	
+perdict: {-28.80, 46.74, 28.25, 15.56, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	-7.04	26.88	-33.05	
+mpu 2 ypr	14.21	36.25	-44.87	
+perdict: {-28.00, 45.59, 27.51, 15.07, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	-6.69	27.01	-35.47	
+mpu 2 ypr	13.51	35.68	-47.03	
+perdict: {-27.05, 43.87, 26.28, 14.58, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	-7.77	26.93	-37.28	
+mpu 2 ypr	11.89	35.13	-48.32	
+perdict: {-26.53, 42.93, 25.58, 14.33, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	-8.60	27.06	-39.33	
+mpu 2 ypr	10.64	34.65	-50.32	
+perdict: {-26.33, 42.67, 25.66, 14.15, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	-8.90	27.54	-41.33	
+mpu 2 ypr	9.83	34.50	-52.23	
+perdict: {-26.96, 43.53, 25.53, 14.67, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	-9.82	28.09	-42.54	
+mpu 2 ypr	8.87	34.68	-53.31	
+perdict: {-27.61, 44.56, 25.87, 15.11, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	-10.81	28.80	-43.29	
+mpu 2 ypr	8.26	35.14	-54.25	
+perdict: {-28.26, 45.64, 26.42, 15.50, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	-11.41	29.69	-43.75	
+mpu 2 ypr	8.21	35.84	-55.13	
+perdict: {-28.75, 46.51, 26.98, 15.77, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	-11.62	30.80	-44.05	
+mpu 2 ypr	8.75	36.77	-56.11	
+perdict: {-29.17, 47.26, 27.50, 15.99, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	-11.26	32.26	-44.57	
+mpu 2 ypr	10.01	37.91	-57.59	
+perdict: {-29.60, 47.97, 27.80, 16.26, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	-10.39	34.06	-45.35	
+mpu 2 ypr	11.83	39.23	-59.46	
+perdict: {-30.00, 48.74, 28.51, 16.42, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	-9.38	35.98	-46.26	
+mpu 2 ypr	13.96	40.59	-61.60	
+perdict: {-30.98, 50.22, 29.39, 17.02, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	-8.49	37.84	-47.22	
+mpu 2 ypr	16.10	41.88	-63.75	
+perdict: {-32.05, 51.90, 30.26, 17.68, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	-7.72	39.58	-48.17	
+mpu 2 ypr	18.29	43.06	-65.92	
+perdict: {-33.20, 53.71, 31.06, 18.41, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	-7.19	41.21	-49.06	
+mpu 2 ypr	20.35	44.17	-67.87	
+perdict: {-34.36, 55.58, 31.91, 19.14, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	-7.55	42.55	-49.66	
+mpu 2 ypr	21.73	45.16	-69.33	
+perdict: {-35.60, 57.69, 33.05, 19.87, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	-9.02	43.47	-49.72	
+mpu 2 ypr	22.05	46.04	-69.90	
+perdict: {-36.80, 59.92, 34.66, 20.47, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	-11.32	43.85	-48.89	
+mpu 2 ypr	21.48	46.73	-69.54	
+perdict: {-37.94, 62.15, 36.63, 20.95, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	-13.61	43.82	-47.33	
+mpu 2 ypr	20.42	47.29	-68.39	
+perdict: {-38.92, 64.01, 38.51, 21.33, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	-14.33	43.50	-45.86	
+mpu 2 ypr	20.16	47.47	-67.46	
+perdict: {-39.33, 64.74, 39.40, 21.47, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	-14.26	42.92	-44.76	
+mpu 2 ypr	19.88	47.32	-66.52	
+perdict: {-39.15, 64.43, 39.48, 21.32, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	-14.10	42.09	-43.91	
+mpu 2 ypr	19.38	46.83	-65.62	
+perdict: {-38.61, 63.55, 39.18, 20.96, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	-13.65	41.04	-43.26	
+mpu 2 ypr	18.80	46.08	-64.74	
+perdict: {-37.71, 62.09, 38.45, 20.41, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	-13.42	39.69	-42.39	
+mpu 2 ypr	17.82	45.16	-63.44	
+perdict: {-36.66, 60.40, 37.69, 19.74, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	-12.77	38.25	-41.81	
+mpu 2 ypr	17.30	44.01	-62.65	
+perdict: {-35.43, 58.44, 36.59, 19.00, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	-13.12	36.76	-40.61	
+mpu 2 ypr	15.79	43.05	-60.63	
+perdict: {-34.43, 56.90, 36.02, 18.34, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	-13.01	35.80	-39.27	
+mpu 2 ypr	15.57	42.61	-59.19	
+perdict: {-34.12, 56.40, 35.88, 18.13, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	-11.97	35.59	-38.45	
+mpu 2 ypr	16.54	42.62	-58.73	
+perdict: {-34.17, 56.31, 35.67, 18.22, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	-10.35	35.93	-38.01	
+mpu 2 ypr	18.20	42.98	-58.91	
+perdict: {-34.45, 56.48, 35.44, 18.50, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	-8.56	36.42	-37.63	
+mpu 2 ypr	20.05	43.45	-59.33	
+perdict: {-34.81, 56.55, 35.14, 18.86, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	-6.20	37.07	-37.78	
+mpu 2 ypr	22.32	43.88	-60.51	
+perdict: {-35.01, 56.39, 34.55, 19.15, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	-3.09	37.88	-38.43	
+mpu 2 ypr	24.88	44.25	-62.31	
+perdict: {-34.92, 55.78, 33.56, 19.29, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	-0.56	38.57	-39.16	
+mpu 2 ypr	26.73	44.49	-63.82	
+perdict: {-34.71, 55.13, 32.66, 19.32, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	2.12	39.13	-40.47	
+mpu 2 ypr	28.46	44.32	-66.04	
+perdict: {-34.04, 53.93, 31.38, 19.06, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	5.61	39.64	-42.54	
+mpu 2 ypr	30.21	43.81	-68.93	
+perdict: {-32.32, 51.37, 29.41, 18.10, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	8.78	39.91	-45.00	
+mpu 2 ypr	31.27	42.91	-71.71	
+perdict: {-30.23, 48.32, 27.25, 16.89, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	11.18	39.73	-47.57	
+mpu 2 ypr	31.52	41.54	-74.20	
+perdict: {-29.00, 46.47, 25.66, 16.24, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	13.83	39.41	-50.46	
+mpu 2 ypr	31.66	39.85	-77.00	
+perdict: {-27.81, 44.16, 23.57, 15.74, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	16.30	39.14	-53.29	
+mpu 2 ypr	31.65	38.19	-79.53	
+perdict: {-26.61, 41.83, 21.53, 15.23, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	18.48	38.95	-55.79	
+mpu 2 ypr	31.60	36.66	-81.86	
+perdict: {-25.52, 39.72, 19.65, 14.77, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	20.88	38.99	-58.08	
+mpu 2 ypr	31.86	35.40	-84.20	
+perdict: {-24.71, 38.07, 17.99, 14.48, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	22.99	39.11	-59.62	
+mpu 2 ypr	32.14	34.50	-86.00	
+perdict: {-24.18, 36.96, 16.75, 14.33, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	24.59	39.15	-60.22	
+mpu 2 ypr	32.38	33.97	-87.18	
+perdict: {-23.53, 35.96, 16.51, 13.87, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	26.86	39.60	-60.65	
+mpu 2 ypr	33.20	33.80	-88.87	
+perdict: {-21.74, 34.28, 16.56, 12.52, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	30.00	40.63	-61.23	
+mpu 2 ypr	34.58	145.94	-91.10	
+perdict: {-75.96, 141.13, 118.79, 33.51, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	32.82	41.82	-61.28	
+mpu 2 ypr	35.95	145.28	-92.87	
+perdict: {-74.47, 138.43, 116.85, 32.75, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	35.46	43.14	-61.02	
+mpu 2 ypr	37.38	144.35	-94.41	
+perdict: {-73.16, 136.22, 115.67, 31.98, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	37.85	44.49	-60.61	
+mpu 2 ypr	38.81	143.26	-95.72	
+perdict: {-72.07, 134.34, 114.63, 31.34, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	39.88	45.72	-59.97	
+mpu 2 ypr	40.12	142.17	-96.77	
+perdict: {-71.18, 132.78, 113.59, 30.87, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	41.77	46.78	-59.44	
+mpu 2 ypr	41.25	141.22	-97.83	
+perdict: {-70.32, 131.27, 112.65, 30.39, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	43.21	47.52	-58.98	
+mpu 2 ypr	42.04	140.49	-98.53	
+perdict: {-69.65, 130.10, 111.95, 30.01, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	44.34	47.90	-58.93	
+mpu 2 ypr	42.36	140.24	-99.34	
+perdict: {-69.04, 129.13, 111.60, 29.61, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	45.29	48.01	-59.18	
+mpu 2 ypr	42.32	140.28	-100.09	
+perdict: {-68.45, 128.25, 111.46, 29.18, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	45.59	47.66	-59.26	
+mpu 2 ypr	41.88	140.55	-100.15	
+perdict: {-68.20, 127.96, 111.66, 28.94, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	46.12	47.30	-59.96	
+mpu 2 ypr	41.15	141.25	-101.09	
+perdict: {-67.72, 127.36, 111.96, 28.50, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	46.87	47.01	-61.03	
+mpu 2 ypr	40.31	141.98	-102.21	
+perdict: {-66.87, 126.47, 111.50, 28.18, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	46.78	46.13	-61.30	
+mpu 2 ypr	39.26	142.66	-101.88	
+perdict: {-66.28, 126.27, 111.08, 28.21, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	46.01	44.80	-60.62	
+mpu 2 ypr	38.08	143.25	-99.49	
+perdict: {-66.35, 127.04, 111.44, 28.49, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	44.66	42.93	-59.06	
+mpu 2 ypr	37.07	143.74	-96.63	
+perdict: {-67.28, 128.62, 112.93, 28.80, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	43.62	41.17	-57.37	
+mpu 2 ypr	36.31	144.05	-93.61	
+perdict: {-68.14, 130.11, 114.25, 29.13, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	42.43	39.13	-55.31	
+mpu 2 ypr	35.61	144.41	-90.25	
+perdict: {-69.50, 132.19, 116.21, 29.55, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	41.42	37.42	-53.78	
+mpu 2 ypr	35.09	35.26	-87.19	
+perdict: {-2.40, 13.67, 17.53, -1.03, } out: 2 servo angle: 30 current: 0
+mpu 1 ypr	40.15	36.05	-52.55	
+mpu 2 ypr	34.59	34.93	-84.26	
+perdict: {-3.97, 15.67, 17.94, -0.22, } out: 2 servo angle: 30 current: 30
+mpu 1 ypr	38.93	35.38	-51.96	
+mpu 2 ypr	34.15	34.73	-82.09	
+perdict: {-5.71, 17.50, 18.52, 0.72, } out: 2 servo angle: 30 current: 30
+mpu 1 ypr	37.65	34.88	-51.45	
+mpu 2 ypr	33.67	34.59	-80.21	
+perdict: {-7.70, 19.30, 19.26, 1.79, } out: 1 servo angle: 0 current: 30
+mpu 1 ypr	36.55	34.57	-50.83	
+mpu 2 ypr	33.34	34.63	-78.51	
+perdict: {-9.84, 21.33, 20.15, 2.96, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	35.88	34.70	-50.47	
+mpu 2 ypr	33.33	34.98	-77.56	
+perdict: {-11.89, 23.44, 21.13, 4.09, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	35.64	35.48	-50.41	
+mpu 2 ypr	33.60	35.66	-77.14	
+perdict: {-13.81, 25.73, 22.10, 5.25, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	35.87	36.75	-50.62	
+mpu 2 ypr	34.26	36.66	-77.31	
+perdict: {-15.57, 28.01, 22.95, 6.42, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	35.96	37.99	-50.44	
+mpu 2 ypr	35.01	37.82	-77.24	
+perdict: {-17.80, 30.61, 23.69, 7.95, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	36.53	39.63	-50.48	
+mpu 2 ypr	36.12	39.18	-77.77	
+perdict: {-19.59, 32.85, 24.46, 9.15, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	37.34	41.32	-50.58	
+mpu 2 ypr	37.40	40.54	-78.59	
+perdict: {-20.79, 34.68, 25.32, 9.90, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	38.11	42.84	-50.46	
+mpu 2 ypr	38.64	41.88	-79.09	
+perdict: {-22.04, 36.75, 26.30, 10.67, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	38.71	44.08	-50.24	
+mpu 2 ypr	39.70	42.95	-79.65	
+perdict: {-22.97, 38.33, 26.64, 11.34, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	39.12	44.87	-50.17	
+mpu 2 ypr	40.31	43.63	-79.85	
+perdict: {-23.25, 39.10, 26.95, 11.51, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	38.65	44.91	-49.97	
+mpu 2 ypr	40.18	43.80	-79.36	
+perdict: {-23.63, 39.56, 26.95, 11.80, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	37.99	44.58	-49.97	
+mpu 2 ypr	39.73	43.57	-78.99	
+perdict: {-23.82, 39.53, 26.74, 11.97, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	37.37	44.14	-50.14	
+mpu 2 ypr	39.17	43.16	-78.75	
+perdict: {-23.67, 39.13, 26.49, 11.91, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	36.73	43.61	-50.25	
+mpu 2 ypr	38.50	42.71	-78.31	
+perdict: {-23.33, 38.58, 26.27, 11.69, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	35.97	42.93	-50.09	
+mpu 2 ypr	37.77	42.24	-77.57	
+perdict: {-23.01, 38.07, 26.06, 11.48, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	35.13	42.05	-49.49	
+mpu 2 ypr	36.94	41.78	-76.34	
+perdict: {-22.71, 37.60, 25.92, 11.28, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	33.98	40.83	-48.41	
+mpu 2 ypr	35.93	41.29	-74.37	
+perdict: {-22.47, 37.23, 25.82, 11.11, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	32.60	39.33	-46.90	
+mpu 2 ypr	34.82	40.71	-72.00	
+perdict: {-22.25, 36.86, 25.69, 10.96, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	31.43	37.91	-45.65	
+mpu 2 ypr	33.86	40.06	-70.05	
+perdict: {-21.93, 36.36, 25.51, 10.75, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	30.25	36.52	-44.46	
+mpu 2 ypr	32.86	39.45	-67.77	
+perdict: {-21.67, 35.96, 25.41, 10.57, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	28.82	35.03	-42.91	
+mpu 2 ypr	31.88	38.87	-65.16	
+perdict: {-21.58, 35.79, 25.29, 10.52, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	27.71	33.72	-41.38	
+mpu 2 ypr	31.24	38.40	-62.99	
+perdict: {-21.56, 35.73, 25.20, 10.52, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	27.22	32.81	-40.39	
+mpu 2 ypr	30.97	38.02	-61.56	
+perdict: {-21.45, 35.58, 25.18, 10.45, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	26.68	31.88	-39.41	
+mpu 2 ypr	30.60	37.59	-59.90	
+perdict: {-21.28, 35.33, 25.17, 10.31, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	25.95	30.72	-38.30	
+mpu 2 ypr	30.14	36.99	-58.06	
+perdict: {-21.03, 34.95, 25.07, 10.14, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	25.13	29.44	-37.13	
+mpu 2 ypr	29.62	36.31	-56.00	
+perdict: {-20.75, 34.51, 24.95, 9.94, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	24.24	28.06	-36.00	
+mpu 2 ypr	29.11	35.50	-54.05	
+perdict: {-20.41, 33.97, 24.75, 9.72, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	23.36	26.68	-34.85	
+mpu 2 ypr	28.61	34.71	-51.88	
+perdict: {-20.12, 33.50, 24.60, 9.52, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	22.40	25.36	-33.63	
+mpu 2 ypr	28.18	33.93	-49.88	
+perdict: {-19.89, 33.11, 24.36, 9.40, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	21.74	24.23	-32.75	
+mpu 2 ypr	27.92	33.20	-48.46	
+perdict: {-19.64, 32.68, 24.13, 9.25, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	21.44	23.43	-32.30	
+mpu 2 ypr	27.81	32.64	-47.41	
+perdict: {-19.41, 32.33, 24.05, 9.08, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	20.93	22.85	-31.63	
+mpu 2 ypr	27.70	32.33	-46.19	
+perdict: {-19.46, 32.37, 23.96, 9.14, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	20.72	22.77	-31.43	
+mpu 2 ypr	27.79	32.38	-45.81	
+perdict: {-19.65, 32.66, 24.00, 9.28, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	20.35	23.05	-31.18	
+mpu 2 ypr	27.78	32.75	-44.94	
+perdict: {-20.13, 33.38, 24.15, 9.62, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	19.56	23.39	-30.72	
+mpu 2 ypr	27.57	33.17	-44.05	
+perdict: {-20.72, 34.23, 24.15, 10.09, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	19.30	23.97	-30.85	
+mpu 2 ypr	27.66	33.62	-44.45	
+perdict: {-21.16, 34.84, 24.12, 10.44, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	19.44	24.52	-31.33	
+mpu 2 ypr	27.82	33.98	-44.96	
+perdict: {-21.40, 35.22, 24.23, 10.60, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	19.51	25.16	-31.82	
+mpu 2 ypr	27.96	34.48	-45.48	
+perdict: {-21.73, 35.75, 24.39, 10.83, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	19.71	26.25	-32.60	
+mpu 2 ypr	28.20	35.29	-46.65	
+perdict: {-22.23, 36.51, 24.59, 11.17, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	20.38	27.99	-34.22	
+mpu 2 ypr	28.65	36.43	-48.92	
+perdict: {-22.78, 37.39, 24.91, 11.54, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	21.23	30.22	-36.25	
+mpu 2 ypr	29.20	37.85	-51.55	
+perdict: {-23.50, 38.53, 25.31, 12.01, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	22.03	32.48	-38.35	
+mpu 2 ypr	29.77	39.22	-54.33	
+perdict: {-24.22, 39.65, 25.63, 12.51, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	22.50	34.38	-40.26	
+mpu 2 ypr	30.09	40.33	-56.62	
+perdict: {-24.80, 40.54, 25.85, 12.92, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	22.19	35.71	-41.78	
+mpu 2 ypr	29.91	41.11	-58.16	
+perdict: {-25.23, 41.16, 25.87, 13.25, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	21.51	36.54	-43.11	
+mpu 2 ypr	29.52	41.50	-59.59	
+perdict: {-25.43, 41.40, 25.68, 13.45, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	20.82	36.99	-44.29	
+mpu 2 ypr	28.96	41.57	-60.68	
+perdict: {-25.35, 41.20, 25.42, 13.44, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	19.64	36.96	-44.84	
+mpu 2 ypr	28.00	41.48	-60.78	
+perdict: {-25.19, 40.88, 25.13, 13.37, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	17.83	36.52	-44.60	
+mpu 2 ypr	26.68	41.28	-59.99	
+perdict: {-25.07, 40.60, 24.73, 13.36, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	15.71	35.71	-43.75	
+mpu 2 ypr	25.15	40.95	-58.50	
+perdict: {-24.91, 40.24, 24.27, 13.34, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	13.06	34.57	-42.28	
+mpu 2 ypr	23.23	40.56	-56.12	
+perdict: {-24.77, 39.88, 23.77, 13.33, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	10.30	33.47	-40.77	
+mpu 2 ypr	21.32	40.22	-53.79	
+perdict: {-25.17, 39.34, 22.87, 13.87, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	7.65	32.67	-39.44	
+mpu 2 ypr	19.65	40.07	-51.98	
+perdict: {-25.84, 39.46, 22.45, 14.52, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	5.93	32.43	-38.68	
+mpu 2 ypr	18.65	40.20	-50.84	
+perdict: {-26.46, 40.20, 22.78, 14.95, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	4.17	32.27	-37.48	
+mpu 2 ypr	17.89	40.46	-49.58	
+perdict: {-27.18, 41.56, 24.03, 15.25, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	3.08	32.19	-36.37	
+mpu 2 ypr	17.72	40.71	-48.69	
+perdict: {-27.83, 42.73, 25.00, 15.56, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	2.95	32.18	-35.74	
+mpu 2 ypr	18.21	40.80	-48.62	
+perdict: {-28.19, 43.35, 25.43, 15.75, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	3.61	32.12	-35.71	
+mpu 2 ypr	19.06	40.64	-49.23	
+perdict: {-28.13, 43.25, 25.22, 15.75, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	4.97	32.10	-36.15	
+mpu 2 ypr	20.24	40.28	-50.55	
+perdict: {-27.72, 42.52, 24.50, 15.58, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	7.18	31.96	-37.13	
+mpu 2 ypr	21.75	39.64	-52.56	
+perdict: {-26.84, 40.96, 23.12, 15.17, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	9.04	31.86	-38.04	
+mpu 2 ypr	22.64	39.16	-53.79	
+perdict: {-25.81, 39.78, 22.65, 14.44, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	9.72	32.08	-38.87	
+mpu 2 ypr	22.90	39.08	-54.74	
+perdict: {-25.36, 39.42, 22.68, 14.07, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	10.34	32.87	-40.45	
+mpu 2 ypr	23.26	39.26	-56.79	
+perdict: {-25.04, 39.33, 22.93, 13.75, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	11.24	34.21	-42.75	
+mpu 2 ypr	23.80	39.66	-59.61	
+perdict: {-24.96, 39.46, 22.94, 13.68, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	12.40	35.86	-45.65	
+mpu 2 ypr	24.61	40.04	-63.24	
+perdict: {-24.90, 39.69, 22.88, 13.62, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	13.94	37.55	-48.86	
+mpu 2 ypr	25.65	40.34	-66.97	
+perdict: {-25.04, 39.91, 22.60, 13.78, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	14.88	38.87	-51.43	
+mpu 2 ypr	26.40	40.49	-69.88	
+perdict: {-25.19, 40.06, 22.33, 13.96, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	16.07	39.98	-53.79	
+mpu 2 ypr	27.60	40.46	-72.94	
+perdict: {-25.65, 40.62, 22.06, 14.37, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	17.85	41.17	-56.23	
+mpu 2 ypr	29.08	40.44	-75.86	
+perdict: {-25.95, 40.96, 21.75, 14.67, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	18.95	42.06	-58.07	
+mpu 2 ypr	30.19	40.38	-78.07	
+perdict: {-26.21, 41.27, 21.55, 14.91, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	19.90	42.77	-59.69	
+mpu 2 ypr	31.25	40.25	-80.03	
+perdict: {-26.45, 41.56, 21.40, 15.13, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	20.42	43.21	-61.01	
+mpu 2 ypr	31.87	39.98	-81.48	
+perdict: {-26.57, 41.69, 21.23, 15.26, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	20.56	43.30	-62.05	
+mpu 2 ypr	32.09	39.47	-82.57	
+perdict: {-26.57, 41.59, 20.90, 15.33, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	20.25	42.87	-62.91	
+mpu 2 ypr	31.51	38.59	-83.14	
+perdict: {-26.28, 41.05, 20.48, 15.19, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	19.04	41.88	-63.36	
+mpu 2 ypr	29.88	37.41	-82.96	
+perdict: {-25.66, 40.04, 20.03, 14.80, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	17.12	40.45	-63.54	
+mpu 2 ypr	27.25	36.02	-82.09	
+perdict: {-25.07, 39.06, 19.60, 14.43, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	13.48	38.28	-62.91	
+mpu 2 ypr	22.88	34.40	-79.99	
+perdict: {-24.95, 38.90, 19.61, 14.33, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	8.81	35.61	-61.67	
+mpu 2 ypr	17.46	32.61	-77.17	
+perdict: {-24.55, 38.38, 19.80, 13.98, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	3.71	32.78	-59.69	
+mpu 2 ypr	11.82	30.97	-73.81	
+perdict: {-25.20, 39.47, 20.32, 14.38, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	-0.90	30.25	-57.31	
+mpu 2 ypr	7.19	29.68	-70.54	
+perdict: {-26.71, 41.28, 19.32, 15.89, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	-4.03	28.35	-54.91	
+mpu 2 ypr	4.45	28.88	-67.83	
+perdict: {-27.82, 42.50, 18.25, 17.08, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	-5.84	27.05	-52.44	
+mpu 2 ypr	3.32	28.58	-65.52	
+perdict: {-28.32, 43.05, 17.74, 17.62, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	-6.54	26.33	-50.25	
+mpu 2 ypr	3.37	28.66	-63.76	
+perdict: {-28.27, 42.99, 17.79, 17.56, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	-6.50	25.79	-48.89	
+mpu 2 ypr	3.85	28.56	-62.82	
+perdict: {-28.02, 42.61, 17.69, 17.38, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	-6.08	25.15	-48.51	
+mpu 2 ypr	4.15	28.01	-62.54	
+perdict: {-27.69, 42.03, 17.30, 17.21, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	-6.10	24.46	-48.49	
+mpu 2 ypr	3.79	27.34	-62.23	
+perdict: {-27.58, 41.73, 16.84, 17.24, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	-6.60	23.39	-48.54	
+mpu 2 ypr	2.92	26.30	-61.85	
+perdict: {-27.81, 41.74, 15.83, 17.69, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	-6.93	22.53	-48.78	
+mpu 2 ypr	2.27	25.37	-61.76	
+perdict: {-28.06, 41.78, 14.86, 18.13, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	-6.99	21.51	-49.19	
+mpu 2 ypr	1.82	24.21	-61.96	
+perdict: {-28.25, 41.67, 13.62, 18.61, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	-6.74	20.80	-49.54	
+mpu 2 ypr	1.68	23.36	-62.15	
+perdict: {-28.20, 41.35, 12.82, 18.76, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	-6.26	20.02	-49.83	
+mpu 2 ypr	1.81	22.46	-62.42	
+perdict: {-28.05, 40.89, 12.00, 18.85, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	-5.52	19.67	-50.24	
+mpu 2 ypr	2.21	21.95	-62.91	
+perdict: {-27.77, 40.36, 11.60, 18.71, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	-4.47	19.72	-51.13	
+mpu 2 ypr	2.71	21.61	-63.78	
+perdict: {-27.59, 38.96, 11.67, 18.51, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	-3.95	19.92	-51.97	
+mpu 2 ypr	2.79	21.43	-64.45	
+perdict: {-27.68, 37.93, 11.78, 18.53, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	-3.73	20.07	-52.74	
+mpu 2 ypr	2.60	21.21	-64.98	
+perdict: {-27.93, 37.17, 11.77, 18.71, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	-3.74	20.10	-53.47	
+mpu 2 ypr	2.23	20.92	-65.46	
+perdict: {-28.33, 36.54, 11.63, 19.04, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	-3.95	19.97	-54.18	
+mpu 2 ypr	1.62	20.49	-65.81	
+perdict: {-28.77, 35.60, 11.54, 19.38, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	-4.31	19.65	-54.78	
+mpu 2 ypr	0.91	19.93	-66.08	
+perdict: {-29.21, 34.62, 11.49, 19.71, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	-4.50	19.36	-55.39	
+mpu 2 ypr	0.41	19.41	-66.48	
+perdict: {-29.64, 33.63, 11.13, 20.10, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	-4.43	19.21	-55.90	
+mpu 2 ypr	0.22	19.05	-66.88	
+perdict: {-29.76, 32.65, 11.16, 20.16, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	-4.21	19.27	-56.12	
+mpu 2 ypr	0.36	19.00	-67.18	
+perdict: {-29.64, 32.27, 11.37, 19.99, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	-3.64	19.80	-56.23	
+mpu 2 ypr	0.99	19.43	-67.56	
+perdict: {-29.09, 32.47, 12.20, 19.37, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	-2.87	20.59	-56.43	
+mpu 2 ypr	1.90	20.05	-68.16	
+perdict: {-28.65, 33.07, 12.36, 19.00, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	-1.76	21.67	-56.78	
+mpu 2 ypr	3.20	20.83	-69.12	
+perdict: {-28.09, 33.77, 12.40, 18.56, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	-0.34	23.04	-57.32	
+mpu 2 ypr	4.69	21.80	-70.18	
+perdict: {-27.26, 34.22, 12.93, 17.79, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	0.75	24.41	-57.66	
+mpu 2 ypr	6.00	22.86	-71.03	
+perdict: {-26.70, 35.39, 13.03, 17.35, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	1.99	25.87	-58.16	
+mpu 2 ypr	7.59	23.91	-72.22	
+perdict: {-26.18, 36.72, 12.85, 17.01, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	3.65	27.52	-58.92	
+mpu 2 ypr	9.59	25.00	-73.77	
+perdict: {-25.24, 37.32, 13.26, 16.17, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	5.45	29.27	-59.67	
+mpu 2 ypr	11.67	26.15	-75.23	
+perdict: {-24.61, 36.82, 14.44, 15.35, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	6.82	30.84	-60.11	
+mpu 2 ypr	13.55	27.29	-76.42	
+perdict: {-24.25, 36.64, 15.54, 14.75, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	8.29	32.34	-60.52	
+mpu 2 ypr	15.62	28.36	-77.71	
+perdict: {-23.87, 36.39, 16.38, 14.22, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	9.82	33.75	-60.93	
+mpu 2 ypr	17.67	29.32	-78.95	
+perdict: {-23.82, 36.47, 16.86, 14.03, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	11.23	35.03	-61.34	
+mpu 2 ypr	19.54	30.17	-80.11	
+perdict: {-23.96, 36.68, 16.89, 14.13, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	12.59	36.14	-61.90	
+mpu 2 ypr	21.29	30.81	-81.30	
+perdict: {-24.11, 36.86, 16.78, 14.26, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	13.72	37.02	-62.62	
+mpu 2 ypr	22.69	31.22	-82.41	
+perdict: {-24.23, 36.99, 16.67, 14.38, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	14.58	37.70	-63.46	
+mpu 2 ypr	23.79	31.43	-83.42	
+perdict: {-24.37, 37.16, 16.55, 14.52, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	15.40	38.32	-64.56	
+mpu 2 ypr	24.88	31.49	-84.56	
+perdict: {-24.55, 37.37, 16.37, 14.70, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	16.50	39.00	-66.00	
+mpu 2 ypr	26.32	31.44	-85.99	
+perdict: {-24.74, 37.55, 16.08, 14.91, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	17.76	39.68	-67.52	
+mpu 2 ypr	27.88	31.33	-87.44	
+perdict: {-23.98, 37.06, 15.86, 14.41, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	18.73	40.20	-68.76	
+mpu 2 ypr	29.21	31.20	-88.59	
+perdict: {-23.08, 36.54, 15.87, 13.75, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	19.33	40.56	-69.66	
+mpu 2 ypr	30.23	31.05	-89.44	
+perdict: {-22.56, 36.29, 15.80, 13.39, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	19.61	40.75	-70.25	
+mpu 2 ypr	30.93	149.13	-90.04	
+perdict: {-81.40, 151.09, 126.19, 36.22, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	19.78	40.84	-70.64	
+mpu 2 ypr	31.47	149.32	-90.50	
+perdict: {-81.56, 151.38, 126.39, 36.30, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	19.65	40.81	-70.86	
+mpu 2 ypr	31.58	149.52	-90.68	
+perdict: {-81.76, 151.74, 126.66, 36.40, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	19.09	40.66	-70.77	
+mpu 2 ypr	31.26	149.69	-90.58	
+perdict: {-82.06, 152.25, 126.95, 36.58, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	18.35	40.46	-70.51	
+mpu 2 ypr	30.76	149.83	-90.35	
+perdict: {-82.39, 152.80, 127.19, 36.78, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	17.58	40.26	-70.16	
+mpu 2 ypr	30.23	149.95	-90.11	
+perdict: {-82.73, 153.34, 127.39, 37.01, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	16.93	40.09	-69.87	
+mpu 2 ypr	29.78	29.95	-89.90	
+perdict: {-25.99, 39.16, 11.71, 17.07, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	16.31	39.94	-69.59	
+mpu 2 ypr	29.34	29.85	-89.70	
+perdict: {-26.74, 39.71, 11.37, 17.71, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	15.62	39.73	-69.16	
+mpu 2 ypr	28.77	29.73	-89.45	
+perdict: {-27.54, 40.26, 10.95, 18.42, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	15.05	39.43	-68.66	
+mpu 2 ypr	28.22	29.56	-89.22	
+perdict: {-28.09, 40.59, 10.53, 18.94, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	14.68	39.17	-68.16	
+mpu 2 ypr	27.66	29.40	-88.97	
+perdict: {-28.06, 40.45, 10.27, 18.97, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	14.40	38.83	-67.60	
+mpu 2 ypr	27.14	29.19	-88.76	
+perdict: {-27.99, 40.25, 9.92, 19.01, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	14.26	38.36	-67.17	
+mpu 2 ypr	26.46	28.84	-88.52	
+perdict: {-27.72, 39.75, 9.57, 18.88, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	14.01	37.68	-66.91	
+mpu 2 ypr	25.49	28.26	-88.23	
+perdict: {-27.38, 39.11, 9.03, 18.75, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	13.59	36.76	-66.86	
+mpu 2 ypr	24.12	27.41	-87.85	
+perdict: {-26.89, 38.25, 8.32, 18.55, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	12.81	35.60	-66.81	
+mpu 2 ypr	22.26	26.38	-87.26	
+perdict: {-26.11, 37.21, 7.54, 18.17, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	11.61	34.25	-66.68	
+mpu 2 ypr	19.87	25.27	-86.37	
+perdict: {-25.54, 36.31, 6.80, 17.94, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	9.96	32.80	-66.44	
+mpu 2 ypr	17.12	24.14	-85.26	
+perdict: {-25.25, 34.80, 6.27, 17.84, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	8.27	31.40	-66.24	
+mpu 2 ypr	14.47	23.03	-84.22	
+perdict: {-26.08, 33.88, 6.04, 18.55, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	6.81	30.18	-66.06	
+mpu 2 ypr	12.19	22.06	-83.34	
+perdict: {-26.80, 33.09, 5.88, 19.15, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	5.57	29.20	-65.81	
+mpu 2 ypr	10.32	21.31	-82.57	
+perdict: {-27.50, 32.68, 5.59, 19.77, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	4.70	28.53	-65.56	
+mpu 2 ypr	9.09	20.83	-82.03	
+perdict: {-28.11, 32.68, 5.19, 20.34, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	4.36	28.29	-65.34	
+mpu 2 ypr	8.61	20.67	-81.79	
+perdict: {-28.42, 32.86, 4.85, 20.67, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	4.41	28.41	-65.08	
+mpu 2 ypr	8.73	20.84	-81.70	
+perdict: {-28.55, 33.37, 4.57, 20.84, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	4.44	28.67	-64.59	
+mpu 2 ypr	8.89	21.23	-81.46	
+perdict: {-28.89, 34.52, 4.09, 21.22, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	4.36	28.90	-63.89	
+mpu 2 ypr	9.09	21.69	-81.15	
+perdict: {-28.79, 35.88, 4.00, 21.19, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	4.71	29.22	-63.22	
+mpu 2 ypr	9.87	22.17	-81.12	
+perdict: {-28.24, 36.82, 4.07, 20.76, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	5.34	29.57	-62.45	
+mpu 2 ypr	10.78	22.73	-81.04	
+perdict: {-27.42, 37.33, 4.41, 20.06, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	5.76	29.79	-61.43	
+mpu 2 ypr	11.44	23.33	-80.68	
+perdict: {-26.98, 37.35, 5.32, 19.48, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	6.23	29.97	-60.49	
+mpu 2 ypr	12.15	23.90	-80.37	
+perdict: {-26.60, 37.11, 6.32, 18.91, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	6.82	30.15	-59.70	
+mpu 2 ypr	12.85	24.40	-80.11	
+perdict: {-26.09, 36.68, 7.23, 18.27, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	7.22	30.18	-58.95	
+mpu 2 ypr	13.30	24.80	-79.75	
+perdict: {-25.65, 36.32, 8.05, 17.71, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	7.53	30.14	-58.23	
+mpu 2 ypr	13.65	25.13	-79.38	
+perdict: {-25.27, 35.99, 8.73, 17.23, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	7.83	30.07	-57.56	
+mpu 2 ypr	13.91	25.40	-78.98	
+perdict: {-24.87, 35.61, 9.35, 16.75, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	8.10	30.00	-57.03	
+mpu 2 ypr	13.95	25.61	-78.44	
+perdict: {-24.37, 35.13, 10.08, 16.17, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	8.28	29.90	-56.52	
+mpu 2 ypr	13.96	25.80	-77.90	
+perdict: {-23.97, 34.77, 10.72, 15.69, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	8.57	29.80	-56.11	
+mpu 2 ypr	14.18	25.96	-77.60	
+perdict: {-23.61, 34.42, 11.21, 15.28, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	8.86	29.67	-55.72	
+mpu 2 ypr	14.33	26.07	-77.27	
+perdict: {-23.22, 34.01, 11.67, 14.85, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	9.08	29.44	-55.15	
+mpu 2 ypr	14.43	26.17	-76.78	
+perdict: {-22.85, 33.62, 12.15, 14.42, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	9.40	29.15	-54.54	
+mpu 2 ypr	14.67	26.23	-76.40	
+perdict: {-22.42, 33.12, 12.49, 13.99, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	9.95	28.82	-54.00	
+mpu 2 ypr	15.06	26.24	-76.12	
+perdict: {-21.85, 32.40, 12.76, 13.46, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	10.47	28.36	-53.36	
+mpu 2 ypr	15.33	26.21	-75.63	
+perdict: {-21.27, 31.68, 13.06, 12.92, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	10.94	27.80	-52.62	
+mpu 2 ypr	15.62	26.18	-75.07	
+perdict: {-20.74, 31.02, 13.39, 12.41, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	11.55	27.35	-52.05	
+mpu 2 ypr	15.96	26.16	-74.58	
+perdict: {-19.99, 30.17, 14.02, 11.65, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	12.09	26.95	-51.50	
+mpu 2 ypr	16.27	26.19	-74.04	
+perdict: {-19.34, 29.43, 14.65, 10.99, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	12.60	26.67	-50.98	
+mpu 2 ypr	16.59	26.29	-73.53	
+perdict: {-18.95, 28.95, 14.91, 10.63, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	13.01	26.38	-50.32	
+mpu 2 ypr	16.86	26.42	-72.82	
+perdict: {-18.70, 28.65, 15.10, 10.39, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	13.43	26.08	-49.57	
+mpu 2 ypr	17.17	26.61	-72.04	
+perdict: {-18.50, 28.43, 15.31, 10.19, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	13.77	25.74	-48.63	
+mpu 2 ypr	17.53	26.87	-71.06	
+perdict: {-18.43, 28.41, 15.59, 10.08, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	14.23	25.47	-47.62	
+mpu 2 ypr	18.06	27.24	-70.11	
+perdict: {-18.41, 28.48, 15.90, 10.00, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	14.88	25.49	-46.64	
+mpu 2 ypr	18.83	27.83	-69.25	
+perdict: {-18.51, 28.73, 16.26, 10.01, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	15.83	26.00	-45.87	
+mpu 2 ypr	19.91	28.74	-68.74	
+perdict: {-18.75, 29.19, 16.65, 10.11, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	16.90	26.94	-45.26	
+mpu 2 ypr	21.17	29.91	-68.45	
+perdict: {-19.11, 29.81, 17.00, 10.32, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	18.01	28.23	-44.74	
+mpu 2 ypr	22.55	31.30	-68.37	
+perdict: {-19.48, 30.38, 17.17, 10.57, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	19.22	29.81	-44.35	
+mpu 2 ypr	24.08	32.85	-68.58	
+perdict: {-19.87, 31.01, 17.40, 10.83, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	20.50	31.51	-44.06	
+mpu 2 ypr	25.67	34.45	-68.97	
+perdict: {-20.53, 32.30, 18.58, 11.10, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	21.64	33.10	-43.70	
+mpu 2 ypr	27.21	36.00	-69.29	
+perdict: {-21.20, 33.58, 19.70, 11.39, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	22.64	34.49	-43.23	
+mpu 2 ypr	28.58	37.40	-69.45	
+perdict: {-21.74, 34.70, 20.87, 11.57, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	23.42	35.54	-42.58	
+mpu 2 ypr	29.76	38.64	-69.33	
+perdict: {-22.20, 35.69, 22.01, 11.68, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	24.04	36.32	-41.79	
+mpu 2 ypr	30.79	39.71	-69.02	
+perdict: {-22.86, 36.95, 23.06, 11.98, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	24.65	36.91	-40.96	
+mpu 2 ypr	31.72	40.62	-68.61	
+perdict: {-23.72, 38.32, 23.55, 12.56, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	25.35	37.39	-40.22	
+mpu 2 ypr	32.66	41.43	-68.33	
+perdict: {-24.45, 39.53, 24.08, 13.02, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	26.19	37.91	-39.78	
+mpu 2 ypr	33.59	42.13	-68.28	
+perdict: {-25.05, 40.52, 24.58, 13.37, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	26.74	38.21	-39.47	
+mpu 2 ypr	34.16	42.61	-68.03	
+perdict: {-25.46, 41.23, 24.98, 13.62, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	26.79	38.12	-39.14	
+mpu 2 ypr	34.26	42.77	-67.45	
+perdict: {-25.64, 41.55, 25.19, 13.71, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	26.44	37.59	-38.86	
+mpu 2 ypr	33.90	42.53	-66.61	
+perdict: {-25.52, 41.38, 25.22, 13.61, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	26.01	36.74	-38.45	
+mpu 2 ypr	33.38	42.08	-65.52	
+perdict: {-25.21, 40.95, 25.21, 13.38, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	25.32	35.50	-37.70	
+mpu 2 ypr	32.64	41.41	-63.91	
+perdict: {-24.81, 40.35, 25.14, 13.07, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	24.54	33.86	-36.79	
+mpu 2 ypr	31.77	40.47	-62.01	
+perdict: {-24.21, 39.45, 25.01, 12.63, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	23.78	32.14	-35.95	
+mpu 2 ypr	30.92	39.44	-60.03	
+perdict: {-23.57, 38.51, 24.89, 12.16, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	22.77	30.47	-35.04	
+mpu 2 ypr	29.97	38.44	-57.72	
+perdict: {-22.94, 37.56, 24.75, 11.69, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	21.58	28.95	-34.12	
+mpu 2 ypr	29.01	37.49	-55.56	
+perdict: {-22.38, 36.70, 24.50, 11.31, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	20.66	27.83	-33.54	
+mpu 2 ypr	28.28	36.73	-54.03	
+perdict: {-21.94, 36.00, 24.27, 11.02, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	19.98	27.17	-33.38	
+mpu 2 ypr	27.70	36.19	-53.05	
+perdict: {-21.62, 35.48, 24.07, 10.80, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	19.17	26.71	-33.36	
+mpu 2 ypr	27.02	35.75	-52.24	
+perdict: {-21.35, 35.03, 23.82, 10.65, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	18.36	26.39	-33.64	
+mpu 2 ypr	26.25	35.32	-51.82	
+perdict: {-21.03, 34.47, 23.51, 10.46, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	17.32	25.94	-34.13	
+mpu 2 ypr	25.18	34.71	-51.42	
+perdict: {-20.67, 33.76, 22.82, 10.33, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	15.70	25.17	-34.54	
+mpu 2 ypr	23.61	33.85	-50.69	
+perdict: {-20.26, 32.85, 21.73, 10.23, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	13.68	24.14	-34.94	
+mpu 2 ypr	21.66	32.75	-49.85	
+perdict: {-19.71, 31.74, 20.63, 10.03, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	11.22	22.78	-35.12	
+mpu 2 ypr	19.27	31.42	-48.48	
+perdict: {-19.12, 30.77, 20.22, 9.65, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	7.98	20.92	-34.60	
+mpu 2 ypr	16.38	29.86	-46.28	
+perdict: {-18.93, 30.46, 20.09, 9.53, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	4.93	19.03	-34.17	
+mpu 2 ypr	13.70	28.21	-44.69	
+perdict: {-18.80, 30.20, 19.83, 9.48, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	3.08	17.72	-34.80	
+mpu 2 ypr	11.74	26.76	-44.65	
+perdict: {-18.72, 30.05, 19.72, 9.45, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	2.03	16.90	-35.89	
+mpu 2 ypr	10.35	25.61	-45.28	
+perdict: {-18.58, 29.85, 19.69, 9.34, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	1.23	16.33	-36.77	
+mpu 2 ypr	9.18	24.77	-45.62	
+perdict: {-18.51, 29.77, 19.75, 9.28, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	0.34	15.86	-37.13	
+mpu 2 ypr	8.22	24.19	-45.62	
+perdict: {-18.77, 30.14, 19.75, 9.48, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	-0.06	15.74	-37.53	
+mpu 2 ypr	7.78	23.94	-45.99	
+perdict: {-18.98, 30.43, 19.72, 9.65, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	0.06	16.05	-37.98	
+mpu 2 ypr	7.84	24.06	-46.57	
+perdict: {-19.08, 30.56, 19.72, 9.73, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	0.50	16.75	-38.22	
+mpu 2 ypr	8.31	24.60	-47.09	
+perdict: {-19.15, 30.66, 19.69, 9.79, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	1.08	17.61	-38.55	
+mpu 2 ypr	8.94	25.28	-47.79	
+perdict: {-19.24, 30.78, 19.68, 9.86, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	1.89	18.68	-39.24	
+mpu 2 ypr	9.69	26.04	-48.94	
+perdict: {-19.32, 30.91, 19.70, 9.92, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	3.19	20.07	-40.35	
+mpu 2 ypr	10.79	26.93	-50.78	
+perdict: {-19.40, 31.03, 19.72, 9.98, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	4.96	21.81	-41.60	
+mpu 2 ypr	12.26	28.06	-52.88	
+perdict: {-19.61, 31.35, 19.78, 10.13, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	6.84	23.72	-42.65	
+mpu 2 ypr	13.98	29.39	-54.91	
+perdict: {-19.89, 31.75, 19.80, 10.35, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	8.94	25.81	-43.65	
+mpu 2 ypr	15.94	30.87	-57.02	
+perdict: {-20.21, 32.20, 19.78, 10.60, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	11.28	28.05	-44.60	
+mpu 2 ypr	18.21	32.48	-59.27	
+perdict: {-20.56, 32.68, 19.73, 10.88, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	13.88	30.42	-45.43	
+mpu 2 ypr	20.78	34.21	-61.61	
+perdict: {-20.93, 33.17, 19.62, 11.19, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	16.67	32.87	-46.11	
+mpu 2 ypr	23.57	36.03	-63.92	
+perdict: {-21.76, 34.49, 20.05, 11.76, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	19.48	35.28	-46.52	
+mpu 2 ypr	26.46	37.88	-66.10	
+perdict: {-22.77, 36.15, 20.83, 12.38, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	22.21	37.55	-46.64	
+mpu 2 ypr	29.33	39.71	-68.07	
+perdict: {-23.64, 37.96, 22.71, 12.67, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	24.78	39.55	-46.50	
+mpu 2 ypr	32.03	41.39	-69.80	
+perdict: {-24.65, 39.81, 24.09, 13.17, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	27.04	41.19	-46.18	
+mpu 2 ypr	34.38	42.86	-71.17	
+perdict: {-25.79, 41.67, 24.91, 13.88, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	28.71	42.38	-45.78	
+mpu 2 ypr	36.15	44.03	-72.04	
+perdict: {-26.70, 43.17, 25.58, 14.46, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	29.64	43.09	-45.47	
+mpu 2 ypr	37.21	44.81	-72.46	
+perdict: {-27.33, 44.21, 26.04, 14.85, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	29.89	43.33	-45.49	
+mpu 2 ypr	37.57	45.10	-72.65	
+perdict: {-27.58, 44.61, 26.22, 15.01, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	29.58	43.17	-45.90	
+mpu 2 ypr	37.30	44.94	-72.73	
+perdict: {-27.45, 44.42, 26.16, 14.92, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	29.03	42.93	-46.69	
+mpu 2 ypr	36.76	44.53	-73.04	
+perdict: {-27.11, 43.85, 25.91, 14.71, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	28.40	42.74	-47.89	
+mpu 2 ypr	36.06	44.02	-73.53	
+perdict: {-26.66, 43.12, 25.59, 14.43, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	27.69	42.64	-49.35	
+mpu 2 ypr	35.30	43.45	-74.24	
+perdict: {-26.16, 42.29, 25.18, 14.12, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	27.02	42.63	-50.98	
+mpu 2 ypr	34.58	42.88	-75.15	
+perdict: {-25.66, 41.45, 24.74, 13.82, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	26.35	42.66	-52.61	
+mpu 2 ypr	33.93	42.35	-76.09	
+perdict: {-25.30, 40.76, 24.19, 13.65, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	25.77	42.73	-54.12	
+mpu 2 ypr	33.40	41.88	-77.05	
+perdict: {-25.21, 40.38, 23.34, 13.76, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	25.27	42.83	-55.47	
+mpu 2 ypr	33.01	41.48	-77.97	
+perdict: {-25.25, 40.30, 22.85, 13.90, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	24.95	42.99	-56.64	
+mpu 2 ypr	32.82	41.16	-78.88	
+perdict: {-25.30, 40.26, 22.47, 14.02, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	24.79	43.23	-57.62	
+mpu 2 ypr	32.88	40.99	-79.77	
+perdict: {-25.42, 40.35, 22.24, 14.16, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	24.69	43.51	-58.52	
+mpu 2 ypr	33.02	40.87	-80.61	
+perdict: {-25.57, 40.51, 22.07, 14.31, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	24.48	43.78	-59.37	
+mpu 2 ypr	33.13	40.78	-81.34	
+perdict: {-25.75, 40.72, 21.90, 14.48, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	24.16	43.92	-60.21	
+mpu 2 ypr	33.16	40.60	-82.02	
+perdict: {-25.91, 40.87, 21.67, 14.65, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	23.87	43.97	-61.23	
+mpu 2 ypr	33.13	40.24	-82.79	
+perdict: {-25.98, 40.91, 21.44, 14.76, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	23.45	43.80	-62.20	
+mpu 2 ypr	32.87	39.70	-83.44	
+perdict: {-25.94, 40.80, 21.29, 14.75, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	22.55	43.24	-62.63	
+mpu 2 ypr	31.99	38.96	-83.56	
+perdict: {-25.71, 40.36, 20.90, 14.66, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	21.21	42.34	-62.16	
+mpu 2 ypr	30.51	38.19	-82.96	
+perdict: {-25.31, 39.60, 20.23, 14.49, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	19.67	41.20	-61.08	
+mpu 2 ypr	28.69	37.47	-81.82	
+perdict: {-24.74, 38.61, 19.67, 14.15, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	18.19	39.93	-59.86	
+mpu 2 ypr	103.83	-36.42	51.65	
+perdict: {-3.71, -14.36, -23.51, 15.03, } out: 3 servo angle: 0 current: 0
+mpu 1 ypr	16.33	38.12	-58.36	
+mpu 2 ypr	24.28	35.61	-78.61	
+perdict: {-23.61, 36.82, 19.05, 13.40, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	14.92	36.57	-57.31	
+mpu 2 ypr	22.29	34.60	-77.12	
+perdict: {-23.29, 36.32, 18.86, 13.20, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	13.40	34.93	-56.37	
+mpu 2 ypr	19.62	33.21	-75.15	
+perdict: {-22.65, 35.27, 18.46, 12.78, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	11.49	32.98	-55.41	
+mpu 2 ypr	17.15	31.86	-73.43	
+perdict: {-22.24, 34.65, 18.30, 12.49, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	9.92	31.41	-54.88	
+mpu 2 ypr	15.18	30.70	-72.21	
+perdict: {-21.90, 34.13, 18.19, 12.24, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	8.73	30.24	-54.60	
+mpu 2 ypr	13.60	29.77	-71.31	
+perdict: {-21.79, 33.96, 18.11, 12.18, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	7.61	29.32	-54.32	
+mpu 2 ypr	12.20	29.05	-70.50	
+perdict: {-21.92, 34.14, 18.13, 12.28, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	6.64	28.67	-54.30	
+mpu 2 ypr	11.05	28.47	-70.08	
+perdict: {-22.10, 34.40, 18.14, 12.41, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	5.98	28.34	-54.78	
+mpu 2 ypr	10.11	27.97	-70.18	
+perdict: {-22.28, 34.65, 18.12, 12.56, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	5.26	28.20	-55.50	
+mpu 2 ypr	8.97	27.56	-70.30	
+perdict: {-22.50, 34.99, 18.18, 12.72, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	4.28	28.05	-56.12	
+mpu 2 ypr	7.79	27.16	-70.45	
+perdict: {-22.98, 35.59, 17.98, 13.15, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	3.75	27.97	-56.45	
+mpu 2 ypr	7.38	26.90	-70.75	
+perdict: {-23.46, 36.09, 17.40, 13.70, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	3.72	27.97	-55.96	
+mpu 2 ypr	7.65	26.99	-70.61	
+perdict: {-23.45, 36.07, 17.35, 13.70, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	4.11	28.06	-55.01	
+mpu 2 ypr	8.53	27.33	-70.36	
+perdict: {-23.15, 35.73, 17.63, 13.38, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	5.03	28.25	-54.02	
+mpu 2 ypr	9.91	27.75	-70.27	
+perdict: {-22.58, 35.05, 18.02, 12.82, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	6.09	28.31	-52.82	
+mpu 2 ypr	11.23	28.17	-69.84	
+perdict: {-22.11, 34.32, 17.84, 12.48, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	7.04	28.20	-51.55	
+mpu 2 ypr	12.43	28.52	-69.33	
+perdict: {-21.65, 33.62, 17.67, 12.16, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	8.08	28.05	-50.54	
+mpu 2 ypr	13.39	28.75	-68.74	
+perdict: {-21.12, 32.80, 17.48, 11.78, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	8.30	27.57	-49.19	
+mpu 2 ypr	13.61	28.92	-67.39	
+perdict: {-20.83, 32.41, 17.51, 11.56, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	8.16	27.03	-47.85	
+mpu 2 ypr	13.76	29.05	-66.15	
+perdict: {-20.77, 32.35, 17.62, 11.48, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	8.28	26.57	-46.83	
+mpu 2 ypr	14.05	29.10	-65.21	
+perdict: {-20.68, 32.24, 17.65, 11.41, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	8.53	26.06	-45.91	
+mpu 2 ypr	14.39	29.04	-64.36	
+perdict: {-20.56, 32.04, 17.60, 11.32, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	9.15	25.64	-45.28	
+mpu 2 ypr	15.02	28.98	-63.89	
+perdict: {-20.44, 31.85, 17.51, 11.25, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	10.09	25.42	-44.87	
+mpu 2 ypr	15.89	29.02	-63.76	
+perdict: {-20.30, 31.64, 17.47, 11.15, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	11.24	25.32	-44.57	
+mpu 2 ypr	16.88	29.11	-63.75	
+perdict: {-20.03, 31.31, 17.64, 10.90, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	12.39	25.31	-44.36	
+mpu 2 ypr	17.78	29.23	-63.72	
+perdict: {-19.74, 30.94, 17.83, 10.63, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	13.50	25.29	-44.18	
+mpu 2 ypr	18.66	29.35	-63.76	
+perdict: {-19.47, 30.62, 18.01, 10.39, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	14.58	25.30	-44.05	
+mpu 2 ypr	19.47	29.49	-63.74	
+perdict: {-19.18, 30.27, 18.22, 10.12, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	15.56	25.54	-43.96	
+mpu 2 ypr	20.26	29.86	-63.71	
+perdict: {-19.01, 30.10, 18.48, 9.93, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	16.34	26.23	-43.92	
+mpu 2 ypr	21.02	30.58	-63.72	
+perdict: {-19.03, 30.18, 18.65, 9.92, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	17.18	27.40	-43.99	
+mpu 2 ypr	21.99	31.64	-64.09	
+perdict: {-19.28, 30.55, 18.71, 10.09, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	18.31	29.15	-43.97	
+mpu 2 ypr	23.43	33.26	-64.59	
+perdict: {-20.02, 31.74, 19.15, 10.58, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	19.62	31.23	-43.52	
+mpu 2 ypr	25.35	35.32	-65.03	
+perdict: {-21.04, 33.33, 19.60, 11.28, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	21.39	33.54	-42.63	
+mpu 2 ypr	27.84	37.71	-65.52	
+perdict: {-22.20, 35.57, 21.59, 11.77, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	23.47	35.79	-41.25	
+mpu 2 ypr	30.68	40.25	-65.69	
+perdict: {-23.77, 38.52, 24.00, 12.50, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	25.60	37.74	-39.32	
+mpu 2 ypr	33.60	42.73	-65.53	
+perdict: {-26.03, 42.15, 25.36, 13.98, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	27.80	39.27	-37.23	
+mpu 2 ypr	36.35	44.92	-65.06	
+perdict: {-27.91, 45.23, 26.68, 15.17, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	29.58	40.23	-35.12	
+mpu 2 ypr	38.55	46.68	-64.07	
+perdict: {-29.23, 47.34, 27.74, 15.99, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	30.97	40.76	-33.36	
+mpu 2 ypr	40.23	47.94	-63.09	
+perdict: {-30.78, 49.16, 28.30, 17.11, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	32.06	41.02	-32.38	
+mpu 2 ypr	41.32	48.64	-62.47	
+perdict: {-31.60, 50.56, 28.93, 17.62, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	32.49	40.94	-32.27	
+mpu 2 ypr	41.54	48.71	-62.03	
+perdict: {-31.57, 50.90, 29.33, 17.49, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	32.09	40.51	-32.99	
+mpu 2 ypr	40.92	48.16	-61.94	
+perdict: {-30.75, 49.81, 29.19, 16.88, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	31.73	40.30	-34.01	
+mpu 2 ypr	40.31	47.63	-62.36	
+perdict: {-30.03, 48.96, 29.10, 16.32, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	31.27	40.30	-35.20	
+mpu 2 ypr	39.62	47.20	-62.83	
+perdict: {-29.51, 48.16, 28.90, 15.96, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	30.56	40.38	-36.42	
+mpu 2 ypr	38.80	46.77	-63.42	
+perdict: {-29.21, 47.62, 28.54, 15.80, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	29.80	40.57	-37.83	
+mpu 2 ypr	38.04	46.47	-64.14	
+perdict: {-29.06, 47.32, 28.24, 15.75, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	29.00	40.86	-39.24	
+mpu 2 ypr	37.26	46.20	-64.97	
+perdict: {-28.93, 47.04, 27.88, 15.72, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	28.28	41.24	-40.77	
+mpu 2 ypr	36.61	45.96	-66.08	
+perdict: {-28.72, 46.61, 27.48, 15.64, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	27.83	41.73	-42.61	
+mpu 2 ypr	36.20	45.81	-67.50	
+perdict: {-28.51, 46.22, 27.19, 15.53, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	27.52	42.33	-44.37	
+mpu 2 ypr	35.86	45.62	-69.10	
+perdict: {-28.24, 45.72, 26.79, 15.41, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	27.21	42.84	-45.99	
+mpu 2 ypr	35.60	45.43	-70.59	
+perdict: {-28.02, 45.30, 26.43, 15.31, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	26.89	43.30	-47.47	
+mpu 2 ypr	35.39	45.29	-71.88	
+perdict: {-27.87, 45.01, 26.14, 15.26, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	26.67	43.79	-48.92	
+mpu 2 ypr	35.33	45.16	-73.29	
+perdict: {-27.77, 44.77, 25.83, 15.24, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	26.58	44.30	-50.41	
+mpu 2 ypr	35.37	45.01	-74.70	
+perdict: {-27.65, 44.51, 25.55, 15.20, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	26.46	44.69	-51.86	
+mpu 2 ypr	35.36	44.77	-76.04	
+perdict: {-27.47, 44.17, 25.25, 15.13, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	26.16	44.87	-53.18	
+mpu 2 ypr	35.17	44.40	-77.14	
+perdict: {-27.20, 43.68, 24.89, 14.99, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	25.66	44.81	-54.25	
+mpu 2 ypr	34.73	43.90	-77.88	
+perdict: {-26.82, 43.02, 24.48, 14.78, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	24.82	44.47	-54.65	
+mpu 2 ypr	33.92	43.39	-77.93	
+perdict: {-26.43, 42.33, 24.06, 14.56, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	23.92	43.98	-54.23	
+mpu 2 ypr	33.18	42.98	-77.57	
+perdict: {-26.08, 41.77, 23.86, 14.33, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	23.31	43.45	-53.37	
+mpu 2 ypr	32.53	42.70	-76.88	
+perdict: {-25.76, 41.30, 23.79, 14.10, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	22.65	42.86	-52.16	
+mpu 2 ypr	31.84	42.55	-75.77	
+perdict: {-25.51, 40.95, 23.84, 13.89, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	21.70	41.99	-50.53	
+mpu 2 ypr	30.88	42.31	-74.17	
+perdict: {-25.20, 40.53, 23.87, 13.64, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	20.76	40.87	-48.81	
+mpu 2 ypr	29.85	41.90	-72.42	
+perdict: {-24.81, 39.94, 23.77, 13.36, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	20.08	39.61	-47.51	
+mpu 2 ypr	28.89	41.22	-70.92	
+perdict: {-24.33, 39.13, 23.36, 13.07, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	19.23	38.19	-46.36	
+mpu 2 ypr	27.68	40.42	-69.25	
+perdict: {-23.82, 38.23, 22.77, 12.79, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	18.54	37.06	-45.82	
+mpu 2 ypr	26.75	39.62	-68.32	
+perdict: {-23.35, 37.37, 22.15, 12.55, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	18.46	36.33	-45.87	
+mpu 2 ypr	26.31	38.85	-68.24	
+perdict: {-22.92, 36.57, 21.50, 12.36, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	18.82	35.69	-46.20	
+mpu 2 ypr	26.06	38.02	-68.50	
+perdict: {-22.57, 35.83, 20.71, 12.25, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	19.13	34.98	-46.74	
+mpu 2 ypr	25.63	37.08	-68.77	
+perdict: {-22.19, 35.01, 19.76, 12.15, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	19.05	34.18	-47.28	
+mpu 2 ypr	24.84	36.07	-68.77	
+perdict: {-21.70, 34.06, 18.90, 11.94, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	18.45	33.13	-47.93	
+mpu 2 ypr	23.55	34.83	-68.58	
+perdict: {-21.01, 33.04, 18.76, 11.44, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	17.19	31.76	-48.69	
+mpu 2 ypr	21.61	33.29	-68.07	
+perdict: {-20.22, 31.84, 18.51, 10.87, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	15.31	30.05	-49.36	
+mpu 2 ypr	19.11	31.48	-67.27	
+perdict: {-19.70, 31.10, 18.55, 10.45, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	13.12	28.13	-50.10	
+mpu 2 ypr	16.30	29.44	-66.50	
+perdict: {-19.14, 30.33, 18.61, 10.01, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	10.89	26.14	-50.83	
+mpu 2 ypr	13.45	27.37	-65.74	
+perdict: {-18.06, 28.70, 18.33, 9.22, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	8.89	24.39	-51.51	
+mpu 2 ypr	10.92	25.52	-65.19	
+perdict: {-18.09, 27.73, 18.44, 9.18, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	7.20	22.93	-51.67	
+mpu 2 ypr	8.93	24.14	-64.38	
+perdict: {-18.65, 26.06, 19.26, 9.37, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	5.97	21.75	-50.86	
+mpu 2 ypr	7.89	23.34	-63.27	
+perdict: {-19.05, 25.87, 19.35, 9.63, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	5.70	20.88	-49.45	
+mpu 2 ypr	8.07	23.01	-62.23	
+perdict: {-18.82, 26.09, 18.92, 9.56, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	6.59	20.25	-48.06	
+mpu 2 ypr	9.33	22.92	-61.66	
+perdict: {-17.98, 25.68, 18.37, 9.05, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	8.19	20.01	-46.97	
+mpu 2 ypr	10.99	23.12	-61.25	
+perdict: {-16.85, 24.75, 18.02, 8.27, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	9.70	20.00	-45.92	
+mpu 2 ypr	12.56	23.56	-60.74	
+perdict: {-15.80, 24.31, 17.69, 7.56, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	10.77	20.06	-44.67	
+mpu 2 ypr	13.79	24.17	-59.62	
+perdict: {-15.49, 24.85, 17.68, 7.35, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	10.80	19.87	-42.48	
+mpu 2 ypr	14.53	24.96	-57.16	
+perdict: {-16.11, 25.90, 18.24, 7.72, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	10.62	20.03	-40.29	
+mpu 2 ypr	15.32	26.08	-54.79	
+perdict: {-17.20, 27.65, 18.91, 8.43, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	9.96	20.42	-37.83	
+mpu 2 ypr	15.84	27.44	-51.87	
+perdict: {-17.76, 28.50, 19.07, 8.84, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	8.68	20.76	-34.98	
+mpu 2 ypr	16.03	28.81	-48.42	
+perdict: {-18.36, 29.32, 18.99, 9.32, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	7.36	21.19	-32.37	
+mpu 2 ypr	16.33	30.15	-45.64	
+perdict: {-19.33, 30.66, 18.80, 10.12, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	7.06	22.08	-31.03	
+mpu 2 ypr	17.15	31.44	-44.67	
+perdict: {-20.28, 31.96, 18.80, 10.86, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	7.76	23.31	-30.73	
+mpu 2 ypr	18.41	32.72	-44.82	
+perdict: {-21.06, 33.00, 19.68, 11.31, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	8.55	24.51	-30.27	
+mpu 2 ypr	19.69	34.05	-44.53	
+perdict: {-21.89, 34.13, 20.53, 11.79, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	8.69	25.53	-28.80	
+mpu 2 ypr	20.79	35.53	-43.01	
+perdict: {-23.64, 36.35, 21.42, 13.00, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	8.62	26.57	-26.89	
+mpu 2 ypr	22.00	37.14	-41.03	
+perdict: {-25.74, 39.66, 23.29, 14.27, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	7.93	27.46	-24.25	
+mpu 2 ypr	22.99	38.80	-38.02	
+perdict: {-28.28, 43.93, 25.34, 15.81, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	7.72	28.55	-22.15	
+mpu 2 ypr	24.40	40.44	-36.11	
+perdict: {-30.78, 49.01, 27.16, 17.33, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	7.53	29.64	-20.66	
+mpu 2 ypr	25.49	41.89	-34.47	
+perdict: {-33.16, 53.25, 28.53, 18.89, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	7.34	30.63	-20.07	
+mpu 2 ypr	26.27	43.00	-33.94	
+perdict: {-35.21, 56.44, 29.44, 20.29, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	6.87	31.45	-20.22	
+mpu 2 ypr	26.40	43.77	-33.90	
+perdict: {-36.25, 58.08, 29.94, 21.01, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	5.98	32.09	-20.84	
+mpu 2 ypr	25.99	44.26	-34.29	
+perdict: {-36.55, 58.56, 30.13, 21.20, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	4.99	32.60	-21.70	
+mpu 2 ypr	25.34	44.57	-34.92	
+perdict: {-36.34, 58.32, 30.36, 20.99, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	4.14	33.12	-22.71	
+mpu 2 ypr	24.87	44.85	-35.95	
+perdict: {-36.03, 58.04, 30.86, 20.64, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	3.86	33.72	-23.70	
+mpu 2 ypr	24.78	45.21	-37.08	
+perdict: {-35.96, 57.93, 31.15, 20.53, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	3.56	34.30	-24.63	
+mpu 2 ypr	24.74	45.55	-38.24	
+perdict: {-36.00, 57.76, 31.39, 20.53, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	3.44	34.61	-25.43	
+mpu 2 ypr	24.66	45.64	-39.16	
+perdict: {-35.86, 57.26, 31.36, 20.44, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	3.31	34.67	-26.24	
+mpu 2 ypr	24.48	45.47	-40.10	
+perdict: {-35.43, 56.24, 31.13, 20.18, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	3.19	34.42	-27.05	
+mpu 2 ypr	24.12	45.05	-40.94	
+perdict: {-34.75, 54.78, 30.69, 19.75, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	2.77	33.99	-28.01	
+mpu 2 ypr	23.32	44.40	-41.62	
+perdict: {-33.86, 52.95, 30.11, 19.20, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	2.09	33.33	-29.14	
+mpu 2 ypr	22.19	43.47	-42.44	
+perdict: {-32.91, 50.68, 29.31, 18.67, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	1.17	32.31	-30.25	
+mpu 2 ypr	20.63	42.21	-42.95	
+perdict: {-31.64, 48.81, 28.48, 17.83, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	-0.26	30.86	-31.10	
+mpu 2 ypr	18.59	40.61	-43.00	
+perdict: {-30.23, 47.02, 27.63, 16.89, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	-1.81	29.09	-31.80	
+mpu 2 ypr	16.47	38.76	-42.93	
+perdict: {-28.67, 45.06, 26.70, 15.83, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	-3.10	27.21	-32.47	
+mpu 2 ypr	14.57	36.76	-43.02	
+perdict: {-26.99, 42.89, 25.60, 14.72, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	-4.10	25.33	-33.18	
+mpu 2 ypr	12.82	34.77	-43.04	
+perdict: {-25.26, 40.59, 24.34, 13.60, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	-5.28	23.55	-33.86	
+mpu 2 ypr	11.01	32.90	-43.06	
+perdict: {-24.12, 38.83, 23.33, 12.91, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	-6.26	22.10	-34.90	
+mpu 2 ypr	9.42	31.18	-43.69	
+perdict: {-23.27, 37.55, 23.08, 12.30, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	-6.76	20.94	-36.33	
+mpu 2 ypr	8.14	29.62	-44.84	
+perdict: {-23.59, 37.79, 22.40, 12.69, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	-7.22	19.98	-37.74	
+mpu 2 ypr	6.85	28.27	-45.80	
+perdict: {-23.72, 37.87, 22.05, 12.86, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	-8.01	19.14	-38.79	
+mpu 2 ypr	5.47	27.16	-46.38	
+perdict: {-23.93, 38.13, 21.89, 13.07, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	-8.93	18.38	-39.54	
+mpu 2 ypr	4.14	26.19	-46.74	
+perdict: {-24.18, 38.45, 21.78, 13.29, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	-9.78	17.69	-40.07	
+mpu 2 ypr	3.03	25.37	-47.01	
+perdict: {-24.64, 38.91, 21.19, 13.80, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	-10.44	17.15	-40.51	
+mpu 2 ypr	2.15	24.70	-47.32	
+perdict: {-25.19, 39.40, 20.24, 14.50, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	-10.88	16.62	-41.02	
+mpu 2 ypr	1.41	24.02	-47.66	
+perdict: {-25.62, 39.72, 19.36, 15.07, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	-11.31	16.00	-41.47	
+mpu 2 ypr	0.66	23.26	-47.93	
+perdict: {-26.02, 39.96, 18.30, 15.67, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	-11.82	15.31	-41.97	
+mpu 2 ypr	-0.19	22.44	-48.23	
+perdict: {-26.66, 40.31, 16.49, 16.64, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	-12.32	14.58	-42.53	
+mpu 2 ypr	-1.09	21.56	-48.53	
+perdict: {-27.50, 40.51, 14.60, 17.77, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	-12.92	13.81	-43.00	
+mpu 2 ypr	-2.05	20.67	-48.69	
+perdict: {-28.67, 40.19, 13.00, 19.05, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	-13.65	13.07	-43.40	
+mpu 2 ypr	-3.03	19.85	-48.82	
+perdict: {-29.86, 40.08, 11.35, 20.38, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	-14.26	12.54	-43.80	
+mpu 2 ypr	-3.84	19.24	-49.07	
+perdict: {-30.81, 40.23, 10.23, 21.39, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	-14.52	12.40	-44.14	
+mpu 2 ypr	-4.16	19.02	-49.51	
+perdict: {-31.24, 40.64, 9.98, 21.78, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	-14.33	12.78	-44.34	
+mpu 2 ypr	-3.95	19.30	-49.95	
+perdict: {-31.17, 40.80, 9.95, 21.75, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	-13.92	13.49	-44.20	
+mpu 2 ypr	-3.31	19.98	-50.29	
+perdict: {-30.63, 41.19, 10.28, 21.27, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	-13.28	14.30	-44.11	
+mpu 2 ypr	-2.42	20.74	-50.76	
+perdict: {-29.80, 41.68, 11.31, 20.39, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	-12.43	15.22	-44.09	
+mpu 2 ypr	-1.37	21.58	-51.32	
+perdict: {-28.79, 42.03, 12.63, 19.29, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	-11.55	16.22	-44.08	
+mpu 2 ypr	-0.28	22.49	-51.91	
+perdict: {-28.07, 41.69, 14.53, 18.25, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	-10.69	17.29	-44.19	
+mpu 2 ypr	0.78	23.45	-52.60	
+perdict: {-27.41, 41.37, 16.51, 17.24, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	-9.86	18.48	-44.50	
+mpu 2 ypr	1.75	24.45	-53.44	
+perdict: {-27.02, 41.20, 17.72, 16.62, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	-9.11	19.79	-45.03	
+mpu 2 ypr	2.62	25.49	-54.48	
+perdict: {-26.84, 41.22, 18.60, 16.24, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	-8.38	21.20	-45.75	
+mpu 2 ypr	3.46	26.55	-55.76	
+perdict: {-26.77, 41.36, 19.40, 15.98, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	-7.51	22.74	-46.68	
+mpu 2 ypr	4.41	27.64	-57.27	
+perdict: {-26.68, 41.49, 20.18, 15.70, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	-6.85	24.18	-47.47	
+mpu 2 ypr	5.18	28.66	-58.54	
+perdict: {-26.66, 41.68, 20.89, 15.50, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	-6.44	25.43	-48.11	
+mpu 2 ypr	5.86	29.58	-59.72	
+perdict: {-26.83, 42.08, 21.38, 15.50, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	-5.88	26.59	-48.89	
+mpu 2 ypr	6.64	30.33	-61.05	
+perdict: {-26.97, 42.37, 21.67, 15.53, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	-5.33	27.51	-49.66	
+mpu 2 ypr	7.31	30.85	-62.30	
+perdict: {-27.10, 42.59, 21.78, 15.60, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	-4.74	28.22	-50.50	
+mpu 2 ypr	7.90	31.16	-63.52	
+perdict: {-27.19, 42.71, 21.74, 15.68, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	-4.33	28.71	-51.36	
+mpu 2 ypr	8.27	31.24	-64.69	
+perdict: {-27.40, 42.91, 21.43, 15.92, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	-3.73	29.11	-52.43	
+mpu 2 ypr	8.65	31.15	-65.98	
+perdict: {-27.51, 42.94, 21.03, 16.10, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	-3.41	29.28	-53.48	
+mpu 2 ypr	8.65	30.87	-67.06	
+perdict: {-27.71, 43.06, 20.49, 16.40, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	-3.25	29.32	-54.65	
+mpu 2 ypr	8.47	30.42	-68.18	
+perdict: {-28.05, 43.30, 19.72, 16.87, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	-3.02	29.34	-55.95	
+mpu 2 ypr	8.26	29.90	-69.37	
+perdict: {-28.37, 43.49, 18.90, 17.33, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	-3.00	29.28	-57.14	
+mpu 2 ypr	7.80	29.35	-70.32	
+perdict: {-28.70, 43.72, 18.10, 17.80, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	-3.31	29.11	-58.01	
+mpu 2 ypr	7.24	28.81	-71.07	
+perdict: {-29.24, 44.19, 17.15, 18.48, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	-3.28	29.04	-58.87	
+mpu 2 ypr	6.99	28.35	-71.88	
+perdict: {-29.57, 44.41, 16.38, 18.94, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	-3.16	29.06	-59.53	
+mpu 2 ypr	6.97	28.00	-72.63	
+perdict: {-29.83, 44.56, 15.68, 19.32, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	-2.67	29.18	-59.94	
+mpu 2 ypr	7.44	27.80	-73.35	
+perdict: {-29.87, 44.46, 15.16, 19.47, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	-2.31	29.27	-59.72	
+mpu 2 ypr	7.84	27.81	-73.51	
+perdict: {-29.74, 44.22, 14.97, 19.41, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	-2.23	29.27	-58.65	
+mpu 2 ypr	8.33	28.09	-73.11	
+perdict: {-29.63, 44.08, 15.03, 19.30, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	-1.83	29.30	-57.13	
+mpu 2 ypr	9.24	28.55	-72.51	
+perdict: {-29.23, 43.62, 15.37, 18.87, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	-1.04	29.39	-55.50	
+mpu 2 ypr	10.45	29.16	-71.81	
+perdict: {-28.47, 42.80, 16.13, 18.06, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	-0.21	29.44	-53.87	
+mpu 2 ypr	11.65	29.78	-71.08	
+perdict: {-27.67, 41.93, 17.00, 17.17, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	1.07	29.43	-52.60	
+mpu 2 ypr	13.16	30.16	-70.81	
+perdict: {-26.75, 40.83, 17.61, 16.26, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	2.91	29.33	-51.79	
+mpu 2 ypr	14.72	30.32	-70.82	
+perdict: {-25.47, 39.24, 18.31, 15.04, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	4.58	29.05	-51.14	
+mpu 2 ypr	15.94	30.31	-70.76	
+perdict: {-24.64, 38.12, 18.48, 14.32, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	5.75	28.62	-50.45	
+mpu 2 ypr	16.63	30.25	-70.30	
+perdict: {-24.18, 37.45, 18.46, 13.97, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	6.57	28.18	-49.71	
+mpu 2 ypr	17.13	30.21	-69.74	
+perdict: {-23.81, 36.93, 18.46, 13.68, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	7.36	27.83	-49.06	
+mpu 2 ypr	17.67	30.23	-69.26	
+perdict: {-23.50, 36.50, 18.50, 13.43, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	8.20	27.65	-48.38	
+mpu 2 ypr	18.33	30.41	-68.80	
+perdict: {-23.23, 36.14, 18.58, 13.21, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	9.25	27.71	-47.60	
+mpu 2 ypr	19.31	30.82	-68.47	
+perdict: {-23.03, 35.89, 18.66, 13.04, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	10.61	27.96	-46.70	
+mpu 2 ypr	20.61	31.47	-68.18	
+perdict: {-22.92, 35.72, 18.65, 12.95, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	12.10	28.38	-45.77	
+mpu 2 ypr	22.04	32.31	-67.82	
+perdict: {-22.83, 35.61, 18.69, 12.87, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	13.45	29.00	-44.79	
+mpu 2 ypr	23.48	33.38	-67.34	
+perdict: {-22.82, 35.64, 18.85, 12.83, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	14.59	29.97	-43.97	
+mpu 2 ypr	24.85	34.66	-66.91	
+perdict: {-22.89, 35.97, 19.65, 12.71, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	15.49	31.31	-43.30	
+mpu 2 ypr	26.21	36.16	-66.72	
+perdict: {-23.08, 36.59, 20.79, 12.63, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	16.78	33.22	-43.12	
+mpu 2 ypr	28.01	37.89	-67.48	
+perdict: {-23.46, 37.55, 22.19, 12.63, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	18.76	35.72	-43.27	
+mpu 2 ypr	30.42	39.91	-69.05	
+perdict: {-24.30, 39.27, 23.94, 12.93, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	21.19	38.42	-43.40	
+mpu 2 ypr	33.28	42.05	-71.06	
+perdict: {-25.93, 41.91, 25.03, 13.97, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	24.30	41.11	-43.62	
+mpu 2 ypr	36.54	44.06	-73.67	
+perdict: {-27.53, 44.42, 25.80, 15.06, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	27.82	43.49	-43.80	
+mpu 2 ypr	39.73	45.78	-76.44	
+perdict: {-28.77, 46.37, 26.42, 15.90, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	30.94	45.20	-43.80	
+mpu 2 ypr	42.21	47.07	-78.56	
+perdict: {-29.47, 47.48, 26.78, 16.37, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	33.28	46.10	-43.77	
+mpu 2 ypr	43.77	47.75	-80.06	
+perdict: {-29.65, 47.78, 26.93, 16.48, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	34.82	46.23	-43.86	
+mpu 2 ypr	44.39	47.84	-80.82	
+perdict: {-29.46, 47.48, 26.83, 16.35, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	35.92	45.84	-44.33	
+mpu 2 ypr	44.40	47.39	-81.50	
+perdict: {-28.70, 46.42, 26.95, 15.73, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	36.84	45.35	-44.99	
+mpu 2 ypr	44.13	46.76	-82.03	
+perdict: {-27.79, 45.15, 27.03, 15.00, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	37.20	44.82	-45.41	
+mpu 2 ypr	43.72	46.26	-81.94	
+perdict: {-27.17, 44.30, 27.12, 14.50, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	37.55	44.53	-45.74	
+mpu 2 ypr	43.49	45.91	-82.03	
+perdict: {-26.73, 43.68, 27.16, 14.15, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	37.95	44.54	-45.87	
+mpu 2 ypr	43.54	45.91	-82.02	
+perdict: {-26.60, 43.54, 27.31, 14.02, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	38.39	44.78	-45.81	
+mpu 2 ypr	43.78	46.12	-82.04	
+perdict: {-26.66, 43.68, 27.47, 14.03, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	39.15	45.35	-45.71	
+mpu 2 ypr	44.40	46.60	-82.42	
+perdict: {-26.89, 44.08, 27.72, 14.16, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	40.21	46.27	-45.52	
+mpu 2 ypr	45.33	47.35	-83.06	
+perdict: {-27.28, 44.72, 28.02, 14.40, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	41.50	47.47	-45.27	
+mpu 2 ypr	46.57	48.33	-83.95	
+perdict: {-27.82, 45.61, 28.40, 14.75, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	42.93	48.82	-44.90	
+mpu 2 ypr	48.00	49.47	-84.97	
+perdict: {-28.48, 46.67, 28.81, 15.17, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	44.53	50.35	-44.62	
+mpu 2 ypr	49.60	50.66	-86.38	
+perdict: {-28.73, 47.51, 29.25, 15.30, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	46.42	52.16	-44.59	
+mpu 2 ypr	51.42	51.91	-88.38	
+perdict: {-28.78, 48.23, 29.68, 15.29, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	48.33	54.02	-44.60	
+mpu 2 ypr	53.27	126.90	-90.57	
+perdict: {-72.59, 131.68, 103.19, 34.13, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	50.18	55.73	-44.56	
+mpu 2 ypr	55.04	125.82	-92.78	
+perdict: {-72.42, 130.90, 101.38, 34.37, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	51.90	57.26	-44.51	
+mpu 2 ypr	56.63	124.90	-94.95	
+perdict: {-72.23, 130.16, 99.81, 34.55, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	53.27	58.49	-44.65	
+mpu 2 ypr	57.92	124.24	-96.85	
+perdict: {-72.00, 129.47, 98.60, 34.62, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	54.18	59.38	-45.25	
+mpu 2 ypr	58.78	123.94	-98.42	
+perdict: {-71.67, 128.76, 97.81, 34.53, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	54.60	59.95	-46.51	
+mpu 2 ypr	59.19	124.08	-99.71	
+perdict: {-71.18, 127.98, 97.50, 34.21, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	54.44	60.11	-48.20	
+mpu 2 ypr	59.14	124.56	-100.43	
+perdict: {-70.66, 127.28, 97.65, 33.78, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	53.84	59.89	-50.00	
+mpu 2 ypr	58.70	125.34	-100.73	
+perdict: {-70.16, 126.74, 98.23, 33.26, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	53.02	59.41	-51.60	
+mpu 2 ypr	58.00	126.22	-100.66	
+perdict: {-69.73, 126.37, 99.07, 32.75, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	51.97	58.66	-52.60	
+mpu 2 ypr	57.08	127.08	-100.07	
+perdict: {-69.51, 126.37, 100.08, 32.37, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	50.97	57.90	-53.33	
+mpu 2 ypr	56.17	127.83	-99.38	
+perdict: {-69.36, 126.44, 101.04, 32.06, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	49.94	57.18	-53.90	
+mpu 2 ypr	55.27	128.51	-98.58	
+perdict: {-69.30, 126.61, 101.94, 31.82, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	48.96	56.51	-54.47	
+mpu 2 ypr	54.41	129.17	-97.85	
+perdict: {-69.23, 126.77, 102.79, 31.59, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	47.83	55.79	-55.29	
+mpu 2 ypr	53.47	129.92	-97.11	
+perdict: {-69.10, 126.87, 103.72, 31.29, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	46.32	54.85	-56.29	
+mpu 2 ypr	52.22	130.86	-96.10	
+perdict: {-69.10, 127.23, 104.95, 31.04, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	44.19	53.52	-57.44	
+mpu 2 ypr	50.48	132.09	-94.71	
+perdict: {-69.89, 128.69, 106.08, 31.42, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	41.66	51.87	-58.71	
+mpu 2 ypr	48.26	133.68	-93.28	
+perdict: {-70.79, 130.40, 107.49, 31.83, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	39.05	50.01	-60.05	
+mpu 2 ypr	45.70	135.54	-91.92	
+perdict: {-71.69, 132.14, 109.07, 32.20, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	36.23	47.95	-61.21	
+mpu 2 ypr	42.74	137.52	-90.37	
+perdict: {-72.60, 133.95, 110.75, 32.56, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	33.01	45.66	-61.89	
+mpu 2 ypr	39.30	40.45	-88.47	
+perdict: {-25.28, 40.32, 22.65, 13.97, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	29.86	43.41	-62.24	
+mpu 2 ypr	35.81	38.49	-86.67	
+perdict: {-24.23, 38.45, 21.55, 13.37, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	27.00	41.40	-62.23	
+mpu 2 ypr	32.50	36.79	-84.93	
+perdict: {-23.24, 36.93, 21.18, 12.67, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	24.13	39.55	-61.49	
+mpu 2 ypr	29.27	35.46	-82.88	
+perdict: {-22.53, 35.69, 20.42, 12.27, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	21.37	37.88	-60.17	
+mpu 2 ypr	26.28	34.53	-80.64	
+perdict: {-21.96, 34.64, 19.62, 12.00, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	19.03	36.48	-58.65	
+mpu 2 ypr	23.80	33.87	-78.52	
+perdict: {-21.51, 33.78, 18.86, 11.80, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	17.06	35.29	-57.02	
+mpu 2 ypr	21.76	33.43	-76.46	
+perdict: {-21.57, 33.80, 18.62, 11.91, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	15.24	34.14	-55.20	
+mpu 2 ypr	19.97	33.09	-74.34	
+perdict: {-21.66, 33.85, 18.37, 12.03, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	13.63	33.05	-53.26	
+mpu 2 ypr	18.48	32.88	-72.17	
+perdict: {-21.68, 33.83, 18.21, 12.08, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	12.45	32.15	-51.45	
+mpu 2 ypr	17.48	32.76	-70.25	
+perdict: {-21.49, 33.60, 18.34, 11.90, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	11.44	31.29	-49.56	
+mpu 2 ypr	16.72	32.70	-68.30	
+perdict: {-21.31, 33.38, 18.48, 11.73, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	10.89	30.61	-47.94	
+mpu 2 ypr	16.48	32.69	-66.82	
+perdict: {-21.20, 33.24, 18.55, 11.63, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	11.12	30.27	-46.86	
+mpu 2 ypr	16.86	32.73	-66.03	
+perdict: {-21.07, 33.04, 18.47, 11.55, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	11.63	30.04	-45.91	
+mpu 2 ypr	17.42	32.83	-65.33	
+perdict: {-20.93, 32.80, 18.38, 11.45, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	12.10	29.82	-44.93	
+mpu 2 ypr	18.00	32.99	-64.60	
+perdict: {-20.81, 32.62, 18.33, 11.37, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	12.67	29.65	-43.91	
+mpu 2 ypr	18.71	33.19	-63.94	
+perdict: {-20.71, 32.46, 18.27, 11.30, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	13.58	29.68	-43.24	
+mpu 2 ypr	19.66	33.45	-63.66	
+perdict: {-20.62, 32.31, 18.18, 11.25, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	14.57	29.82	-42.71	
+mpu 2 ypr	20.62	33.76	-63.49	
+perdict: {-20.53, 32.15, 18.09, 11.20, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	15.64	30.04	-42.37	
+mpu 2 ypr	21.61	34.06	-63.54	
+perdict: {-20.44, 32.00, 17.99, 11.15, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	16.65	30.27	-42.13	
+mpu 2 ypr	22.50	34.34	-63.63	
+perdict: {-20.51, 32.15, 18.20, 11.16, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	17.50	30.39	-41.88	
+mpu 2 ypr	23.23	34.55	-63.61	
+perdict: {-20.60, 32.35, 18.43, 11.19, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	18.21	30.44	-41.58	
+mpu 2 ypr	23.84	34.70	-63.48	
+perdict: {-20.59, 32.44, 18.79, 11.10, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	18.88	30.38	-41.24	
+mpu 2 ypr	24.39	34.79	-63.28	
+perdict: {-20.54, 32.46, 19.11, 10.99, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	19.52	30.24	-40.84	
+mpu 2 ypr	24.89	34.84	-62.96	
+perdict: {-20.46, 32.45, 19.44, 10.86, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	20.06	30.00	-40.32	
+mpu 2 ypr	25.37	34.87	-62.48	
+perdict: {-20.37, 32.43, 19.76, 10.73, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	20.62	29.68	-39.76	
+mpu 2 ypr	25.80	34.84	-61.87	
+perdict: {-20.23, 32.32, 20.08, 10.55, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	20.93	29.20	-39.09	
+mpu 2 ypr	26.06	34.72	-61.02	
+perdict: {-20.11, 32.24, 20.43, 10.38, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	20.95	28.55	-38.67	
+mpu 2 ypr	26.03	34.39	-60.14	
+perdict: {-19.90, 31.98, 20.53, 10.20, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	20.62	27.77	-38.55	
+mpu 2 ypr	25.60	33.78	-59.35	
+perdict: {-19.55, 31.39, 20.24, 9.98, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	19.77	26.72	-38.56	
+mpu 2 ypr	24.68	32.90	-58.29	
+perdict: {-19.05, 30.67, 20.17, 9.61, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	18.35	25.36	-38.62	
+mpu 2 ypr	22.88	31.33	-56.91	
+perdict: {-18.23, 29.37, 19.75, 9.06, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	16.32	23.48	-38.95	
+mpu 2 ypr	20.70	29.46	-55.55	
+perdict: {-17.37, 28.04, 19.37, 8.47, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	13.80	21.23	-38.64	
+mpu 2 ypr	18.30	27.51	-53.29	
+perdict: {-16.71, 27.04, 19.19, 7.99, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	11.32	19.10	-37.91	
+mpu 2 ypr	16.32	25.89	-51.28	
+perdict: {-16.57, 26.83, 19.16, 7.89, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	9.38	17.71	-37.30	
+mpu 2 ypr	14.81	24.89	-49.38	
+perdict: {-16.49, 26.73, 19.23, 7.81, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	7.48	16.72	-36.21	
+mpu 2 ypr	13.69	24.41	-47.43	
+perdict: {-16.74, 27.09, 19.22, 8.01, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	6.02	16.30	-35.05	
+mpu 2 ypr	64.54	177.70	-178.71	
+perdict: {-115.41, 201.38, 146.37, 58.80, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	4.10	16.01	-33.19	
+mpu 2 ypr	12.19	24.85	-42.75	
+perdict: {-17.43, 28.02, 19.08, 8.57, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	2.52	16.29	-32.14	
+mpu 2 ypr	11.53	25.45	-41.38	
+perdict: {-18.02, 28.81, 18.85, 9.08, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	0.95	16.67	-31.68	
+mpu 2 ypr	10.60	25.96	-40.47	
+perdict: {-18.56, 29.53, 18.72, 9.53, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	-0.49	17.09	-32.07	
+mpu 2 ypr	9.45	26.26	-40.55	
+perdict: {-18.87, 30.07, 19.05, 9.70, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	-2.05	17.29	-32.91	
+mpu 2 ypr	7.84	26.26	-40.70	
+perdict: {-19.55, 31.17, 19.48, 10.15, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	-4.21	17.22	-33.58	
+mpu 2 ypr	5.79	26.13	-40.65	
+perdict: {-20.43, 32.58, 20.01, 10.72, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	-6.30	17.34	-34.48	
+mpu 2 ypr	3.82	26.14	-41.05	
+perdict: {-21.40, 34.14, 20.60, 11.36, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	-8.02	17.74	-35.46	
+mpu 2 ypr	2.25	26.43	-41.80	
+perdict: {-22.36, 35.69, 21.21, 11.98, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	-9.03	18.69	-36.45	
+mpu 2 ypr	1.47	27.22	-42.91	
+perdict: {-23.19, 37.06, 21.83, 12.50, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	-9.53	20.07	-37.29	
+mpu 2 ypr	1.35	28.42	-44.16	
+perdict: {-23.89, 38.26, 22.50, 12.91, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	-9.35	21.89	-38.27	
+mpu 2 ypr	2.00	29.96	-45.95	
+perdict: {-24.45, 39.26, 23.23, 13.19, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	-8.55	24.08	-39.40	
+mpu 2 ypr	3.27	31.74	-48.05	
+perdict: {-24.88, 40.07, 23.84, 13.40, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	-7.32	26.54	-40.56	
+mpu 2 ypr	5.23	33.70	-50.58	
+perdict: {-25.28, 40.79, 24.37, 13.60, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	-5.23	29.27	-41.81	
+mpu 2 ypr	8.17	35.78	-53.54	
+perdict: {-25.50, 41.18, 24.63, 13.72, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	-2.41	32.12	-42.90	
+mpu 2 ypr	11.97	37.91	-56.61	
+perdict: {-25.51, 41.18, 24.57, 13.74, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	0.93	34.85	-43.47	
+mpu 2 ypr	16.38	39.97	-59.43	
+perdict: {-26.87, 41.87, 24.78, 14.83, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	4.77	37.19	-43.51	
+mpu 2 ypr	21.06	41.79	-61.95	
+perdict: {-28.18, 43.44, 25.25, 15.78, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	8.76	39.28	-43.49	
+mpu 2 ypr	25.46	43.39	-64.39	
+perdict: {-29.35, 44.57, 25.22, 16.72, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	12.42	41.12	-43.76	
+mpu 2 ypr	29.04	44.69	-66.65	
+perdict: {-29.57, 45.60, 25.74, 16.76, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	15.11	42.38	-44.08	
+mpu 2 ypr	31.54	45.48	-68.50	
+perdict: {-30.00, 46.98, 26.19, 16.97, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	17.12	43.08	-44.54	
+mpu 2 ypr	33.06	45.79	-69.92	
+perdict: {-29.95, 47.51, 26.42, 16.85, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	18.01	43.30	-45.23	
+mpu 2 ypr	33.52	45.68	-70.87	
+perdict: {-29.55, 47.35, 26.48, 16.51, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	18.29	43.27	-46.31	
+mpu 2 ypr	33.45	45.25	-71.86	
+perdict: {-28.97, 46.64, 26.34, 16.07, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	18.29	43.09	-47.42	
+mpu 2 ypr	33.08	44.69	-72.65	
+perdict: {-28.38, 45.71, 26.09, 15.66, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	17.83	42.78	-48.20	
+mpu 2 ypr	32.40	44.16	-72.97	
+perdict: {-27.80, 44.83, 25.88, 15.26, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	17.16	42.43	-48.76	
+mpu 2 ypr	31.72	43.67	-73.17	
+perdict: {-27.30, 44.07, 25.75, 14.89, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	16.66	42.05	-49.25	
+mpu 2 ypr	31.04	43.12	-73.34	
+perdict: {-26.71, 43.18, 25.56, 14.47, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	15.93	41.38	-49.46	
+mpu 2 ypr	30.00	42.43	-73.03	
+perdict: {-25.99, 42.08, 25.29, 13.97, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	14.77	40.24	-49.32	
+mpu 2 ypr	28.35	41.47	-72.10	
+perdict: {-25.39, 40.95, 24.40, 13.68, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	12.76	38.45	-49.06	
+mpu 2 ypr	25.72	40.02	-70.54	
+perdict: {-25.12, 40.22, 23.25, 13.71, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	10.12	36.07	-48.95	
+mpu 2 ypr	22.24	38.00	-68.71	
+perdict: {-24.68, 39.15, 21.74, 13.68, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	6.96	33.20	-48.89	
+mpu 2 ypr	18.09	35.52	-66.62	
+perdict: {-24.04, 38.02, 20.99, 13.34, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	3.34	29.94	-48.52	
+mpu 2 ypr	13.52	32.80	-64.08	
+perdict: {-23.56, 37.28, 20.81, 13.00, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	-0.81	26.31	-47.47	
+mpu 2 ypr	8.62	29.97	-60.76	
+perdict: {-23.99, 37.89, 20.82, 13.33, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	-4.94	22.55	-46.29	
+mpu 2 ypr	4.19	27.02	-57.83	
+perdict: {-24.91, 38.86, 19.75, 14.35, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	-7.99	19.23	-45.92	
+mpu 2 ypr	0.66	24.10	-56.03	
+perdict: {-26.36, 39.95, 16.73, 16.32, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	-10.43	16.30	-45.91	
+mpu 2 ypr	-2.32	21.39	-54.72	
+perdict: {-28.67, 39.95, 12.29, 19.23, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	-12.49	13.81	-46.03	
+mpu 2 ypr	-4.79	19.06	-53.80	
+perdict: {-31.18, 39.77, 9.16, 21.92, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	-13.98	11.99	-46.27	
+mpu 2 ypr	-6.54	17.34	-53.34	
+perdict: {-32.69, 40.14, 8.44, 23.23, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	-14.79	11.07	-46.57	
+mpu 2 ypr	-7.45	16.44	-53.33	
+perdict: {-32.88, 39.91, 8.08, 23.48, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	-14.74	11.25	-46.89	
+mpu 2 ypr	-7.26	16.63	-53.84	
+perdict: {-33.18, 40.35, 8.01, 23.73, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	-13.87	12.57	-47.01	
+mpu 2 ypr	-6.04	17.87	-54.57	
+perdict: {-32.98, 41.13, 8.33, 23.51, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	-12.41	14.54	-47.13	
+mpu 2 ypr	-4.11	19.66	-55.65	
+perdict: {-31.72, 41.24, 8.73, 22.49, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	-10.48	16.96	-47.20	
+mpu 2 ypr	-1.60	21.83	-56.90	
+perdict: {-29.46, 41.88, 11.51, 20.09, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	-8.31	19.59	-47.21	
+mpu 2 ypr	1.27	24.17	-58.30	
+perdict: {-27.65, 41.45, 15.68, 17.63, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	-5.80	22.33	-47.32	
+mpu 2 ypr	4.51	26.55	-59.97	
+perdict: {-26.56, 40.62, 17.93, 16.15, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	-2.83	25.20	-47.66	
+mpu 2 ypr	8.21	28.94	-62.07	
+perdict: {-25.35, 39.62, 20.15, 14.58, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	0.36	28.18	-47.89	
+mpu 2 ypr	12.10	31.43	-64.06	
+perdict: {-24.67, 38.87, 20.83, 13.86, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	3.27	31.00	-47.58	
+mpu 2 ypr	15.95	33.98	-65.60	
+perdict: {-24.54, 38.73, 20.99, 13.73, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	6.23	33.75	-47.04	
+mpu 2 ypr	19.99	36.55	-67.19	
+perdict: {-25.17, 39.86, 21.76, 14.06, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	9.48	36.44	-46.65	
+mpu 2 ypr	24.11	38.93	-69.06	
+perdict: {-25.81, 40.99, 23.40, 14.23, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	12.72	38.88	-46.51	
+mpu 2 ypr	27.92	40.98	-71.08	
+perdict: {-25.74, 41.63, 25.02, 13.82, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	15.90	41.02	-46.77	
+mpu 2 ypr	31.38	42.59	-73.39	
+perdict: {-26.18, 42.55, 25.97, 13.97, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	19.09	42.96	-47.44	
+mpu 2 ypr	34.52	43.81	-75.95	
+perdict: {-27.32, 44.29, 26.34, 14.79, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	22.44	44.83	-48.42	
+mpu 2 ypr	37.59	44.79	-78.92	
+perdict: {-28.17, 45.57, 26.60, 15.39, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	26.01	46.78	-49.37	
+mpu 2 ypr	40.64	45.80	-81.87	
+perdict: {-28.98, 46.79, 26.83, 15.98, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	29.48	48.77	-49.79	
+mpu 2 ypr	43.78	47.03	-84.70	
+perdict: {-29.92, 48.25, 27.23, 16.63, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	33.04	50.84	-49.58	
+mpu 2 ypr	46.92	48.50	-87.29	
+perdict: {-30.72, 49.53, 27.68, 17.16, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	36.15	52.68	-48.41	
+mpu 2 ypr	49.70	50.19	-89.11	
+perdict: {-31.53, 50.86, 28.29, 17.67, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	38.45	53.99	-46.50	
+mpu 2 ypr	51.85	51.85	-89.99	
+perdict: {-32.31, 52.18, 28.98, 18.13, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	39.69	54.70	-44.33	
+mpu 2 ypr	53.19	53.28	-89.80	
+perdict: {-33.07, 53.45, 29.63, 18.59, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	40.19	54.91	-42.97	
+mpu 2 ypr	53.82	54.07	-89.48	
+perdict: {-33.51, 54.19, 30.01, 18.85, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	40.03	54.64	-42.98	
+mpu 2 ypr	53.48	53.97	-88.92	
+perdict: {-33.51, 54.15, 29.89, 18.87, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	38.80	53.57	-43.73	
+mpu 2 ypr	52.07	53.08	-87.86	
+perdict: {-33.10, 53.45, 29.47, 18.64, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	37.04	52.17	-44.86	
+mpu 2 ypr	50.00	51.76	-86.38	
+perdict: {-32.46, 52.34, 28.82, 18.28, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	33.99	50.00	-46.19	
+mpu 2 ypr	46.68	49.76	-84.05	
+perdict: {-31.42, 50.59, 27.94, 17.65, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	29.88	46.93	-47.73	
+mpu 2 ypr	42.07	46.93	-81.29	
+perdict: {-29.56, 47.60, 26.79, 16.44, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	25.23	43.23	-49.45	
+mpu 2 ypr	36.52	43.39	-78.60	
+perdict: {-26.43, 42.70, 25.27, 14.31, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	20.65	39.28	-51.22	
+mpu 2 ypr	30.66	39.44	-76.39	
+perdict: {-24.39, 38.86, 22.12, 13.38, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	16.46	35.34	-52.76	
+mpu 2 ypr	24.97	35.46	-74.50	
+perdict: {-23.15, 36.12, 18.92, 13.07, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	12.56	31.56	-53.79	
+mpu 2 ypr	19.65	31.73	-72.70	
+perdict: {-22.59, 35.18, 18.42, 12.74, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	9.61	28.33	-54.98	
+mpu 2 ypr	15.44	28.33	-71.88	
+perdict: {-21.52, 33.67, 18.45, 11.90, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	7.72	25.92	-56.46	
+mpu 2 ypr	12.14	25.53	-71.53	
+perdict: {-20.66, 31.00, 18.57, 11.15, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	5.82	24.05	-57.33	
+mpu 2 ypr	9.31	23.48	-70.98	
+perdict: {-21.46, 27.62, 19.95, 11.32, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	4.41	22.94	-57.69	
+mpu 2 ypr	7.46	22.30	-70.55	
+perdict: {-21.37, 25.77, 20.75, 11.04, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	4.00	22.83	-57.69	
+mpu 2 ypr	7.09	22.16	-70.55	
+perdict: {-21.66, 26.02, 20.69, 11.28, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	4.55	23.65	-57.15	
+mpu 2 ypr	7.96	22.99	-70.57	
+perdict: {-22.07, 28.03, 19.85, 11.80, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	5.91	25.06	-56.65	
+mpu 2 ypr	9.94	24.33	-71.26	
+perdict: {-21.48, 30.33, 18.70, 11.70, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	8.58	27.40	-56.21	
+mpu 2 ypr	13.32	26.42	-72.58	
+perdict: {-20.72, 32.27, 17.58, 11.46, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	11.91	30.31	-55.22	
+mpu 2 ypr	17.51	29.19	-73.86	
+perdict: {-21.64, 33.59, 17.62, 12.16, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	15.71	33.58	-53.82	
+mpu 2 ypr	22.34	32.42	-75.31	
+perdict: {-21.99, 34.05, 17.47, 12.47, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	20.03	37.14	-52.36	
+mpu 2 ypr	27.54	35.87	-77.06	
+perdict: {-22.40, 35.04, 18.84, 12.50, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	24.43	40.64	-50.78	
+mpu 2 ypr	32.64	39.30	-78.94	
+perdict: {-23.83, 37.94, 21.76, 13.01, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	28.51	43.80	-49.07	
+mpu 2 ypr	37.24	42.46	-80.69	
+perdict: {-25.21, 40.65, 24.21, 13.58, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	32.18	46.44	-47.42	
+mpu 2 ypr	41.17	45.10	-82.45	
+perdict: {-26.93, 43.54, 25.70, 14.61, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	35.52	48.49	-46.30	
+mpu 2 ypr	44.29	47.04	-84.32	
+perdict: {-28.19, 45.55, 26.43, 15.44, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	37.84	49.73	-45.63	
+mpu 2 ypr	46.15	48.24	-85.44	
+perdict: {-28.79, 46.51, 26.79, 15.84, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	38.57	49.93	-45.35	
+mpu 2 ypr	46.55	48.59	-85.44	
+perdict: {-28.98, 46.79, 26.84, 15.97, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	37.73	49.08	-45.44	
+mpu 2 ypr	45.55	48.08	-84.36	
+perdict: {-28.75, 46.39, 26.58, 15.85, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	36.66	48.04	-45.84	
+mpu 2 ypr	44.31	47.32	-83.33	
+perdict: {-28.37, 45.75, 26.25, 15.63, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	34.73	46.63	-46.36	
+mpu 2 ypr	42.18	46.17	-81.44	
+perdict: {-27.78, 44.73, 25.68, 15.28, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	32.01	44.79	-47.11	
+mpu 2 ypr	39.36	44.56	-79.43	
+perdict: {-26.58, 42.81, 24.93, 14.50, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	27.45	41.63	-48.60	
+mpu 2 ypr	34.42	41.56	-76.75	
+perdict: {-24.08, 38.87, 23.66, 12.82, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	23.35	38.62	-50.27	
+mpu 2 ypr	29.67	38.47	-75.01	
+perdict: {-23.02, 36.45, 20.65, 12.61, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	18.31	34.57	-52.68	
+mpu 2 ypr	23.30	34.07	-73.37	
+perdict: {-21.11, 33.02, 18.23, 11.62, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	14.28	31.13	-54.29	
+mpu 2 ypr	18.03	30.44	-72.04	
+perdict: {-20.43, 32.09, 18.35, 11.07, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	9.54	27.00	-55.66	
+mpu 2 ypr	11.85	26.28	-70.30	
+perdict: {-19.25, 29.18, 18.31, 10.11, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	6.24	24.12	-56.25	
+mpu 2 ypr	7.66	23.50	-68.98	
+perdict: {-19.56, 25.07, 20.23, 9.82, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	3.62	21.85	-56.50	
+mpu 2 ypr	4.46	21.38	-67.92	
+perdict: {-19.53, 21.47, 21.48, 9.43, } out: 2 servo angle: 30 current: 0
+mpu 1 ypr	1.88	20.32	-56.55	
+mpu 2 ypr	2.45	19.97	-67.27	
+perdict: {-19.61, 19.25, 22.13, 9.29, } out: 2 servo angle: 30 current: 30
+mpu 1 ypr	1.06	19.56	-56.34	
+mpu 2 ypr	1.56	19.32	-66.79	
+perdict: {-19.83, 18.54, 22.04, 9.48, } out: 2 servo angle: 30 current: 30
+mpu 1 ypr	0.52	19.13	-55.41	
+mpu 2 ypr	1.31	19.25	-65.95	
+perdict: {-20.57, 19.91, 21.23, 10.27, } out: 2 servo angle: 30 current: 30
+mpu 1 ypr	0.58	19.09	-54.02	
+mpu 2 ypr	1.98	19.67	-65.12	
+perdict: {-21.32, 22.56, 20.19, 11.13, } out: 1 servo angle: 0 current: 30
+mpu 1 ypr	1.47	19.41	-52.54	
+mpu 2 ypr	3.63	20.45	-64.72	
+perdict: {-21.66, 25.13, 19.34, 11.59, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	3.02	19.90	-51.07	
+mpu 2 ypr	5.78	21.39	-64.40	
+perdict: {-20.69, 26.36, 18.99, 10.93, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	4.87	20.44	-49.45	
+mpu 2 ypr	8.12	22.47	-63.93	
+perdict: {-19.44, 27.45, 17.98, 10.27, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	6.82	20.98	-47.93	
+mpu 2 ypr	10.49	23.55	-63.55	
+perdict: {-18.16, 28.33, 17.06, 9.56, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	8.79	21.47	-46.55	
+mpu 2 ypr	12.70	24.57	-63.13	
+perdict: {-17.51, 27.56, 17.11, 9.05, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	10.41	21.69	-45.20	
+mpu 2 ypr	14.51	25.40	-62.44	
+perdict: {-17.52, 27.65, 17.38, 9.00, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	11.93	22.05	-44.43	
+mpu 2 ypr	16.13	26.16	-62.31	
+perdict: {-17.52, 27.72, 17.62, 8.95, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	13.38	22.80	-44.21	
+mpu 2 ypr	17.48	27.01	-62.39	
+perdict: {-17.52, 27.81, 17.90, 8.89, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	14.36	23.73	-44.00	
+mpu 2 ypr	18.53	27.99	-62.34	
+perdict: {-17.86, 28.40, 18.23, 9.09, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	15.13	24.86	-43.61	
+mpu 2 ypr	19.58	29.19	-62.24	
+perdict: {-18.51, 29.40, 18.54, 9.53, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	16.07	26.26	-43.12	
+mpu 2 ypr	20.90	30.67	-62.27	
+perdict: {-18.90, 29.97, 18.55, 9.83, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	17.28	27.90	-42.52	
+mpu 2 ypr	22.58	32.39	-62.46	
+perdict: {-19.56, 30.97, 18.76, 10.30, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	18.92	29.82	-41.83	
+mpu 2 ypr	24.71	34.38	-62.92	
+perdict: {-20.50, 32.45, 19.21, 10.94, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	20.98	31.95	-41.14	
+mpu 2 ypr	27.21	36.55	-63.59	
+perdict: {-21.53, 34.48, 21.12, 11.35, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	23.24	34.17	-40.38	
+mpu 2 ypr	29.90	38.82	-64.36	
+perdict: {-22.66, 36.80, 23.50, 11.74, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	25.58	36.39	-39.55	
+mpu 2 ypr	32.64	41.09	-65.19	
+perdict: {-24.54, 39.84, 24.72, 12.95, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	27.84	38.48	-38.62	
+mpu 2 ypr	35.28	43.28	-65.91	
+perdict: {-26.35, 42.76, 25.89, 14.12, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	29.92	40.36	-37.72	
+mpu 2 ypr	37.73	45.29	-66.62	
+perdict: {-27.84, 45.19, 26.91, 15.07, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	31.85	42.08	-37.04	
+mpu 2 ypr	39.92	47.06	-67.44	
+perdict: {-29.01, 47.11, 27.76, 15.81, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	33.42	43.57	-36.58	
+mpu 2 ypr	41.71	48.55	-68.16	
+perdict: {-30.01, 48.76, 28.47, 16.44, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	34.43	44.79	-36.49	
+mpu 2 ypr	42.96	49.66	-68.89	
+perdict: {-30.96, 50.23, 28.90, 17.09, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	35.08	45.81	-36.99	
+mpu 2 ypr	43.79	50.36	-69.93	
+perdict: {-31.51, 51.07, 29.11, 17.48, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	35.35	46.58	-38.12	
+mpu 2 ypr	44.10	50.61	-71.17	
+perdict: {-31.59, 51.20, 29.13, 17.54, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	35.11	47.04	-39.67	
+mpu 2 ypr	43.89	50.44	-72.33	
+perdict: {-31.43, 50.92, 28.94, 17.45, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	34.50	47.24	-41.51	
+mpu 2 ypr	43.29	49.96	-73.43	
+perdict: {-31.21, 50.48, 28.58, 17.35, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	33.75	47.32	-43.66	
+mpu 2 ypr	42.51	49.24	-74.71	
+perdict: {-30.80, 49.76, 28.08, 17.14, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	32.98	47.25	-45.94	
+mpu 2 ypr	41.63	48.36	-76.00	
+perdict: {-30.26, 48.84, 27.56, 16.83, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	32.25	47.09	-48.26	
+mpu 2 ypr	40.75	47.38	-77.34	
+perdict: {-29.43, 47.46, 26.92, 16.31, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	31.64	46.89	-50.43	
+mpu 2 ypr	39.92	46.39	-78.56	
+perdict: {-28.57, 46.06, 26.32, 15.77, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	30.83	46.53	-52.25	
+mpu 2 ypr	38.93	45.44	-79.31	
+perdict: {-27.77, 44.76, 25.76, 15.26, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	29.58	45.96	-53.78	
+mpu 2 ypr	37.61	44.45	-79.61	
+perdict: {-26.97, 43.43, 25.15, 14.76, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	27.89	45.06	-55.08	
+mpu 2 ypr	35.80	43.32	-79.43	
+perdict: {-26.04, 41.89, 24.46, 14.17, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	25.37	43.65	-56.01	
+mpu 2 ypr	33.12	41.92	-78.56	
+perdict: {-25.46, 40.62, 22.95, 14.04, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	22.22	41.76	-56.71	
+mpu 2 ypr	29.72	40.19	-77.39	
+perdict: {-24.82, 39.22, 21.33, 13.87, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	19.20	39.62	-57.42	
+mpu 2 ypr	26.12	38.13	-76.39	
+perdict: {-23.88, 37.66, 20.59, 13.30, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	16.24	37.29	-57.84	
+mpu 2 ypr	22.30	35.95	-75.16	
+perdict: {-22.93, 36.12, 19.95, 12.69, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	13.17	34.84	-57.89	
+mpu 2 ypr	18.33	33.78	-73.66	
+perdict: {-22.35, 35.30, 19.95, 12.23, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	10.31	32.50	-57.74	
+mpu 2 ypr	14.66	31.73	-72.22	
+perdict: {-21.78, 34.46, 19.87, 11.80, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	7.81	30.37	-57.48	
+mpu 2 ypr	11.47	29.88	-70.90	
+perdict: {-22.00, 34.77, 19.87, 11.97, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	5.81	28.60	-57.16	
+mpu 2 ypr	9.01	28.35	-69.87	
+perdict: {-22.23, 35.08, 19.81, 12.17, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	4.70	27.46	-56.93	
+mpu 2 ypr	7.71	27.30	-69.40	
+perdict: {-22.33, 34.87, 19.69, 12.26, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	4.76	27.22	-56.79	
+mpu 2 ypr	7.84	26.97	-69.58	
+perdict: {-22.24, 34.50, 19.45, 12.24, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	5.37	27.71	-56.38	
+mpu 2 ypr	8.62	27.40	-69.66	
+perdict: {-22.11, 34.71, 19.17, 12.21, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	5.88	28.41	-55.43	
+mpu 2 ypr	9.70	28.24	-69.49	
+perdict: {-22.20, 34.76, 18.87, 12.34, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	6.83	29.33	-54.36	
+mpu 2 ypr	11.41	29.30	-69.58	
+perdict: {-22.16, 34.60, 18.54, 12.38, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	8.59	30.57	-53.50	
+mpu 2 ypr	13.87	30.53	-70.16	
+perdict: {-21.77, 34.01, 18.41, 12.10, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	10.77	31.95	-52.67	
+mpu 2 ypr	16.62	31.86	-70.89	
+perdict: {-21.88, 34.14, 18.32, 12.20, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	13.19	33.38	-51.72	
+mpu 2 ypr	19.53	33.30	-71.65	
+perdict: {-22.01, 34.30, 18.24, 12.32, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	15.68	34.84	-50.72	
+mpu 2 ypr	22.41	34.81	-72.36	
+perdict: {-21.87, 34.11, 18.23, 12.22, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	18.14	36.30	-49.73	
+mpu 2 ypr	25.18	36.35	-73.07	
+perdict: {-21.98, 34.54, 19.18, 12.10, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	20.52	37.78	-48.91	
+mpu 2 ypr	27.78	37.85	-73.86	
+perdict: {-22.51, 35.74, 20.66, 12.21, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	22.68	39.20	-48.23	
+mpu 2 ypr	30.09	39.27	-74.64	
+perdict: {-22.99, 36.83, 22.01, 12.31, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	24.48	40.44	-47.65	
+mpu 2 ypr	32.04	40.49	-75.33	
+perdict: {-23.41, 37.77, 23.18, 12.39, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	26.00	41.42	-47.14	
+mpu 2 ypr	33.61	41.49	-75.87	
+perdict: {-23.88, 38.65, 23.92, 12.60, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	26.94	41.93	-46.45	
+mpu 2 ypr	34.58	42.21	-75.86	
+perdict: {-24.54, 39.67, 24.17, 13.06, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	27.34	41.95	-45.63	
+mpu 2 ypr	34.99	42.58	-75.41	
+perdict: {-24.91, 40.24, 24.31, 13.32, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	27.58	41.65	-44.90	
+mpu 2 ypr	35.12	42.68	-74.82	
+perdict: {-25.04, 40.44, 24.34, 13.42, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	27.69	41.12	-44.15	
+mpu 2 ypr	35.04	42.62	-74.03	
+perdict: {-25.05, 40.44, 24.27, 13.44, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	27.56	40.41	-43.26	
+mpu 2 ypr	34.78	42.47	-72.96	
+perdict: {-25.02, 40.36, 24.19, 13.43, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	27.28	39.49	-42.31	
+mpu 2 ypr	34.34	42.19	-71.62	
+perdict: {-24.84, 40.11, 24.22, 13.29, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	27.00	38.48	-41.38	
+mpu 2 ypr	33.90	41.81	-70.24	
+perdict: {-24.55, 39.74, 24.32, 13.04, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	26.78	37.47	-40.52	
+mpu 2 ypr	33.48	41.40	-68.85	
+perdict: {-24.25, 39.34, 24.44, 12.78, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	26.64	36.46	-39.90	
+mpu 2 ypr	33.11	40.90	-67.73	
+perdict: {-23.86, 38.81, 24.51, 12.47, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	26.44	35.55	-39.53	
+mpu 2 ypr	32.67	40.39	-66.60	
+perdict: {-23.48, 38.28, 24.56, 12.15, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	26.13	34.74	-39.32	
+mpu 2 ypr	32.17	39.85	-65.67	
+perdict: {-23.08, 37.70, 24.52, 11.85, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	25.76	34.04	-39.31	
+mpu 2 ypr	31.65	39.32	-65.00	
+perdict: {-22.68, 37.10, 24.41, 11.57, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	25.44	33.58	-39.51	
+mpu 2 ypr	31.16	38.87	-64.54	
+perdict: {-22.34, 36.57, 24.28, 11.32, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	25.18	33.47	-39.63	
+mpu 2 ypr	30.77	38.61	-64.32	
+perdict: {-22.11, 36.19, 24.09, 11.19, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	24.99	33.57	-39.92	
+mpu 2 ypr	30.53	38.56	-64.21	
+perdict: {-22.08, 36.13, 24.03, 11.17, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	24.80	33.83	-40.17	
+mpu 2 ypr	30.41	38.69	-64.13	
+perdict: {-22.21, 36.32, 24.02, 11.28, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	24.62	34.10	-40.40	
+mpu 2 ypr	30.29	38.82	-64.12	
+perdict: {-22.34, 36.49, 23.99, 11.38, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	24.49	34.25	-40.74	
+mpu 2 ypr	30.15	38.82	-64.17	
+perdict: {-22.34, 36.49, 23.96, 11.39, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	24.48	34.29	-41.07	
+mpu 2 ypr	30.07	38.76	-64.26	
+perdict: {-22.28, 36.39, 23.95, 11.35, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	24.47	34.31	-41.19	
+mpu 2 ypr	29.99	38.71	-64.21	
+perdict: {-22.24, 36.32, 23.91, 11.33, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	24.45	34.22	-41.10	
+mpu 2 ypr	29.93	38.66	-63.97	
+perdict: {-22.21, 36.28, 23.93, 11.29, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	24.38	34.01	-41.19	
+mpu 2 ypr	29.73	38.45	-63.75	
+perdict: {-22.09, 36.07, 23.81, 11.22, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	23.87	33.41	-41.51	
+mpu 2 ypr	28.95	37.76	-63.46	
+perdict: {-21.71, 35.33, 23.12, 11.07, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	22.78	32.35	-42.10	
+mpu 2 ypr	27.58	36.63	-62.97	
+perdict: {-21.11, 34.14, 21.97, 10.85, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	21.24	30.99	-42.86	
+mpu 2 ypr	25.74	35.17	-62.45	
+perdict: {-20.27, 32.62, 20.89, 10.42, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	19.49	29.48	-43.80	
+mpu 2 ypr	23.60	33.47	-62.04	
+perdict: {-19.46, 31.34, 20.49, 9.86, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	17.62	27.86	-44.81	
+mpu 2 ypr	21.30	31.63	-61.66	
+perdict: {-18.61, 30.00, 20.04, 9.29, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	15.60	26.16	-45.64	
+mpu 2 ypr	18.89	29.77	-61.12	
+perdict: {-17.79, 28.71, 19.63, 8.74, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	13.65	24.51	-46.33	
+mpu 2 ypr	16.61	28.02	-60.61	
+perdict: {-17.03, 27.55, 19.36, 8.20, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	12.08	23.17	-47.03	
+mpu 2 ypr	14.70	26.50	-60.37	
+perdict: {-16.29, 26.41, 19.05, 7.69, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	10.87	22.16	-47.58	
+mpu 2 ypr	13.21	25.36	-60.18	
+perdict: {-15.95, 25.11, 19.09, 7.39, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	10.04	21.54	-47.84	
+mpu 2 ypr	12.25	24.66	-60.04	
+perdict: {-15.83, 23.81, 19.35, 7.21, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	9.79	21.46	-47.91	
+mpu 2 ypr	11.97	24.53	-60.02	
+perdict: {-15.94, 23.79, 19.38, 7.28, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	10.10	21.92	-47.70	
+mpu 2 ypr	12.39	24.96	-60.14	
+perdict: {-16.05, 24.84, 19.00, 7.47, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	10.63	22.53	-47.50	
+mpu 2 ypr	13.01	25.54	-60.24	
+perdict: {-16.05, 25.90, 18.71, 7.57, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	10.95	22.89	-47.54	
+mpu 2 ypr	13.36	25.86	-60.44	
+perdict: {-16.19, 26.18, 18.76, 7.68, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	11.16	23.23	-47.65	
+mpu 2 ypr	13.59	26.13	-60.63	
+perdict: {-16.34, 26.40, 18.83, 7.78, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	11.47	23.66	-47.57	
+mpu 2 ypr	13.97	26.52	-60.80	
+perdict: {-16.57, 26.74, 18.86, 7.95, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	11.67	23.91	-47.57	
+mpu 2 ypr	14.22	26.76	-60.95	
+perdict: {-16.71, 26.95, 18.91, 8.05, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	11.91	24.26	-47.57	
+mpu 2 ypr	14.52	27.07	-61.10	
+perdict: {-16.89, 27.23, 18.97, 8.18, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	12.15	24.62	-47.46	
+mpu 2 ypr	14.85	27.44	-61.16	
+perdict: {-17.13, 27.59, 19.05, 8.35, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	12.32	24.88	-47.43	
+mpu 2 ypr	15.09	27.69	-61.28	
+perdict: {-17.30, 27.85, 19.09, 8.47, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	12.55	25.23	-47.62	
+mpu 2 ypr	15.37	28.00	-61.57	
+perdict: {-17.48, 28.14, 19.21, 8.59, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	12.63	25.72	-47.95	
+mpu 2 ypr	15.43	28.34	-61.80	
+perdict: {-17.68, 28.47, 19.35, 8.72, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	12.40	26.28	-48.29	
+mpu 2 ypr	15.29	28.80	-61.98	
+perdict: {-18.12, 29.16, 19.56, 9.02, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	12.07	26.95	-48.73	
+mpu 2 ypr	15.11	29.32	-62.31	
+perdict: {-18.51, 29.73, 19.63, 9.30, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	11.81	27.80	-49.23	
+mpu 2 ypr	15.05	29.99	-62.81	
+perdict: {-18.91, 30.31, 19.66, 9.61, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	11.81	28.95	-49.67	
+mpu 2 ypr	15.34	30.93	-63.47	
+perdict: {-19.40, 31.00, 19.65, 9.99, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	12.26	30.44	-50.00	
+mpu 2 ypr	16.25	32.17	-64.44	
+perdict: {-20.00, 31.83, 19.56, 10.48, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	13.43	32.40	-50.29	
+mpu 2 ypr	17.97	33.78	-65.76	
+perdict: {-20.67, 32.74, 19.40, 11.04, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	15.08	34.66	-50.31	
+mpu 2 ypr	20.40	35.75	-67.20	
+perdict: {-21.46, 33.82, 19.23, 11.69, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	17.15	37.21	-50.10	
+mpu 2 ypr	23.41	38.01	-68.71	
+perdict: {-22.64, 35.72, 19.99, 12.45, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	19.39	39.99	-49.75	
+mpu 2 ypr	26.78	40.53	-70.28	
+perdict: {-23.91, 38.11, 21.91, 13.05, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	21.75	42.87	-49.32	
+mpu 2 ypr	30.48	43.12	-72.08	
+perdict: {-25.78, 41.41, 24.05, 14.06, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	24.37	45.69	-48.99	
+mpu 2 ypr	34.42	45.57	-74.25	
+perdict: {-28.21, 45.19, 25.13, 15.73, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	26.92	48.16	-48.71	
+mpu 2 ypr	38.12	47.67	-76.43	
+perdict: {-30.29, 48.43, 26.08, 17.15, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	28.98	50.01	-48.41	
+mpu 2 ypr	41.07	49.26	-78.24	
+perdict: {-31.85, 50.88, 26.83, 18.22, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	30.10	51.04	-48.19	
+mpu 2 ypr	42.84	50.21	-79.35	
+perdict: {-32.78, 52.35, 27.33, 18.84, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	30.02	51.07	-48.14	
+mpu 2 ypr	43.11	50.36	-79.57	
+perdict: {-32.93, 52.61, 27.49, 18.92, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	28.95	50.13	-48.53	
+mpu 2 ypr	42.00	49.58	-79.25	
+perdict: {-32.26, 51.59, 27.27, 18.45, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	27.51	48.60	-49.18	
+mpu 2 ypr	40.00	48.17	-78.58	
+perdict: {-30.90, 49.48, 26.70, 17.50, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	25.47	46.50	-49.83	
+mpu 2 ypr	37.13	46.30	-77.38	
+perdict: {-29.07, 46.65, 25.94, 16.23, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	22.55	44.01	-50.15	
+mpu 2 ypr	33.38	44.24	-75.42	
+perdict: {-26.99, 43.45, 25.13, 14.78, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	19.17	41.28	-50.03	
+mpu 2 ypr	29.29	42.07	-73.17	
+perdict: {-25.07, 40.34, 23.88, 13.54, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	16.68	38.86	-50.03	
+mpu 2 ypr	26.02	39.98	-71.64	
+perdict: {-23.98, 38.21, 21.95, 13.09, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	14.97	36.94	-49.98	
+mpu 2 ypr	23.54	38.27	-70.42	
+perdict: {-23.28, 36.76, 20.42, 12.86, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	13.45	35.30	-49.65	
+mpu 2 ypr	21.52	36.91	-69.24	
+perdict: {-22.95, 36.17, 19.99, 12.70, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	12.48	34.00	-49.40	
+mpu 2 ypr	20.12	35.78	-68.43	
+perdict: {-22.60, 35.60, 19.75, 12.47, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	11.59	32.68	-49.01	
+mpu 2 ypr	18.82	34.71	-67.48	
+perdict: {-22.26, 35.04, 19.53, 12.25, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	10.66	31.24	-48.60	
+mpu 2 ypr	17.52	33.56	-66.52	
+perdict: {-21.91, 34.48, 19.30, 12.03, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	9.74	29.73	-48.32	
+mpu 2 ypr	16.18	32.28	-65.59	
+perdict: {-21.54, 33.87, 19.02, 11.80, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	8.84	28.07	-48.16	
+mpu 2 ypr	14.79	30.82	-64.76	
+perdict: {-21.15, 33.20, 18.68, 11.56, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	7.93	26.39	-48.08	
+mpu 2 ypr	13.40	29.30	-63.95	
+perdict: {-20.65, 32.46, 18.56, 11.19, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	7.08	24.76	-47.98	
+mpu 2 ypr	12.13	27.82	-63.20	
+perdict: {-20.18, 31.79, 18.59, 10.82, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	6.47	23.19	-48.02	
+mpu 2 ypr	11.08	26.34	-62.71	
+perdict: {-19.83, 31.32, 18.64, 10.54, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	6.00	21.76	-48.14	
+mpu 2 ypr	10.17	24.94	-62.31	
+perdict: {-19.14, 30.25, 18.38, 10.05, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	5.63	20.53	-48.28	
+mpu 2 ypr	9.41	23.72	-61.98	
+perdict: {-18.80, 28.57, 18.53, 9.72, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	5.48	19.72	-48.24	
+mpu 2 ypr	9.03	22.94	-61.69	
+perdict: {-18.73, 26.97, 18.85, 9.54, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	5.87	19.55	-47.93	
+mpu 2 ypr	9.38	22.82	-61.57	
+perdict: {-18.42, 26.45, 18.73, 9.32, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	6.87	20.00	-47.36	
+mpu 2 ypr	10.49	23.37	-61.50	
+perdict: {-17.80, 26.85, 18.24, 8.99, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	8.44	21.02	-46.60	
+mpu 2 ypr	12.30	24.54	-61.62	
+perdict: {-17.26, 27.42, 17.83, 8.70, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	10.69	22.70	-45.72	
+mpu 2 ypr	14.85	26.33	-61.99	
+perdict: {-17.95, 28.48, 18.10, 9.18, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	13.45	24.91	-44.56	
+mpu 2 ypr	18.02	28.73	-62.43	
+perdict: {-18.80, 29.77, 18.36, 9.80, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	16.46	27.49	-43.05	
+mpu 2 ypr	21.59	31.62	-62.69	
+perdict: {-19.28, 30.44, 18.30, 10.18, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	19.55	30.27	-41.25	
+mpu 2 ypr	25.38	34.81	-62.88	
+perdict: {-20.65, 32.77, 19.61, 10.98, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	22.58	33.07	-39.38	
+mpu 2 ypr	29.15	38.06	-63.00	
+perdict: {-22.20, 36.03, 23.11, 11.46, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	25.32	35.60	-37.49	
+mpu 2 ypr	32.66	41.10	-63.03	
+perdict: {-24.83, 40.30, 24.90, 13.14, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	27.72	37.78	-35.80	
+mpu 2 ypr	97.19	-54.76	-88.85	
+perdict: {28.91, -57.34, -16.43, -3.38, } out: 0 servo angle: 60 current: 0
+mpu 1 ypr	30.07	39.96	-34.50	
+mpu 2 ypr	38.72	46.35	-63.39	
+perdict: {-28.91, 46.95, 27.71, 15.74, } out: 1 servo angle: 0 current: 60
+mpu 1 ypr	31.45	41.38	-34.39	
+mpu 2 ypr	40.63	47.97	-64.40	
+perdict: {-30.41, 49.08, 28.41, 16.78, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	32.06	42.16	-34.85	
+mpu 2 ypr	41.10	48.43	-65.08	
+perdict: {-30.62, 49.55, 28.65, 16.89, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	31.89	42.75	-36.49	
+mpu 2 ypr	40.73	48.35	-66.19	
+perdict: {-30.26, 49.15, 28.59, 16.61, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	30.96	43.16	-38.87	
+mpu 2 ypr	39.75	47.81	-67.76	
+perdict: {-29.95, 48.54, 28.05, 16.49, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	29.68	43.32	-41.76	
+mpu 2 ypr	38.29	46.86	-69.38	
+perdict: {-29.34, 47.46, 27.32, 16.16, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	28.07	43.18	-44.62	
+mpu 2 ypr	36.55	45.75	-70.75	
+perdict: {-28.33, 45.74, 26.41, 15.56, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	26.38	42.87	-47.15	
+mpu 2 ypr	34.87	44.64	-71.95	
+perdict: {-27.38, 44.13, 25.53, 15.00, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	25.25	42.77	-49.55	
+mpu 2 ypr	33.79	43.72	-73.54	
+perdict: {-26.59, 42.78, 24.78, 14.54, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	25.01	43.07	-51.91	
+mpu 2 ypr	33.46	43.08	-75.43	
+perdict: {-26.01, 41.80, 24.27, 14.19, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	24.70	43.25	-53.83	
+mpu 2 ypr	33.00	42.49	-76.76	
+perdict: {-25.71, 41.13, 23.46, 14.13, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	23.61	42.87	-55.12	
+mpu 2 ypr	31.68	41.66	-77.06	
+perdict: {-25.41, 40.40, 22.44, 14.10, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	21.42	41.63	-55.72	
+mpu 2 ypr	29.23	40.36	-76.40	
+perdict: {-24.91, 39.27, 21.06, 14.00, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	18.57	39.63	-55.87	
+mpu 2 ypr	25.78	38.53	-75.05	
+perdict: {-23.93, 37.66, 20.33, 13.39, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	15.29	37.03	-55.83	
+mpu 2 ypr	21.70	36.24	-73.42	
+perdict: {-23.00, 36.13, 19.64, 12.81, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	12.34	34.26	-55.99	
+mpu 2 ypr	17.75	33.65	-72.03	
+perdict: {-22.30, 35.07, 19.43, 12.30, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	9.28	31.23	-55.83	
+mpu 2 ypr	13.50	30.92	-70.18	
+perdict: {-21.51, 33.93, 19.39, 11.69, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	6.20	28.03	-55.36	
+mpu 2 ypr	9.61	28.12	-68.40	
+perdict: {-21.66, 34.15, 19.37, 11.82, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	4.04	25.18	-55.24	
+mpu 2 ypr	6.68	25.49	-67.27	
+perdict: {-21.86, 31.88, 19.84, 11.78, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	2.46	22.94	-55.27	
+mpu 2 ypr	4.43	23.40	-66.41	
+perdict: {-22.16, 28.48, 20.87, 11.67, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	1.11	21.22	-55.17	
+mpu 2 ypr	2.64	21.83	-65.62	
+perdict: {-21.72, 25.80, 21.71, 11.10, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	0.09	19.99	-55.06	
+mpu 2 ypr	1.40	20.72	-65.12	
+perdict: {-21.73, 24.20, 21.80, 11.08, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	-0.51	19.32	-55.05	
+mpu 2 ypr	0.68	20.09	-64.92	
+perdict: {-21.86, 23.19, 21.55, 11.24, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	-0.71	19.17	-55.02	
+mpu 2 ypr	0.52	19.94	-64.95	
+perdict: {-22.12, 23.32, 21.20, 11.54, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	-0.23	19.78	-55.06	
+mpu 2 ypr	1.22	20.47	-65.41	
+perdict: {-22.35, 24.64, 20.93, 11.79, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	0.56	20.81	-55.04	
+mpu 2 ypr	2.25	21.36	-65.91	
+perdict: {-22.50, 26.20, 20.65, 11.96, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	1.57	22.11	-54.95	
+mpu 2 ypr	3.81	22.55	-66.72	
+perdict: {-22.89, 28.65, 19.99, 12.43, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	3.79	24.32	-55.13	
+mpu 2 ypr	6.69	24.41	-68.25	
+perdict: {-21.94, 30.99, 19.27, 11.94, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	6.11	26.82	-54.56	
+mpu 2 ypr	9.88	26.73	-69.23	
+perdict: {-21.47, 33.54, 18.27, 11.90, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	9.15	29.60	-53.68	
+mpu 2 ypr	14.31	29.39	-70.84	
+perdict: {-21.51, 33.46, 17.81, 12.02, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	13.58	33.03	-52.87	
+mpu 2 ypr	19.84	32.52	-72.96	
+perdict: {-22.02, 34.23, 17.93, 12.40, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	18.00	36.43	-51.35	
+mpu 2 ypr	25.16	35.87	-74.47	
+perdict: {-22.07, 34.51, 18.63, 12.29, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	21.92	39.36	-49.14	
+mpu 2 ypr	29.99	39.13	-75.49	
+perdict: {-23.19, 37.09, 21.94, 12.47, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	25.59	41.95	-46.98	
+mpu 2 ypr	34.31	42.12	-76.44	
+perdict: {-24.52, 39.72, 24.45, 12.99, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	28.67	44.19	-45.19	
+mpu 2 ypr	37.85	44.67	-77.33	
+perdict: {-26.80, 43.29, 25.46, 14.56, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	31.12	46.08	-44.13	
+mpu 2 ypr	40.60	46.62	-78.36	
+perdict: {-28.50, 45.94, 26.24, 15.73, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	32.69	47.42	-43.59	
+mpu 2 ypr	42.36	47.92	-79.07	
+perdict: {-29.46, 47.43, 26.67, 16.38, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	33.22	47.99	-43.25	
+mpu 2 ypr	43.02	48.55	-79.11	
+perdict: {-29.95, 48.19, 26.86, 16.73, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	32.64	47.63	-42.95	
+mpu 2 ypr	42.52	48.50	-78.20	
+perdict: {-30.02, 48.28, 26.82, 16.80, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	31.33	46.59	-42.55	
+mpu 2 ypr	41.14	48.11	-76.21	
+perdict: {-29.97, 48.13, 26.59, 16.80, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	28.46	44.81	-40.99	
+mpu 2 ypr	38.65	47.55	-72.37	
+perdict: {-29.91, 47.98, 26.37, 16.80, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	25.25	42.51	-39.14	
+mpu 2 ypr	35.99	46.58	-68.56	
+perdict: {-29.88, 46.96, 25.76, 16.95, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	22.95	40.22	-37.61	
+mpu 2 ypr	33.76	45.44	-65.14	
+perdict: {-29.72, 45.63, 24.90, 17.04, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	20.84	37.77	-35.89	
+mpu 2 ypr	31.71	44.16	-61.66	
+perdict: {-29.45, 44.24, 24.01, 17.06, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	19.51	35.46	-34.49	
+mpu 2 ypr	30.30	42.78	-58.91	
+perdict: {-28.75, 42.87, 23.48, 16.63, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	18.88	33.36	-33.56	
+mpu 2 ypr	29.38	41.38	-56.86	
+perdict: {-27.59, 41.54, 23.41, 15.73, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	18.37	31.43	-32.67	
+mpu 2 ypr	28.63	40.07	-54.85	
+perdict: {-26.09, 40.38, 23.65, 14.46, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	18.14	29.84	-31.94	
+mpu 2 ypr	28.26	39.01	-53.27	
+perdict: {-24.88, 39.56, 23.93, 13.41, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	18.19	28.85	-31.47	
+mpu 2 ypr	28.21	38.37	-52.17	
+perdict: {-24.17, 39.16, 24.22, 12.76, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	18.15	28.43	-31.06	
+mpu 2 ypr	28.25	38.19	-51.10	
+perdict: {-24.16, 39.19, 24.35, 12.73, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	18.21	28.60	-31.11	
+mpu 2 ypr	28.41	38.32	-51.01	
+perdict: {-24.33, 39.46, 24.43, 12.85, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	18.20	29.18	-31.73	
+mpu 2 ypr	28.32	38.64	-51.08	
+perdict: {-24.54, 39.78, 24.55, 12.98, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	17.31	29.77	-32.10	
+mpu 2 ypr	27.69	38.97	-50.82	
+perdict: {-24.83, 40.16, 24.40, 13.25, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	16.07	30.29	-32.70	
+mpu 2 ypr	26.75	39.17	-50.76	
+perdict: {-25.22, 40.16, 23.91, 13.67, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	14.66	30.45	-33.39	
+mpu 2 ypr	25.49	39.03	-50.65	
+perdict: {-25.23, 39.66, 23.33, 13.82, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	13.11	30.27	-34.12	
+mpu 2 ypr	24.08	38.57	-50.77	
+perdict: {-24.94, 38.73, 22.59, 13.76, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	11.81	29.72	-35.10	
+mpu 2 ypr	22.52	37.66	-50.98	
+perdict: {-23.91, 37.21, 21.97, 13.08, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	9.85	28.47	-35.98	
+mpu 2 ypr	20.15	36.15	-50.63	
+perdict: {-22.73, 35.26, 20.65, 12.42, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	7.50	26.57	-37.32	
+mpu 2 ypr	17.15	33.89	-50.66	
+perdict: {-21.39, 33.91, 19.88, 11.50, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	4.64	24.03	-38.75	
+mpu 2 ypr	13.35	31.03	-50.19	
+perdict: {-20.34, 32.46, 20.02, 10.65, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	0.88	20.84	-39.61	
+mpu 2 ypr	8.89	27.77	-49.00	
+perdict: {-20.38, 32.42, 19.70, 10.75, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	-3.15	17.41	-40.12	
+mpu 2 ypr	4.34	24.44	-47.51	
+perdict: {-21.02, 33.32, 19.69, 11.25, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	-7.02	14.20	-40.22	
+mpu 2 ypr	0.31	21.46	-46.09	
+perdict: {-22.15, 33.70, 19.68, 12.12, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	-9.85	11.80	-40.28	
+mpu 2 ypr	-2.45	19.28	-45.29	
+perdict: {-25.28, 32.67, 16.20, 15.42, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	-11.20	10.56	-40.40	
+mpu 2 ypr	-3.64	18.15	-45.19	
+perdict: {-27.11, 33.21, 13.27, 17.58, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	-11.30	10.48	-40.29	
+mpu 2 ypr	-3.36	18.18	-45.46	
+perdict: {-27.41, 33.95, 12.38, 18.05, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	-10.14	11.60	-40.12	
+mpu 2 ypr	-1.81	19.31	-46.07	
+perdict: {-26.01, 34.44, 14.21, 16.53, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	-8.34	13.45	-39.80	
+mpu 2 ypr	0.54	21.18	-46.88	
+perdict: {-23.77, 35.63, 16.83, 14.17, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	-5.59	16.29	-39.73	
+mpu 2 ypr	3.97	23.85	-48.58	
+perdict: {-22.34, 35.27, 19.90, 12.24, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	-1.78	20.02	-39.83	
+mpu 2 ypr	8.32	27.27	-50.61	
+perdict: {-21.87, 34.68, 20.19, 11.81, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	1.88	24.12	-39.43	
+mpu 2 ypr	12.84	31.17	-52.26	
+perdict: {-21.70, 34.60, 20.70, 11.57, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	5.39	28.27	-38.93	
+mpu 2 ypr	17.37	35.08	-53.96	
+perdict: {-22.74, 36.19, 21.09, 12.30, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	8.40	31.98	-38.37	
+mpu 2 ypr	21.44	38.62	-55.45	
+perdict: {-25.07, 38.67, 22.69, 13.86, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	10.74	35.02	-38.04	
+mpu 2 ypr	24.75	41.47	-56.90	
+perdict: {-27.76, 41.59, 23.36, 15.88, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	12.30	37.21	-38.07	
+mpu 2 ypr	26.99	43.42	-58.18	
+perdict: {-29.97, 44.49, 24.29, 17.44, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	12.79	38.47	-38.47	
+mpu 2 ypr	27.97	44.48	-59.15	
+perdict: {-31.04, 45.97, 24.88, 18.17, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	12.37	38.97	-39.22	
+mpu 2 ypr	27.80	44.76	-59.82	
+perdict: {-31.12, 46.18, 25.13, 18.17, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	11.30	38.89	-40.17	
+mpu 2 ypr	26.88	44.45	-60.40	
+perdict: {-30.45, 45.46, 25.16, 17.63, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	10.49	38.61	-41.45	
+mpu 2 ypr	25.96	43.80	-61.42	
+perdict: {-29.38, 44.13, 24.80, 16.86, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	10.05	38.32	-43.22	
+mpu 2 ypr	25.10	42.98	-62.86	
+perdict: {-28.31, 43.15, 24.60, 16.03, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	9.47	38.03	-45.16	
+mpu 2 ypr	23.98	42.05	-64.30	
+perdict: {-27.08, 42.15, 24.61, 15.03, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	8.59	37.71	-47.13	
+mpu 2 ypr	22.56	41.11	-65.56	
+perdict: {-26.23, 41.36, 24.09, 14.44, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	7.34	37.36	-48.97	
+mpu 2 ypr	21.01	40.22	-66.73	
+perdict: {-25.87, 41.08, 23.42, 14.28, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	6.35	37.23	-50.89	
+mpu 2 ypr	19.89	39.48	-68.24	
+perdict: {-25.97, 41.40, 23.10, 14.41, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	5.89	37.42	-52.93	
+mpu 2 ypr	19.29	38.93	-70.00	
+perdict: {-26.21, 41.72, 23.05, 14.61, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	5.54	37.76	-54.88	
+mpu 2 ypr	19.00	38.52	-71.80	
+perdict: {-26.53, 42.17, 23.02, 14.86, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	5.39	38.17	-56.78	
+mpu 2 ypr	19.06	38.16	-73.67	
+perdict: {-26.89, 42.66, 22.96, 15.15, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	5.34	38.58	-58.54	
+mpu 2 ypr	19.23	37.79	-75.39	
+perdict: {-27.32, 43.20, 22.69, 15.55, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	5.07	38.73	-59.87	
+mpu 2 ypr	19.28	37.30	-76.75	
+perdict: {-27.77, 43.72, 22.31, 15.98, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	4.89	38.67	-60.98	
+mpu 2 ypr	19.20	36.69	-77.82	
+perdict: {-28.03, 43.97, 21.89, 16.27, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	4.30	38.33	-61.63	
+mpu 2 ypr	18.50	35.99	-78.31	
+perdict: {-28.11, 43.97, 21.55, 16.39, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	3.07	37.75	-61.58	
+mpu 2 ypr	17.20	35.36	-78.14	
+perdict: {-28.41, 44.36, 21.38, 16.67, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	2.24	37.18	-61.02	
+mpu 2 ypr	16.48	34.84	-77.90	
+perdict: {-28.66, 44.61, 21.04, 16.93, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	1.96	36.77	-59.93	
+mpu 2 ypr	16.25	34.61	-77.39	
+perdict: {-28.69, 44.50, 20.53, 17.08, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	2.09	36.45	-58.49	
+mpu 2 ypr	16.48	34.61	-76.74	
+perdict: {-28.43, 44.05, 20.30, 16.91, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	2.92	36.27	-56.98	
+mpu 2 ypr	17.43	34.74	-76.29	
+perdict: {-27.91, 43.23, 19.99, 16.57, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	4.68	36.16	-55.89	
+mpu 2 ypr	19.05	34.74	-76.40	
+perdict: {-27.54, 42.53, 19.43, 16.39, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	6.84	36.14	-55.01	
+mpu 2 ypr	20.72	34.80	-76.62	
+perdict: {-27.08, 41.74, 18.98, 16.13, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	9.11	36.21	-54.33	
+mpu 2 ypr	22.45	34.90	-77.05	
+perdict: {-26.44, 40.78, 18.80, 15.67, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	11.70	36.35	-53.84	
+mpu 2 ypr	24.35	34.97	-77.83	
+perdict: {-25.70, 39.73, 18.80, 15.09, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	14.15	36.32	-53.29	
+mpu 2 ypr	25.66	35.01	-78.13	
+perdict: {-24.73, 38.33, 18.78, 14.33, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	15.14	35.81	-51.68	
+mpu 2 ypr	25.95	35.25	-76.95	
+perdict: {-24.01, 37.44, 19.19, 13.69, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	-7.31	-142.74	176.87	
+mpu 2 ypr	26.15	35.59	-75.42	
+perdict: {-79.32, 9.00, -20.28, 70.28, } out: 3 servo angle: 0 current: 0
+mpu 1 ypr	16.21	34.78	-48.35	
+mpu 2 ypr	26.64	35.91	-74.50	
+perdict: {-23.24, 36.67, 20.29, 12.86, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	17.14	34.56	-47.15	
+mpu 2 ypr	27.34	36.30	-73.77	
+perdict: {-22.89, 36.29, 20.73, 12.49, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	18.21	34.40	-46.22	
+mpu 2 ypr	28.05	36.60	-73.23	
+perdict: {-22.58, 35.91, 20.89, 12.22, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	19.17	34.20	-45.53	
+mpu 2 ypr	28.61	36.82	-72.73	
+perdict: {-22.59, 35.96, 21.04, 12.19, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	19.71	33.89	-45.08	
+mpu 2 ypr	28.74	36.84	-72.03	
+perdict: {-22.55, 35.89, 20.98, 12.18, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	19.66	33.51	-44.85	
+mpu 2 ypr	28.40	36.71	-71.16	
+perdict: {-22.49, 35.74, 20.76, 12.17, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	19.12	33.07	-44.91	
+mpu 2 ypr	27.66	36.35	-70.37	
+perdict: {-22.35, 35.42, 20.34, 12.15, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	17.72	32.28	-44.99	
+mpu 2 ypr	26.07	35.66	-68.92	
+perdict: {-22.08, 34.81, 19.61, 12.09, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	15.07	30.83	-44.78	
+mpu 2 ypr	23.45	34.50	-66.76	
+perdict: {-22.05, 34.52, 18.78, 12.25, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	11.87	28.85	-44.64	
+mpu 2 ypr	20.21	32.83	-64.60	
+perdict: {-21.82, 34.19, 18.76, 12.07, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	8.44	26.48	-44.51	
+mpu 2 ypr	16.58	30.80	-62.32	
+perdict: {-21.49, 33.72, 18.78, 11.80, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	4.83	23.78	-44.17	
+mpu 2 ypr	12.75	28.51	-59.87	
+perdict: {-21.09, 33.14, 18.73, 11.50, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	1.33	20.95	-43.75	
+mpu 2 ypr	9.10	26.10	-57.66	
+perdict: {-21.50, 33.72, 18.72, 11.83, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	-1.49	18.27	-43.57	
+mpu 2 ypr	6.08	23.70	-56.06	
+perdict: {-22.16, 34.40, 17.89, 12.57, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	-3.49	15.92	-43.65	
+mpu 2 ypr	3.81	21.46	-55.13	
+perdict: {-23.11, 35.07, 15.81, 13.88, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	-4.54	14.07	-44.10	
+mpu 2 ypr	2.42	19.57	-54.99	
+perdict: {-24.54, 32.92, 14.11, 15.37, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	-4.75	12.86	-44.81	
+mpu 2 ypr	1.78	18.18	-55.32	
+perdict: {-25.15, 30.38, 13.35, 15.96, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	-4.43	12.27	-45.36	
+mpu 2 ypr	1.77	17.45	-55.73	
+perdict: {-25.01, 28.24, 13.75, 15.68, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	-3.68	12.46	-45.62	
+mpu 2 ypr	2.40	17.57	-56.09	
+perdict: {-24.22, 27.22, 15.17, 14.68, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	-2.58	13.44	-45.61	
+mpu 2 ypr	3.58	18.51	-56.45	
+perdict: {-22.93, 27.49, 17.31, 13.16, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	-1.20	15.00	-45.54	
+mpu 2 ypr	5.17	20.01	-57.01	
+perdict: {-21.55, 29.39, 18.85, 11.75, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	0.54	17.11	-45.45	
+mpu 2 ypr	7.19	21.98	-57.81	
+perdict: {-20.58, 31.74, 18.67, 11.09, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	2.60	19.65	-45.38	
+mpu 2 ypr	9.62	24.31	-58.85	
+perdict: {-20.63, 32.46, 18.62, 11.17, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	5.02	22.59	-45.40	
+mpu 2 ypr	12.48	26.95	-60.27	
+perdict: {-20.73, 32.55, 18.48, 11.27, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	7.88	25.88	-45.54	
+mpu 2 ypr	15.82	29.82	-62.09	
+perdict: {-21.36, 33.50, 18.63, 11.74, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	11.09	29.46	-45.75	
+mpu 2 ypr	19.56	32.88	-64.22	
+perdict: {-21.94, 34.43, 19.01, 12.11, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	14.44	33.19	-45.89	
+mpu 2 ypr	23.54	36.05	-66.48	
+perdict: {-22.53, 35.49, 19.73, 12.42, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	17.73	36.80	-45.86	
+mpu 2 ypr	27.60	39.14	-68.73	
+perdict: {-23.52, 37.68, 22.34, 12.65, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	20.82	40.09	-45.60	
+mpu 2 ypr	31.48	42.00	-70.82	
+perdict: {-25.49, 41.08, 24.35, 13.77, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	23.56	42.91	-45.25	
+mpu 2 ypr	35.03	44.47	-72.82	
+perdict: {-27.73, 44.57, 25.36, 15.30, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	25.97	45.15	-45.07	
+mpu 2 ypr	37.97	46.35	-74.68	
+perdict: {-29.40, 47.18, 26.14, 16.45, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	27.78	46.66	-45.16	
+mpu 2 ypr	40.01	47.54	-76.22	
+perdict: {-30.42, 48.78, 26.62, 17.14, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	28.55	47.28	-45.58	
+mpu 2 ypr	40.79	47.92	-77.08	
+perdict: {-30.73, 49.26, 26.75, 17.36, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	28.16	47.01	-46.35	
+mpu 2 ypr	40.28	47.51	-77.26	
+perdict: {-30.36, 48.69, 26.57, 17.11, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	27.06	46.13	-47.51	
+mpu 2 ypr	38.93	46.45	-77.25	
+perdict: {-29.40, 47.19, 26.13, 16.45, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	25.52	44.93	-49.18	
+mpu 2 ypr	36.91	44.96	-77.15	
+perdict: {-28.03, 45.03, 25.48, 15.52, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	23.42	43.49	-51.11	
+mpu 2 ypr	34.30	43.17	-76.92	
+perdict: {-26.34, 42.41, 24.73, 14.35, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	20.98	41.97	-53.42	
+mpu 2 ypr	31.30	41.18	-76.88	
+perdict: {-25.36, 40.49, 22.98, 13.96, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	18.42	40.47	-55.95	
+mpu 2 ypr	28.11	39.10	-77.06	
+perdict: {-24.77, 38.96, 20.65, 13.98, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	15.78	38.95	-58.21	
+mpu 2 ypr	24.83	37.11	-77.17	
+perdict: {-24.39, 38.24, 20.07, 13.80, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	13.13	37.49	-59.84	
+mpu 2 ypr	21.59	35.36	-77.06	
+perdict: {-24.48, 38.36, 20.03, 13.88, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	10.59	36.25	-60.72	
+mpu 2 ypr	18.64	34.04	-76.71	
+perdict: {-24.39, 38.25, 20.11, 13.79, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	8.41	35.43	-60.84	
+mpu 2 ypr	16.43	33.30	-76.24	
+perdict: {-24.39, 38.29, 20.25, 13.76, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	6.89	35.13	-60.27	
+mpu 2 ypr	15.29	33.19	-75.75	
+perdict: {-24.79, 38.94, 20.49, 14.03, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	6.14	35.30	-59.18	
+mpu 2 ypr	15.20	33.60	-75.28	
+perdict: {-25.04, 39.34, 20.67, 14.19, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	5.77	35.60	-57.51	
+mpu 2 ypr	15.72	34.31	-74.58	
+perdict: {-25.14, 39.53, 20.83, 14.23, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	6.35	36.01	-55.63	
+mpu 2 ypr	17.30	35.13	-74.20	
+perdict: {-25.23, 39.60, 20.64, 14.34, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	8.21	36.65	-54.05	
+mpu 2 ypr	19.78	36.02	-74.31	
+perdict: {-25.37, 39.70, 20.31, 14.51, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	10.33	37.33	-52.75	
+mpu 2 ypr	22.06	36.91	-74.43	
+perdict: {-25.15, 39.45, 20.52, 14.30, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	11.84	37.77	-51.65	
+mpu 2 ypr	23.59	37.59	-74.32	
+perdict: {-24.81, 39.17, 21.20, 13.89, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	12.84	37.85	-50.93	
+mpu 2 ypr	24.50	37.85	-74.24	
+perdict: {-24.53, 38.87, 21.49, 13.62, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	13.60	37.65	-50.64	
+mpu 2 ypr	24.89	37.76	-74.20	
+perdict: {-24.20, 38.37, 21.43, 13.37, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	13.83	37.27	-50.66	
+mpu 2 ypr	24.68	37.42	-74.05	
+perdict: {-23.98, 37.95, 21.05, 13.28, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	13.84	36.79	-50.81	
+mpu 2 ypr	24.30	36.91	-73.98	
+perdict: {-23.81, 37.56, 20.57, 13.25, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	13.88	36.30	-51.03	
+mpu 2 ypr	23.89	36.36	-73.96	
+perdict: {-23.62, 37.12, 20.02, 13.21, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	13.79	35.77	-51.26	
+mpu 2 ypr	23.34	35.78	-73.84	
+perdict: {-23.43, 36.69, 19.45, 13.18, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	13.52	35.19	-51.55	
+mpu 2 ypr	22.60	35.13	-73.68	
+perdict: {-23.26, 36.29, 18.95, 13.15, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	12.96	34.45	-51.95	
+mpu 2 ypr	21.50	34.33	-73.37	
+perdict: {-23.08, 35.99, 18.78, 13.05, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	11.79	33.38	-52.39	
+mpu 2 ypr	19.73	33.24	-72.75	
+perdict: {-22.93, 35.72, 18.62, 12.96, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	9.94	31.88	-52.89	
+mpu 2 ypr	17.17	31.78	-71.82	
+perdict: {-22.56, 35.17, 18.51, 12.70, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	7.53	29.99	-53.48	
+mpu 2 ypr	13.97	29.94	-70.77	
+perdict: {-22.29, 34.75, 18.41, 12.51, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	5.03	27.94	-54.25	
+mpu 2 ypr	10.59	27.87	-69.93	
+perdict: {-22.72, 35.35, 18.34, 12.86, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	2.69	25.94	-55.21	
+mpu 2 ypr	7.22	25.73	-69.29	
+perdict: {-23.81, 36.29, 16.47, 14.23, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	0.31	23.98	-55.95	
+mpu 2 ypr	3.85	23.69	-68.53	
+perdict: {-25.43, 34.47, 15.98, 15.59, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	-1.97	22.14	-56.33	
+mpu 2 ypr	0.84	21.88	-67.75	
+perdict: {-27.09, 32.67, 15.47, 16.98, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	-3.66	20.66	-56.47	
+mpu 2 ypr	-1.32	20.47	-67.16	
+perdict: {-28.34, 31.38, 14.88, 18.08, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	-4.60	19.72	-56.45	
+mpu 2 ypr	-2.47	19.57	-66.83	
+perdict: {-28.67, 29.93, 13.78, 18.64, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	-4.74	19.44	-56.37	
+mpu 2 ypr	-2.59	19.28	-66.83	
+perdict: {-28.72, 29.63, 13.16, 18.83, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	-4.15	19.87	-56.28	
+mpu 2 ypr	-1.86	19.62	-67.12	
+perdict: {-28.66, 30.24, 13.47, 18.70, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	-3.25	20.77	-56.13	
+mpu 2 ypr	-0.62	20.41	-67.58	
+perdict: {-28.27, 31.77, 13.76, 18.33, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	-1.66	22.25	-56.16	
+mpu 2 ypr	1.54	21.64	-68.64	
+perdict: {-27.40, 33.27, 13.53, 17.73, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	1.17	24.59	-56.52	
+mpu 2 ypr	5.08	23.41	-70.58	
+perdict: {-25.79, 34.81, 13.58, 16.49, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	4.97	27.67	-56.82	
+mpu 2 ypr	9.73	25.78	-72.90	
+perdict: {-23.67, 35.62, 14.90, 14.49, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	9.17	31.17	-56.62	
+mpu 2 ypr	15.02	28.67	-75.15	
+perdict: {-22.15, 34.15, 17.07, 12.68, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	13.42	34.81	-55.74	
+mpu 2 ypr	20.59	31.95	-77.16	
+perdict: {-22.43, 34.61, 17.27, 12.86, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	17.61	38.36	-54.33	
+mpu 2 ypr	26.12	35.36	-78.97	
+perdict: {-22.59, 35.19, 18.45, 12.73, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	21.62	41.58	-52.64	
+mpu 2 ypr	31.25	38.59	-80.62	
+perdict: {-23.96, 37.91, 21.04, 13.26, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	25.09	44.15	-50.79	
+mpu 2 ypr	35.50	41.37	-81.92	
+perdict: {-25.28, 40.46, 23.29, 13.82, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	27.63	45.89	-49.07	
+mpu 2 ypr	38.49	43.49	-82.63	
+perdict: {-26.15, 42.23, 25.07, 14.13, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	29.10	46.70	-47.81	
+mpu 2 ypr	40.11	44.76	-82.79	
+perdict: {-26.71, 43.34, 26.07, 14.37, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	29.47	46.61	-47.20	
+mpu 2 ypr	40.36	45.11	-82.39	
+perdict: {-27.01, 43.80, 26.20, 14.57, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	28.86	45.73	-47.20	
+mpu 2 ypr	39.46	44.61	-81.62	
+perdict: {-26.57, 43.11, 25.97, 14.28, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	28.00	44.52	-47.54	
+mpu 2 ypr	38.04	43.63	-80.82	
+perdict: {-25.73, 41.76, 25.46, 13.73, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	26.89	43.05	-47.98	
+mpu 2 ypr	36.25	42.39	-79.84	
+perdict: {-25.04, 40.48, 24.50, 13.39, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	25.51	41.47	-48.33	
+mpu 2 ypr	34.24	41.05	-78.67	
+perdict: {-24.28, 39.10, 23.49, 13.01, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	24.06	39.84	-48.68	
+mpu 2 ypr	32.15	39.65	-77.48	
+perdict: {-23.49, 37.67, 22.43, 12.61, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	22.11	37.91	-48.96	
+mpu 2 ypr	29.53	38.05	-75.84	
+perdict: {-22.71, 36.14, 21.04, 12.29, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	19.39	35.55	-49.21	
+mpu 2 ypr	26.21	36.09	-73.82	
+perdict: {-21.93, 34.45, 19.11, 12.08, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	16.42	32.97	-49.75	
+mpu 2 ypr	22.57	33.75	-72.08	
+perdict: {-21.48, 33.41, 17.77, 12.01, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	13.69	30.44	-50.67	
+mpu 2 ypr	18.98	31.22	-70.86	
+perdict: {-21.22, 32.98, 17.58, 11.85, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	11.01	27.95	-51.55	
+mpu 2 ypr	15.39	28.68	-69.69	
+perdict: {-20.47, 31.97, 17.79, 11.21, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	8.30	25.50	-52.08	
+mpu 2 ypr	11.90	26.31	-68.37	
+perdict: {-19.72, 30.86, 17.62, 10.67, } out: 1 servo angle: 0 current: 0
+mpu 1 ypr	5.73	23.24	-52.18	
+mpu 2 ypr	8.74	24.23	-66.95	
+perdict: {-20.07, 29.72, 18.03, 10.79, } out: 1 servo angle: 0 current: 0

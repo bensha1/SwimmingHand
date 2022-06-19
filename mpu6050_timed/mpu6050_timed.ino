@@ -35,7 +35,6 @@ THE SOFTWARE.
 
 // I2Cdev and MPU6050 must be installed as libraries, or else the .cpp/.h files
 // for both classes must be in the include path of your project
-#include "SH_servo.h"
 #include "I2Cdev.h"
 //#include "MPU6050.h"
 #include "MPU6050_6Axis_MotionApps612.h"
@@ -43,6 +42,9 @@ THE SOFTWARE.
 #include "EloquentTinyML.h"
 #include <eloquent_tinyml/tensorflow.h>
 #include "state_history.h"
+
+#include <ESP32Servo.h>
+#define Servo_PWM 5
 
 #define N_INPUTS 6
 #define N_OUTPUTS 4
@@ -78,6 +80,7 @@ VectorFloat gravity;    // [x, y, z]            gravity vector
 float euler[3];         // [psi, theta, phi]    Euler angle container
 float ypr[3];           // [yaw, pitch, roll]   yaw/pitch/roll container and gravity vector
 float pred_ypr[6];
+Servo servo;
 StateHistory history(8);
 
 int servo_angles[] = {60, 0, 30, 0};
@@ -85,7 +88,7 @@ int servo_angles[] = {60, 0, 30, 0};
 void setup() {
   tf.begin(hand_model);
     Serial.begin(115200);
-    init_servo();
+    servo.attach(Servo_PWM);
     mpuwire1.begin(21, 22);
     mpuwire2.begin(25, 26);
 
@@ -215,7 +218,7 @@ void simulate_motion(bool start_new_cycle) {
     if (start_new_cycle) {
         i = 0;
         state_start_time = current_time;
-        servo_write(timings[i][0]);
+        servo.write(timings[i][0]);
         return;
     }
     
@@ -224,14 +227,14 @@ void simulate_motion(bool start_new_cycle) {
     if (current_time >= target_time) {
         if (i == STATES_NUMBER - 1) {
             // cycle is done but we didn't detect a new cycle yet, so idle on 0 here
-            servo_write(0);
+            servo.write(0);
             return;
         }
 
         Serial.print("moving to state "); Serial.println(i);
         i++;
         state_start_time = current_time;
-        servo_write(timings[i][0]);
+        servo.write(timings[i][0]);
     } else {
         Serial.print("in state "); Serial.println(i);
         return;

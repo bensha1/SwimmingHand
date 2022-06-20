@@ -87,7 +87,7 @@ int servo_angles[] = {60, 0, 30, 0};
 
 void setup() {
   tf.begin(hand_model);
-    Serial.begin(115200);
+    Serial.begin(230400);
     servo.attach(Servo_PWM);
     mpuwire1.begin(21, 22);
     mpuwire2.begin(25, 26);
@@ -212,13 +212,19 @@ void update_cycle_time() {
 float timings[STATES_NUMBER][2] = {{60, 0.25}, {0, 0.25}, {30, 0.25}, {0, 0.25}};
 void simulate_motion(bool start_new_cycle) {
     static int i;
-    static unsigned int state_start_time;
+    static unsigned int state_start_time = 0;
 
     unsigned int current_time = millis();
     if (start_new_cycle) {
         i = 0;
         state_start_time = current_time;
-        servo.write(timings[i][0]);
+        if (cycle_time != 0) {
+            servo.write(timings[i][0]);
+        }
+        return;
+    }
+    
+    if (cycle_time == 0) { // never finished a cycle
         return;
     }
     
@@ -254,7 +260,7 @@ void main_loop(MPU6050& mpu, int i, int packetSize, uint8_t *fifoBuffer) {
     mpu.dmpGetQuaternion(&q, fifoBuffer);
     mpu.dmpGetGravity(&gravity, &q);
     mpu.dmpGetYawPitchRoll(ypr, &q, &gravity);
-    print_ypr(mpu, i);
+    /*print_ypr(mpu, i);*/
 
       pred_ypr[(i-1)*3 + 0] = (ypr[0] * 180 / M_PI);
       pred_ypr[(i-1)*3 + 1] = (ypr[1] * 180 / M_PI);
@@ -270,6 +276,10 @@ void main_loop(MPU6050& mpu, int i, int packetSize, uint8_t *fifoBuffer) {
 
         int state;
         int prediction = get_prediction(prediction_arr, &state);
+        if (state == 2) {
+            Serial.println(" skipping state 2");
+            return;
+        }
         history.update_state(state);
         Serial.print(" current: ");
         Serial.println(predicted);

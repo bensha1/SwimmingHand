@@ -18,6 +18,7 @@ def parse_log(log_file):
         elif line.startswith(b"mpu 2 ypr"):
             ypr = [float(x) for x in re.findall(FLOAT_RE, line)]
             merged_input.extend(ypr)
+            full_output.append(tuple(merged_input))
         elif line.startswith(b"mpu 3 ypr"):
             ypr = [float(x) for x in re.findall(FLOAT_RE, line)]
             output = [3]
@@ -25,10 +26,10 @@ def parse_log(log_file):
             full_output.append((tuple(merged_input), tuple(output)))
     
     # validations
-    for i, line in enumerate(full_output):
-        if (len(line) != 2 or len(line[0]) != 7 or len(line[1]) != 4
-                or line[0][0] != 1 or line[1][0] != 3):
-            print("dropping line: ", full_output.pop(i))
+    # for i, line in enumerate(full_output):
+        # if (len(line) != 2 or len(line[0]) != 7 or len(line[1]) != 4
+                # or line[0][0] != 1 or line[1][0] != 3):
+            # print("dropping line: ", full_output.pop(i))
 
     return full_output
 

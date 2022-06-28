@@ -51,49 +51,15 @@ THE SOFTWARE.
 Eloquent::TinyML::TensorFlow::TensorFlow<N_INPUTS, N_OUTPUTS, TENSOR_ARENA_SIZE> tf;
 int predicted = 0;
 
-// Arduino Wire library is required if I2Cdev I2CDEV_ARDUINO_WIRE implementation
-// is used in I2Cdev.h
-#if I2CDEV_IMPLEMENTATION == I2CDEV_ARDUINO_WIRE
-    #include "Wire.h"
-#endif
+#include "Wire.h"
 
-// SERVO
-//#include <ESP32Servo.h>
-//#define Servo_PWM 5
-
-// class default I2C address is 0x68
-// specific I2C addresses may be passed as a parameter here
-// AD0 low = 0x68 (default for InvenSense evaluation board)
-// AD0 high = 0x69
 TwoWire mpuwire1(0);
 TwoWire mpuwire2(1);
 MPU6050 accelgyro3(0x69, &mpuwire1);
 MPU6050 accelgyro2(0x68, &mpuwire1);
 MPU6050 accelgyro1(0x68, &mpuwire2);
-//MPU6050 accelgyro(0x69); // <-- use for AD0 high
-//MPU6050 accelgyro(0x68, &Wire1); // <-- use for AD0 low, but 2nd Wire (TWI/I2C) object
-
-//int16_t ax, ay, az;
-//int16_t gx, gy, gz;
-
-// uncomment "OUTPUT_READABLE_ACCELGYRO" if you want to see a tab-separated
-// list of the accel X/Y/Z and then gyro X/Y/Z values in decimal. Easy to read,
-// not so easy to parse, and slow(er) over UART.
-#define OUTPUT_READABLE_ACCELGYRO
-
-// uncomment "OUTPUT_BINARY_ACCELGYRO" to send all 6 axes of data as 16-bit
-// binary, one right after the other. This is very fast (as fast as possible
-// without compression or data loss), and easy to parse, but impossible to read
-// for a human.
-//#define OUTPUT_BINARY_ACCELGYRO
-
-
-#define LED_PIN 13
-bool blinkState = false;
 
 // MPU control/status vars
-//bool dmpReady = false;  // set true if DMP init was successful
-//uint8_t mpuIntStatus;   // holds actual interrupt status byte from MPU
 uint8_t devStatus1, devStatus2, devStatus3;      // return status after each device operation (0 = success, !0 = error)
 uint16_t packetSize1, packetSize2, packetSize3;    // expected DMP packet size (default is 42 bytes)
 uint16_t fifoCount;     // count of all bytes currently in FIFO
@@ -126,7 +92,8 @@ float ranges[13][3] = {{-180.0, -165.0, -180.0},
                 {134.999, 165.0, 150.0},
                 {164.999, 180.0, 180.0}};
 // 0, 60, 120, 180, 240, 300
-int servo_angles[] = {30, 0, 0, 30, 0, 60};
+//int servo_angles[] = {30, 0, 0, 30, 0, 60};/
+int servo_angles[] = {60, 0, 30, 0};
 int valid_transitions[6][2] = {{0, 1},
                               {1, 2},
                               {2, 3},
@@ -134,80 +101,22 @@ int valid_transitions[6][2] = {{0, 1},
                               {4, 5},
                               {5, 0}};
 
-
-// packet structure for InvenSense teapot demo
-uint8_t teapotPacket[14] = { '$', 0x02, 0, 0, 0, 0, 0, 0, 0, 0, 0x00, 0x00, '\r', '\n' };
-
-//Servo MG995_Servo;
-//void init_servo();
-//void servo_write(int angle);
-//
-//void init_servo() {
-//  MG995_Servo.attach(Servo_PWM);
-//}
-//
-//void servo_write(int angle) {
-//  MG995_Servo.write(angle);
-//}
-
-
 void setup() {
   tf.begin(hand_model);
-  // initialize serial communication
-    // (38400 chosen because it works as well at 8MHz as it does at 16MHz, but
-    // it's really up to you depending  on your project)
     Serial.begin(115200);
     init_servo();
-    // join I2C bus (I2Cdev library doesn't do this automatically)
-//    #if I2CDEV_IMPLEMENTATION == I2CDEV_ARDUINO_WIRE
-//        Wire.begin();
-        mpuwire1.begin(21, 22);
-        mpuwire2.begin(25, 26);
-//    #elif I2CDEV_IMPLEMENTATION == I2CDEV_BUILTIN_FASTWIRE
-//        Fastwire::setup(400, true);
-//    #endif
+    mpuwire1.begin(21, 22);
+    mpuwire2.begin(25, 26);
 
 
     // initialize device
     Serial.println("Initializing I2C devices...");
     accelgyro1.initialize();
     accelgyro2.initialize();
-//    accelgyro3.initialize();
 
-    // verify connection
-//    Serial.println("Testing device connections...");
-//    Serial.println(accelgyro1.testConnection() ? "MPU6050 1 connection successful" : "MPU6050 1 connection failed");
-//    Serial.println(accelgyro2.testConnection() ? "MPU6050 2 connection successful" : "MPU6050 2 connection failed");
-//    Serial.println(accelgyro3.testConnection() ? "MPU6050 3 connection successful" : "MPU6050 3 connection failed");
-
-    // use the code below to change accel/gyro offset values
-    /*
-    Serial.println("Updating internal sensor offsets...");
-    // -76	-2359	1688	0	0	0
-    Serial.print(accelgyro.getXAccelOffset()); Serial.print("\t"); // -76
-    Serial.print(accelgyro.getYAccelOffset()); Serial.print("\t"); // -2359
-    Serial.print(accelgyro.getZAccelOffset()); Serial.print("\t"); // 1688
-    Serial.print(accelgyro.getXGyroOffset()); Serial.print("\t"); // 0
-    Serial.print(accelgyro.getYGyroOffset()); Serial.print("\t"); // 0
-    Serial.print(accelgyro.getZGyroOffset()); Serial.print("\t"); // 0
-    Serial.print("\n");
-    accelgyro.setXGyroOffset(220);
-    accelgyro.setYGyroOffset(76);
-    accelgyro.setZGyroOffset(-85);
-    Serial.print(accelgyro.getXAccelOffset()); Serial.print("\t"); // -76
-    Serial.print(accelgyro.getYAccelOffset()); Serial.print("\t"); // -2359
-    Serial.print(accelgyro.getZAccelOffset()); Serial.print("\t"); // 1688
-    Serial.print(accelgyro.getXGyroOffset()); Serial.print("\t"); // 0
-    Serial.print(accelgyro.getYGyroOffset()); Serial.print("\t"); // 0
-    Serial.print(accelgyro.getZGyroOffset()); Serial.print("\t"); // 0
-    Serial.print("\n");
-    */
-    
-    // configure Arduino LED pin for output
-//    pinMode(LED_PIN, OUTPUT);
 //    packetSize1 = init_dmp(accelgyro1, 1, -4733, -6623, 12661, 136, -174, -12);
-    packetSize1 = init_dmp(accelgyro1, 1, -5487, 5111, 12993, -20, -23, 6);
-    packetSize2 = init_dmp(accelgyro2, 2, -5065, -8381, 11773, 134, -174, -14);
+    packetSize1 = init_dmp(accelgyro1, 1, -1647, -199, 3001, 60, -37, 50);
+    packetSize2 = init_dmp(accelgyro2, 2, -551, -765, 3677, 140, 52, 32);
 //    packetSize3 = init_dmp(accelgyro3, 3, -1773, 1793, 4855, 62, -37, 53);/
 }
 
@@ -216,8 +125,6 @@ int init_dmp(MPU6050& mpu, int i, int xacc, int yacc, int zacc, int xgyro, int y
   Serial.println(i);
   // wait for ready
   Serial.println(F("\nSend any character to begin DMP programming and demo: "));
-//  while (Serial.available() && Serial.read()); // empty buffer
-//  while (!Serial.available());                 // wait for data
   while (Serial.available() && Serial.read()); // empty buffer again
   int devStatus = mpu.dmpInitialize();
   
@@ -267,7 +174,7 @@ float fix_ypr(float f) {
 int get_prediction(float* predict_arr, int* max_i) {
   float max_val = -200.0;
   *max_i = -1;
-  for (int i = 0; i < 6; i++) {
+  for (int i = 0; i < 4; i++) {
     if (predict_arr[i] > max_val) {
       max_val = predict_arr[i];
       *max_i = i;
@@ -289,6 +196,54 @@ bool is_valid_transition(int current, int next) {
   return false;
 }
 
+unsigned int prev_ms = millis();
+bool allow_timed_transition(int old_val, int new_val) {
+  if (old_val == new_val) {
+    return true;
+  }
+  
+  unsigned int new_ms = millis();
+  Serial.print("\nold = ");
+  Serial.print(prev_ms);
+  Serial.print(" new = ");
+  Serial.println(new_ms);
+  bool rc = false;
+  if (new_ms > prev_ms + 400) {
+      rc = true;
+      prev_ms = new_ms;
+  }
+  return rc;
+}
+
+void print_ypr(MPU6050& mpu, int i) {
+    Serial.print("mpu ");
+    Serial.print(i);
+    Serial.print(" ypr\t");
+    Serial.print(ypr[0] * 180 / M_PI);
+    Serial.print("\t");
+    Serial.print(ypr[1] * 180 / M_PI);
+    Serial.print("\t");
+    Serial.print(ypr[2] * 180 / M_PI);
+    Serial.print("\t");
+    Serial.println();
+}
+
+void print_pred(float* prediction_arr) {
+    Serial.print("perdict: {");
+    Serial.print(prediction_arr[0]);
+    Serial.print(", ");
+    Serial.print(prediction_arr[1]);
+    Serial.print(", ");
+    Serial.print(prediction_arr[2]);
+    Serial.print(", ");
+    Serial.print(prediction_arr[3]);
+    Serial.print(", ");
+//        Serial.print(prediction_arr[4]);
+//        Serial.print(", ");
+//        Serial.print(prediction_arr[5]);
+    Serial.print("} ");
+}
+
 void main_loop(MPU6050& mpu, int i, int packetSize, uint8_t *fifoBuffer) {
   mpu.resetFIFO();
   // get current FIFO count
@@ -302,48 +257,35 @@ void main_loop(MPU6050& mpu, int i, int packetSize, uint8_t *fifoBuffer) {
     mpu.dmpGetQuaternion(&q, fifoBuffer);
     mpu.dmpGetGravity(&gravity, &q);
     mpu.dmpGetYawPitchRoll(ypr, &q, &gravity);
-    Serial.print("mpu ");
-    Serial.print(i);
-    Serial.print(" ypr\t");
-    Serial.print(ypr[0] * 180 / M_PI);
-    Serial.print("\t");
-    Serial.print(ypr[1] * 180 / M_PI);
-    Serial.print("\t");
-    Serial.print(ypr[2] * 180 / M_PI);
-    Serial.print("\t");
-    Serial.println();
+    print_ypr(mpu, i);
 
       pred_ypr[(i-1)*3 + 0] = (ypr[0] * 180 / M_PI);
       pred_ypr[(i-1)*3 + 1] = (ypr[1] * 180 / M_PI);
       pred_ypr[(i-1)*3 + 2] = (ypr[2] * 180 / M_PI);
+
+      /*pred_ypr[(i-1)*2 + 0] = (ypr[1] * 180 / M_PI);*/
+      /*pred_ypr[(i-1)*2 + 1] = (ypr[2] * 180 / M_PI);*/
+      
       if (i == 2) {
         float prediction_arr[4];
         tf.predict(pred_ypr, prediction_arr);
-        Serial.print("perdict: {");
-        Serial.print(prediction_arr[0]);
-        Serial.print(", ");
-        Serial.print(prediction_arr[1]);
-        Serial.print(", ");
-        Serial.print(prediction_arr[2]);
-        Serial.print(", ");
-        Serial.print(prediction_arr[3]);
-        Serial.print(", ");
-        Serial.print(prediction_arr[4]);
-        Serial.print(", ");
-        Serial.print(prediction_arr[5]);
-        Serial.print("} ");
+        print_pred(prediction_arr);
+
         int category = 0;
         int prediction = get_prediction(prediction_arr, &category);
         Serial.print(" current: ");
         Serial.println(predicted);
-        if (is_valid_transition(predicted, category)) {
+//        if (is_valid_transition(predicted, category)) {/
+         /*if (allow_timed_transition(predicted, category)) {*/
+            /*servo_write(prediction);*/
+            /*predicted = category;*/
+         /*}*/
+        
+        /*}/*/
+        if (prediction != predicted) {
           servo_write(prediction);
-          predicted = category;
-        }
-//        if (prediction != predicted) {
-//          servo_write(prediction);
-//          predicted = prediction;
-//        } 
+          predicted = prediction;
+        } 
       }
 }
 
@@ -352,5 +294,5 @@ void loop() {
     main_loop(accelgyro1, 1, packetSize1, fifoBuffer1);
     main_loop(accelgyro2, 2, packetSize2, fifoBuffer2);
 //    main_loop(accelgyro3, 3, packetSize3, fifoBuffer3);
-  delay(50);
+  delay(80);
 }

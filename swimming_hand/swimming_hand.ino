@@ -22,6 +22,8 @@ THE SOFTWARE.
 ===============================================
 */
 
+#include "config.h"
+
 // I2Cdev and MPU6050 must be installed as libraries, or else the .cpp/.h files
 // for both classes must be in the include path of your project
 #include "I2Cdev.h"
@@ -75,16 +77,16 @@ void setup() {
   tf.begin(hand_model);
     Serial.begin(230400);
     servo.attach(Servo_PWM);
-    mpuwire1.begin(21, 22);
-    mpuwire2.begin(25, 26);
+    mpuwire1.begin(MPU1_SDA, MPU1_SCL);
+    mpuwire2.begin(MPU2_SDA, MPU2_SCL);
 
     // initialize device
     Serial.println("Initializing I2C devices...");
     accelgyro1.initialize();
     accelgyro2.initialize();
 
-    packetSize1 = init_dmp(accelgyro1, 1, -1647, -199, 3001, 60, -37, 50);
-    packetSize2 = init_dmp(accelgyro2, 2, -551, -765, 3677, 140, 52, 32);
+    packetSize1 = init_dmp(accelgyro1, 1, MPU1_ACC_X, MPU1_ACC_Y, MPU1_ACC_Z, MPU1_GYRO_X, MPU1_GYRO_Y, MPU1_GYRO_Z);
+    packetSize2 = init_dmp(accelgyro2, 2, MPU2_ACC_X, MPU2_ACC_Y, MPU2_ACC_Z, MPU2_GYRO_X, MPU2_GYRO_Y, MPU2_GYRO_Z);
 }
 
 int init_dmp(MPU6050& mpu, int i, int xacc, int yacc, int zacc, int xgyro, int ygyro, int zgyro) {

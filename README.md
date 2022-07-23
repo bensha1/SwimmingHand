@@ -26,4 +26,4 @@ Swimming Hand uses a neural network running on the prosthetic to predict the des
 
 Check out our wiki!
 
-[Wiki](https://github.con/bensha1/SwimmingHand/wiki)
+[Wiki](https://github.com/bensha1/SwimmingHand/wiki)

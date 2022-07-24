@@ -21,7 +21,11 @@ Swimming Hand uses a neural network running on the prosthetic to predict the des
   - Copy `Arduino/I2Cdev` and `Arduino/MPU6050` directories into your local libraries directory.  
   - Our project used the most up to date version as of June 2022.
 - ESP32Servo v0.11.0  
-
+- EloquentTinyML
+- Python Libraraies:
+  - TensorFlow v2.1.1
+  - numpy
+  - tinymlge
 ## Wiki
 
 Check out our wiki!

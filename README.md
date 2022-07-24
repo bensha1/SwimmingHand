@@ -25,7 +25,7 @@ Swimming Hand uses a neural network running on the prosthetic to predict the des
 - Python Libraraies:
   - TensorFlow v2.1.1
   - numpy
-  - tinymlge
+  - tinymlgen
 ## Wiki
 
 Check out our wiki!

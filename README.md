@@ -31,3 +31,8 @@ Swimming Hand uses a neural network running on the prosthetic to predict the des
 Check out our wiki!
 
 [Wiki](https://github.com/bensha1/SwimmingHand/wiki)
+
+## Raw data
+- All raw data for collected and used for trainig the model is in "data science/datasets".
+- Older logs (called simply serial logs) are logs of continual movement used for linear regression and three-sensor prediction experiements.
+- Newer logs are marked with their date and the angle which represents the quadrant, or sixth for the 1/6 and 7/6 experiements, for tagging. The python script takes this files and automatically adds the tags based on the file name.
